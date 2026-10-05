@@ -15,7 +15,7 @@ STUDENT INSTRUCTIONS
 This file is configured for the SBB MehrSpur project. For your own project
 (e.g., a bike highway or mobility hub), adapt these three sections:
 1. General parameters: set nominal values, shared appraisal assumptions,and
-   physical targets. Stages and their package-specific parameters 
+   physical targets. Stages and their package-specific parameters
    are defined together in stages.py. A KEY_Y40 value defines that parameter's
    nominal endpoint.
 2. Corridor: redefine CORRIDOR_REGIONS/CORRIDOR_MUNICIPALITIES or use explicit
@@ -28,6 +28,7 @@ This file is configured for the SBB MehrSpur project. For your own project
 
 See code/surrogate_model/README.md for the adaptation checklist.
 """
+
 from additional import uncertainty as uc
 from stages import package_parameter_defaults
 
@@ -42,7 +43,6 @@ NOMINAL_PARAMS = {
     "N_YEARS": 40,  # Appraisal horizon (years); *_Y40 denotes its final-year endpoint.
     "APPRAISAL_START_YEAR": 2026,  # Calendar year represented by Year 1 of the appraisal.
     "DISCOUNT_RATE": 0.02,  # Annual social discount rate; 0.02 means 2%.
-
     # -------------------------------------------------------------------------
     # Passenger demand, transport preferences, cycling and background traffic
     # Present-day values; *_Y40 values define the nominal endpoints.
@@ -58,7 +58,6 @@ NOMINAL_PARAMS = {
     "EBIKE_SPEED_MULTIPLIER": 1.5,  # E-bike speed divided by conventional-bike speed; 1.5 means 50% faster.
     "ROAD_FREIGHT_GROWTH": 0.0,  # Growth in prepared commercial/freight vehicles and their synthetic uplift.
     "ROAD_FREIGHT_GROWTH_Y40": 0.10,  # Nominal final growth of prepared background road vehicles.
-
     # -------------------------------------------------------------------------
     # Peak-hour to annual conversions
     # -------------------------------------------------------------------------
@@ -74,7 +73,6 @@ NOMINAL_PARAMS = {
     # during the configured peak hours. The engine derives conversions from days
     # and each mode's peak share.
     "PEAK_TO_ANNUAL_TRAIN": 3391.5,  # Peak-hour supplied train-km to annual train-km; independent of passenger demand.
-
     # -------------------------------------------------------------------------
     # PT service, section comfort capacity and train supply
     # -------------------------------------------------------------------------
@@ -91,7 +89,6 @@ NOMINAL_PARAMS = {
     # it independent of ridership prevents mode shift from creating fictitious
     # trains in the external-cost calculation.
     "PT_TRAIN_KM_PEAK_STAGE0": 3_414.6,  # Fixed baseline supplied train-km/peak hour; higher ridership alone adds no trains.
-
     # -------------------------------------------------------------------------
     # Values of passenger time (CHF/person-hour)
     # -------------------------------------------------------------------------
@@ -101,9 +98,8 @@ NOMINAL_PARAMS = {
     "C_TT_PT_ACCESS": 26.52,  # PT access and egress walking/cycling time value (CHF/person-hour).
     "C_TT_PT_TRANSFER": 26.52,  # Physical transfer-walking time value (CHF/person-hour); excludes waiting.
     # Active-mode time is valued per person-hour, like PT/car passenger time.
-        "C_TT_BIKE": 35.0,  # Cycling value of time (CHF/person-hour)
+    "C_TT_BIKE": 35.0,  # Cycling value of time (CHF/person-hour)
     "C_TT_WALK": 16.0,  # Walking value of time (CHF/person-hour)
-
     # -------------------------------------------------------------------------
     # Optional additional benefits (uncomment to include in appraisal)
     # -------------------------------------------------------------------------
@@ -113,7 +109,6 @@ NOMINAL_PARAMS = {
     # "BENEFIT_HEALTH_BIKE_PER_KM": 1.0,  # Cycling health benefit (CHF/person-km).
     # "BENEFIT_HEALTH_WALK_PER_KM": 1.0,  # Walking health benefit (CHF/person-km).
     # "BENEFIT_SOCIOECONOMIC_PT_PER_TRIP": 1.0,  # Additional PT benefit (CHF/person-trip).
-
     # -------------------------------------------------------------------------
     # Physical CO2 emissions and their common monetary value
     # -------------------------------------------------------------------------
@@ -127,7 +122,6 @@ NOMINAL_PARAMS = {
     "CO2_VALUE_CHF_PER_TONNE": 123.2,  # Reference-year CO2 value (constant 2019 CHF/tonne CO2).
     "CO2_REFERENCE_YEAR": 2015,  # Calendar year to which the reference CO2 value applies.
     "CO2_VALUE_ANNUAL_GROWTH": 0.03,  # Real annual CO2-value growth (fraction/year); 0.03 means 3% compounded.
-
     # -------------------------------------------------------------------------
     # Other NIBA external costs (road and passenger rail)
     # -------------------------------------------------------------------------
@@ -141,7 +135,6 @@ NOMINAL_PARAMS = {
     "ACCIDENT_COST_MULTIPLIER_Y40": 0.85,  # Nominal final accident-cost factor; 0.85 means 15% lower unit costs.
     "LOCAL_AIR_COST_MULTIPLIER": 1.0,  # Multiplier on road and rail local air-pollution unit costs.
     "LOCAL_AIR_COST_MULTIPLIER_Y40": 0.65,  # Nominal final local air-pollution cost factor.
-
     # -------------------------------------------------------------------------
     # Shared operation, investment multipliers and flexibility options
     # -------------------------------------------------------------------------
@@ -151,14 +144,12 @@ NOMINAL_PARAMS = {
     "CAPEX_MULTIPLIER": 1.0,  # Multiplier on construction costs and upfront option premiums.
     # Flexibility Premium (for pre-engineering or reservation)
     "C_FLEX": 50_000_000,  # Upfront CHF per adaptive package; two options are paid at time zero even if unused.
-
     # -------------------------------------------------------------------------
     # Performance requirements and strategic mode-share indicators
     # -------------------------------------------------------------------------
     "MAX_AVG_TT": 15.0,  # Acceptability ceiling for peak car/PT in-vehicle time plus car delay (min/trip).
     "PT_SHARE_TARGET": 0.35,  # Teaching minimum for PT share of strategic passenger-km; baseline is about 31.9%.
     "MIN_STRATEGIC_PKM_DISTANCE": 5.0,  # Minimum OD distance for strategic mode-share indicators (km); not an appraisal cutoff.
-
     # Internal shared keys for appraisal and uncertainties; edit values in stages.py.
     **package_parameter_defaults(),
 }
@@ -173,35 +164,146 @@ globals().update(NOMINAL_PARAMS)
 # -----------------------------------------------------------------------------
 # OPTION A: Define by Municipalities / Regions (Empty when in "zones" mode)
 # -----------------------------------------------------------------------------
-CORRIDOR_REGIONS = {  # Named municipality groups defining the modeled corridor.
-    "Zürich": ["Zürich"],
-    "Winterthur": ["Winterthur"],
-    "Airport / Glattal": [
-        "Kloten", "Opfikon", "Wallisellen", "Dübendorf",
-        "Dietlikon", "Wangen-Brüttisellen", "Bassersdorf", "Rümlang",
-        "Illnau-Effretikon", "Lindau", "Nürensdorf"
-    ],
-    "Eastern Switzerland (Gateways)": [
-        "Wiesendangen", "Elsau",
-        "Elgg", "Hagenbuch"
-    ]
-}
+CORRIDOR_REGIONS = (
+    {}
+)  # Empty: the Limmattal corridor is defined by zone IDs (Option B).
 
 # Flat list of all corridor municipalities
-CORRIDOR_MUNICIPALITIES = [  # Derived flat list used by corridor selection and stage definitions.
-    muni for munis in CORRIDOR_REGIONS.values() for muni in munis
-]
+CORRIDOR_MUNICIPALITIES = (
+    [  # Derived flat list used by corridor selection and stage definitions.
+        muni for munis in CORRIDOR_REGIONS.values() for muni in munis
+    ]
+)
 
 # Optional project-relative or absolute detailed road-network cache path.
 # Notebook 02 prepares a missing cache; later notebooks require it to exist.
 # None uses the existing default cache. For a new project, select a new filename.
-DETAILED_NETWORK_FILE = None  # Example: "data/processed/my_project_detailed_network.pkl"
+DETAILED_NETWORK_FILE = "data/processed/limmattal_detailed_network.pkl"
 
 # -----------------------------------------------------------------------------
 # OPTION B: Define by Explicit Zone IDs
 # -----------------------------------------------------------------------------
-# Example: enable zone selection, define groups, then flatten their IDs.
-# CORRIDOR_DEFINITION_MODE = "zones"
+# Limmattal bike corridor Dietikon – Zürich Altstetten: eight Limmattal
+# municipalities plus the city quartier Altstetten (city_quartier == "Altstetten").
+CORRIDOR_DEFINITION_MODE = "zones"
+PROJECT_ZONES = {
+    "Limmattal": [
+        # Dietikon (27)
+        "24301001",
+        "24301002",
+        "24301003",
+        "24301004",
+        "24301005",
+        "24301006",
+        "24301007",
+        "24301008",
+        "24301009",
+        "24301010",
+        "24301011",
+        "24301012",
+        "24301013",
+        "24301014",
+        "24301015",
+        "24301016",
+        "24301017",
+        "24301018",
+        "24301019",
+        "24301020",
+        "24301021",
+        "24301022",
+        "24301023",
+        "24301024",
+        "24301025",
+        "24301026",
+        "24301027",
+        # Schlieren (20)
+        "24701001",
+        "24701002",
+        "24701003",
+        "24701004",
+        "24701005",
+        "24701006",
+        "24701007",
+        "24701008",
+        "24701009",
+        "24701010",
+        "24701011",
+        "24701012",
+        "24701013",
+        "24701014",
+        "24701015",
+        "24701016",
+        "24701017",
+        "24701018",
+        "24701019",
+        "24701020",
+        # Urdorf (9)
+        "25001001",
+        "25001002",
+        "25001003",
+        "25001004",
+        "25001005",
+        "25001006",
+        "25001007",
+        "25001008",
+        "25001009",
+        # Unterengstringen (3)
+        "24901001",
+        "24901002",
+        "24901003",
+        # Oberengstringen (4)
+        "24501001",
+        "24501002",
+        "24501003",
+        "24501004",
+        # Weiningen (ZH) (4)
+        "25101001",
+        "25101002",
+        "25101003",
+        "25101004",
+        # Geroldswil (5)
+        "24401001",
+        "24401002",
+        "24401003",
+        "24401004",
+        "24401005",
+        # Oetwil an der Limmat (2)
+        "24601001",
+        "24601002",
+    ],
+    "Zurich_Altstetten": [
+        # Zürich, quartier Altstetten (25)
+        "26101001",
+        "26101002",
+        "26101003",
+        "26101004",
+        "26101006",
+        "26101008",
+        "26101010",
+        "26101012",
+        "26101013",
+        "26101015",
+        "26101016",
+        "26101018",
+        "26101019",
+        "26101020",
+        "26101021",
+        "26101023",
+        "26101029",
+        "26101030",
+        "26101032",
+        "26101033",
+        "26101034",
+        "26101039",
+        "26101041",
+        "26101046",
+        "26103306",
+    ],
+}
+# Flat list of active corridor zone IDs:
+CORRIDOR_ZONE_IDS = [z for zone_list in PROJECT_ZONES.values() for z in zone_list]
+
+# Example from the MehrSpur template (kept for reference):
 # PROJECT_ZONES = {
 #     # 1. Zürich Eastern Alignment into CBD: Bellevue, Stadelhofen, Kreuzplatz, Römerhof,
 #     #    Hegibachplatz, Burgwies, Balgrist, Rehalp (S18 border loop), and Witikon
@@ -233,25 +335,29 @@ DETAILED_NETWORK_FILE = None  # Example: "data/processed/my_project_detailed_net
 # Use `python code/additional/section_flows.py --help` for preparation/calibration.
 # Omit SECTION and EXTERNAL_FLOW for projects that do not use this feature.
 SECTION_DEFAULTS = {  # Generic fallback settings; configure the project's SECTION below.
-    "active": False,                      # Enable route coverage and section-specific appraisal.
-    "mode": "PT",                         # PT, CAR, BIKE or WALK
-    "origin": {},                         # {"municipality_name": "X"} or {"zone_ids": [...]}
-    "destination": {},                    # Destination selector for reference section travel time.
-    "both_directions": True,              # Count both directions and use both reference OD directions.
-    "coverage_file": None,                # None uses an automatically regenerated cache.
-    "crowding_enabled": False,            # this version values crowding only for PT
+    "active": False,  # Enable route coverage and section-specific appraisal.
+    "mode": "PT",  # PT, CAR, BIKE or WALK
+    "origin": {},  # {"municipality_name": "X"} or {"zone_ids": [...]}
+    "destination": {},  # Destination selector for reference section travel time.
+    "both_directions": True,  # Count both directions and use both reference OD directions.
+    "coverage_file": None,  # None uses an automatically regenerated cache.
+    "crowding_enabled": False,  # this version values crowding only for PT
 }
 SECTION = {  # Active project section and endpoints used for its travel-time reference.
     **SECTION_DEFAULTS,
-    "active": True,                       # Include this count and its effects in model/appraisal outputs.
-    "kind": "pt_approach",                # PT station approach, cycling route or individual PT stop.
-    "station": "Winterthur",              # Station whose approach is counted.
-    "towards": "Effretikon",              # Select the side facing this station, including express services.
+    "active": True,  # Include this count and its effects in model/appraisal outputs.
+    "kind": "pt_approach",  # PT station approach, cycling route or individual PT stop.
+    "station": "Winterthur",  # Station whose approach is counted.
+    "towards": "Effretikon",  # Select the side facing this station, including express services.
     "coverage_file": "data/processed/section_coverage.npz",  # Supplied example; refreshed if inputs or definition change.
-    "mode": "PT",                         # Mode using this section; must match an enabled external flow.
-    "origin": {"municipality_name": "Zürich"},  # Origin of the modeled travel-time reference.
-    "destination": {"municipality_name": "Winterthur"},  # Destination of that reference.
-    "crowding_enabled": True,             # Value extra PT discomfort using the section comfort threshold.
+    "mode": "PT",  # Mode using this section; must match an enabled external flow.
+    "origin": {
+        "municipality_name": "Zürich"
+    },  # Origin of the modeled travel-time reference.
+    "destination": {
+        "municipality_name": "Winterthur"
+    },  # Destination of that reference.
+    "crowding_enabled": True,  # Value extra PT discomfort using the section comfort threshold.
 }
 
 # Alternative definitions (replace SECTION above; disable PT crowding for these).
@@ -269,15 +375,15 @@ SECTION = {  # Active project section and endpoints used for its travel-time ref
 # Enter ONE fixed baseline additional count, then grow it explicitly. The calibration
 # script in NB02 reports a suggested residual without editing this configuration.
 EXTERNAL_FLOW_DEFAULTS = {  # Generic fallback; configure the project's EXTERNAL_FLOW below.
-    "enabled": False,                     # Include an existing supplementary cohort in appraisal.
-    "mode": None,                         # Inherit SECTION.mode; no separate mode-choice response.
-    "additional_trips_daily": 0.0,        # Existing person-trips/weekday missing from the retained model.
-    "growth": "general",                  # "general" demand growth or "fixed"
+    "enabled": False,  # Include an existing supplementary cohort in appraisal.
+    "mode": None,  # Inherit SECTION.mode; no separate mode-choice response.
+    "additional_trips_daily": 0.0,  # Existing person-trips/weekday missing from the retained model.
+    "growth": "general",  # "general" demand growth or "fixed"
 }
 EXTERNAL_FLOW = {  # One cohort shared by baseline and projects, added after mode choice.
     **EXTERNAL_FLOW_DEFAULTS,
-    "enabled": True,                      # Include this cohort's time costs and PT comfort loading.
-    "mode": "PT",                         # Existing PT passengers; must match SECTION.mode.
+    "enabled": True,  # Include this cohort's time costs and PT comfort loading.
+    "mode": "PT",  # Existing PT passengers; must match SECTION.mode.
     # One-time nominal Stage-0 calibration (25% e-bikes; 2% road-gap target):
     # 120,000 target - 66,891.950467 modeled passengers/day, both directions.
     # Winterthur approach towards Effretikon; connectivity-refined road network.
@@ -424,6 +530,8 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
 
 # Validate settings and prepare internal surrogate metadata.
 uc.configure(
-    registry=STRUCTURAL_UNCERTAINTIES, nominal=NOMINAL_PARAMS,
-    n_years=N_YEARS, tail_probability=TRANSPORT_SURROGATE_TAIL_PROBABILITY,
+    registry=STRUCTURAL_UNCERTAINTIES,
+    nominal=NOMINAL_PARAMS,
+    n_years=N_YEARS,
+    tail_probability=TRANSPORT_SURROGATE_TAIL_PROBABILITY,
 )
