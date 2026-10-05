@@ -38,8 +38,8 @@ import pandas as pd
 # ---------------------------------------------------------------------------
 
 DEFAULT_CORRIDOR_BUFFER_M = 500.0
-DEFAULT_MAX_GATES = 100
-DEFAULT_GATE_SEPARATION_M = 500.0
+DEFAULT_MAX_GATES = 20  # Limmattal: chosen in Notebook 02, Section 1.3 gate comparison
+DEFAULT_GATE_SEPARATION_M = 800.0
 DEFAULT_PASSTHROUGH_FRACTION = 0.05
 
 # ---------------------------------------------------------------------------
