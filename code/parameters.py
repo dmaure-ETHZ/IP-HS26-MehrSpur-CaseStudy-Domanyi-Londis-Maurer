@@ -149,7 +149,9 @@ NOMINAL_PARAMS = {
     # -------------------------------------------------------------------------
     "MAX_AVG_TT": 15.0,  # Acceptability ceiling for peak car/PT in-vehicle time plus car delay (min/trip).
     "PT_SHARE_TARGET": 0.35,  # Teaching minimum for PT share of strategic passenger-km; baseline is about 31.9%.
-    "MIN_STRATEGIC_PKM_DISTANCE": 5.0,  # Minimum OD distance for strategic mode-share indicators (km); not an appraisal cutoff.
+    # Limmattal: 2 km instead of the MehrSpur 5 km, because the corridor is only ~10 km long and
+    # cycling is strongest at 1-5 km (see NB02 section 1.5); a 5 km filter would drop most bike trips.
+    "MIN_STRATEGIC_PKM_DISTANCE": 2.0,  # Minimum OD distance for strategic mode-share indicators (km); not an appraisal cutoff.
     # Internal shared keys for appraisal and uncertainties; edit values in stages.py.
     **package_parameter_defaults(),
 }
