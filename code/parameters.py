@@ -175,6 +175,21 @@ CORRIDOR_MUNICIPALITIES = (
     ]
 )
 
+# Municipalities shown in the municipality-level OD explorers (NB02 section 1.4).
+# Display only: the corridor perimeter is defined by PROJECT_ZONES. "Zürich" is the
+# whole city incl. Altstetten, as the main commuter destination of the Limmattal.
+OD_EXPLORER_MUNICIPALITIES = [
+    "Dietikon",
+    "Schlieren",
+    "Urdorf",
+    "Unterengstringen",
+    "Oberengstringen",
+    "Weiningen (ZH)",
+    "Geroldswil",
+    "Oetwil an der Limmat",
+    "Zürich",
+]
+
 # Optional project-relative or absolute detailed road-network cache path.
 # Notebook 02 prepares a missing cache; later notebooks require it to exist.
 # None uses the existing default cache. For a new project, select a new filename.
