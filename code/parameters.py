@@ -106,9 +106,9 @@ NOMINAL_PARAMS = {
     # Health rates apply to standalone cycling/walking person-km, including e-bikes.
     # The PT rate applies once per person-trip, including supplementary PT passengers.
     # Positive rates reduce societal costs; omitted rates default to zero.
-    "BENEFIT_HEALTH_BIKE_PER_KM": 1.0,  # Cycling health benefit (CHF/person-km).
-    "BENEFIT_HEALTH_WALK_PER_KM": 1.0,  # Walking health benefit (CHF/person-km).
-    "BENEFIT_SOCIOECONOMIC_PT_PER_TRIP": 1.0,  # Additional PT benefit (CHF/person-trip).
+    "BENEFIT_HEALTH_BIKE_PER_KM": 1.306,  # Cycling health benefit (CHF/person-km); Kanton Zürich (2017), KNA Veloschnellroute Limmattal.
+    "BENEFIT_HEALTH_WALK_PER_KM": 0.0,  # Walking health benefit (CHF/person-km); not valued (no project-specific source).
+    "BENEFIT_SOCIOECONOMIC_PT_PER_TRIP": 0.0,  # Additional PT benefit (CHF/person-trip); not valued for the bike project.
     # -------------------------------------------------------------------------
     # Physical CO2 emissions and their common monetary value
     # -------------------------------------------------------------------------
@@ -119,7 +119,7 @@ NOMINAL_PARAMS = {
     # Both road and rail emissions use this carbon value. Its reference-year
     # value is in constant 2019 CHF; annual real growth is compounded from the
     # reference year to APPRAISAL_START_YEAR + the zero-based appraisal year.
-    "CO2_VALUE_CHF_PER_TONNE": 200,  # Reference-year CO2 value (constant 2019 CHF/tonne CO2).
+    "CO2_VALUE_CHF_PER_TONNE": 430,  # Reference-year CO2 value (CHF/tonne CO2); ARE/INFRAS climate cost rate for 2021.
     "CO2_REFERENCE_YEAR": 2021,  # Calendar year to which the reference CO2 value applies.
     "CO2_VALUE_ANNUAL_GROWTH": 0.0,  # Real annual CO2-value growth (fraction/year); 0.03 means 3% compounded.
     # -------------------------------------------------------------------------
@@ -139,7 +139,7 @@ NOMINAL_PARAMS = {
     # Shared operation, investment multipliers and flexibility options
     # -------------------------------------------------------------------------
     # Package-specific CAPEX is defined in stages.py, alongside each intervention.
-    "OPEX_RATE": 0.01,  # Annual infrastructure operating/maintenance cost as a fraction of base construction cost.
+    "OPEX_RATE": 0.005,  # Annual O&M cost as a fraction of base construction cost; Kanton Zürich (2017): 3.84 CHF/m2/a * 40,800 m2 = ~0.5 % of CAPEX.
     "OPEX_MULTIPLIER": 1.0,  # Multiplier on annual infrastructure operating/maintenance costs.
     "CAPEX_MULTIPLIER": 1.2,  # Multiplier on construction costs and upfront option premiums.
     # Flexibility Premium (for pre-engineering or reservation)
@@ -491,8 +491,9 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
         "use": "sensitivity",
         "transient": False,
         "distribution": "triangular",
-        "minimum": 70.0,
-        "maximum": 217.0,
+        # Lower bound: previous ARE rate (140 CHF/t); upper bound: assumed twice the 2021 rate.
+        "minimum": 140.0,
+        "maximum": 860.0,
     },
     "CAR_CO2_KG_PER_VEHICLE_KM": {  # Final car emissions (kg CO2/vehicle-km); sigma is relative to its nominal endpoint.
         "category": "post_modelling",
