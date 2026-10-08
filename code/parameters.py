@@ -48,7 +48,7 @@ NOMINAL_PARAMS = {
     # Present-day values; *_Y40 values define the nominal endpoints.
     # -------------------------------------------------------------------------
     "PASSENGER_DEMAND_GROWTH": 0.0,  # Cumulative passenger OD growth relative to baseline; 0.20 means +20%.
-    "PASSENGER_DEMAND_GROWTH_Y40": 0.20,  # Nominal final passenger-demand growth.
+    "PASSENGER_DEMAND_GROWTH_Y40": 0.30,  # Nominal final passenger-demand growth.
     "PT_ASC_SHIFT": 0.0,  # Additive preference shift for both PT access modes (utility units, not percent).
     "PT_ASC_SHIFT_Y40": 0.10,  # Nominal final PT preference shift (utility units).
     "BIKE_ASC_SHIFT": 0.0,  # Additive preference shift for standalone cycling (utility units).
@@ -106,22 +106,22 @@ NOMINAL_PARAMS = {
     # Health rates apply to standalone cycling/walking person-km, including e-bikes.
     # The PT rate applies once per person-trip, including supplementary PT passengers.
     # Positive rates reduce societal costs; omitted rates default to zero.
-    # "BENEFIT_HEALTH_BIKE_PER_KM": 1.0,  # Cycling health benefit (CHF/person-km).
-    # "BENEFIT_HEALTH_WALK_PER_KM": 1.0,  # Walking health benefit (CHF/person-km).
-    # "BENEFIT_SOCIOECONOMIC_PT_PER_TRIP": 1.0,  # Additional PT benefit (CHF/person-trip).
+    "BENEFIT_HEALTH_BIKE_PER_KM": 1.0,  # Cycling health benefit (CHF/person-km).
+    "BENEFIT_HEALTH_WALK_PER_KM": 1.0,  # Walking health benefit (CHF/person-km).
+    "BENEFIT_SOCIOECONOMIC_PT_PER_TRIP": 1.0,  # Additional PT benefit (CHF/person-trip).
     # -------------------------------------------------------------------------
     # Physical CO2 emissions and their common monetary value
     # -------------------------------------------------------------------------
     "CAR_CO2_KG_PER_VEHICLE_KM": 0.139,  # Car emissions (kg CO2/vehicle-km).
-    "CAR_CO2_KG_PER_VEHICLE_KM_Y40": 0.050,  # Nominal final car emissions (kg CO2/vehicle-km).
+    "CAR_CO2_KG_PER_VEHICLE_KM_Y40": 0.030,  # Nominal final car emissions (kg CO2/vehicle-km).
     "RAIL_ENERGY_WH_PER_GROSS_TONNE_KM": 30.0,  # Rail electricity consumption (Wh/gross-tonne-km).
     "RAIL_ELECTRICITY_CO2_G_PER_KWH": 19.58,  # Rail electricity emissions (g CO2/kWh).
     # Both road and rail emissions use this carbon value. Its reference-year
     # value is in constant 2019 CHF; annual real growth is compounded from the
     # reference year to APPRAISAL_START_YEAR + the zero-based appraisal year.
-    "CO2_VALUE_CHF_PER_TONNE": 123.2,  # Reference-year CO2 value (constant 2019 CHF/tonne CO2).
-    "CO2_REFERENCE_YEAR": 2015,  # Calendar year to which the reference CO2 value applies.
-    "CO2_VALUE_ANNUAL_GROWTH": 0.03,  # Real annual CO2-value growth (fraction/year); 0.03 means 3% compounded.
+    "CO2_VALUE_CHF_PER_TONNE": 200,  # Reference-year CO2 value (constant 2019 CHF/tonne CO2).
+    "CO2_REFERENCE_YEAR": 2021,  # Calendar year to which the reference CO2 value applies.
+    "CO2_VALUE_ANNUAL_GROWTH": 0.0,  # Real annual CO2-value growth (fraction/year); 0.03 means 3% compounded.
     # -------------------------------------------------------------------------
     # Other NIBA external costs (road and passenger rail)
     # -------------------------------------------------------------------------
@@ -139,17 +139,17 @@ NOMINAL_PARAMS = {
     # Shared operation, investment multipliers and flexibility options
     # -------------------------------------------------------------------------
     # Package-specific CAPEX is defined in stages.py, alongside each intervention.
-    "OPEX_RATE": 0.02,  # Annual infrastructure operating/maintenance cost as a fraction of base construction cost.
+    "OPEX_RATE": 0.01,  # Annual infrastructure operating/maintenance cost as a fraction of base construction cost.
     "OPEX_MULTIPLIER": 1.0,  # Multiplier on annual infrastructure operating/maintenance costs.
-    "CAPEX_MULTIPLIER": 1.0,  # Multiplier on construction costs and upfront option premiums.
+    "CAPEX_MULTIPLIER": 1.2,  # Multiplier on construction costs and upfront option premiums.
     # Flexibility Premium (for pre-engineering or reservation)
-    "C_FLEX": 50_000_000,  # Upfront CHF per adaptive package; two options are paid at time zero even if unused.
+    "C_FLEX": 400_000,  # Upfront CHF per adaptive package; two options are paid at time zero even if unused.
     # -------------------------------------------------------------------------
     # Performance requirements and strategic mode-share indicators
     # -------------------------------------------------------------------------
     "MAX_AVG_TT": 15.0,  # Acceptability ceiling for peak car/PT in-vehicle time plus car delay (min/trip).
     "PT_SHARE_TARGET": 0.35,  # Teaching minimum for PT share of strategic passenger-km; baseline is about 31.9%.
-    "MIN_STRATEGIC_PKM_DISTANCE": 5.0,  # Minimum OD distance for strategic mode-share indicators (km); not an appraisal cutoff.
+    "MIN_STRATEGIC_PKM_DISTANCE": 3.0,  # Minimum OD distance for strategic mode-share indicators (km); not an appraisal cutoff.
     # Internal shared keys for appraisal and uncertainties; edit values in stages.py.
     **package_parameter_defaults(),
 }
@@ -345,7 +345,7 @@ SECTION_DEFAULTS = {  # Generic fallback settings; configure the project's SECTI
 }
 SECTION = {  # Active project section and endpoints used for its travel-time reference.
     **SECTION_DEFAULTS,
-    "active": True,  # Include this count and its effects in model/appraisal outputs.
+    "active": False,  # Include this count and its effects in model/appraisal outputs.
     "kind": "pt_approach",  # PT station approach, cycling route or individual PT stop.
     "station": "Winterthur",  # Station whose approach is counted.
     "towards": "Effretikon",  # Select the side facing this station, including express services.
@@ -382,7 +382,7 @@ EXTERNAL_FLOW_DEFAULTS = {  # Generic fallback; configure the project's EXTERNAL
 }
 EXTERNAL_FLOW = {  # One cohort shared by baseline and projects, added after mode choice.
     **EXTERNAL_FLOW_DEFAULTS,
-    "enabled": True,  # Include this cohort's time costs and PT comfort loading.
+    "enabled": False,  # Include this cohort's time costs and PT comfort loading.
     "mode": "PT",  # Existing PT passengers; must match SECTION.mode.
     # One-time nominal Stage-0 calibration (25% e-bikes; 2% road-gap target):
     # 120,000 target - 66,891.950467 modeled passengers/day, both directions.
