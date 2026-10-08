@@ -144,63 +144,72 @@ import itertools
 from math import isfinite
 
 # =============================================================================
-# 1. PACKAGES: RAILWAY IMPROVEMENTS, MOBILITY HUBS AND APPRAISAL
+# 1. PACKAGES: LIMMATTAL BIKE HIGHWAY (VELOSCHNELLROUTE) AND APPRAISAL
 # =============================================================================
+# Limmattal bike highway, Zürich-Altstetten (city border) – Dietikon (cantonal
+# border), about 8.5 km long and 4.8 m wide, following the regional Richtplan
+# Limmattal (Kanton Zürich, 2017). Source for speeds, distances and costs:
+# docs/IP-HS2026-Report-Cycling.pdf, Sections 2.1 and 2.4.
+#
+# The route is split into two independently buildable stretches at the golf park
+# in Unterengstringen, the same split the cantonal cost estimate uses:
+#   - "stations" key -> Package 1: EAST stretch, city border Altstetten – golf park (5.0 km)
+#   - "tunnel" key   -> Package 2: WEST stretch, golf park – cantonal border Dietikon (3.0 km
+#                       plus the two Limmat bridges)
+# The internal keys "stations"/"tunnel" are required by the model and adaptive_planning.py;
+# only the content and "name" are project-specific.
+#
+# Effect derivation (bike_highways rescale the bicycle time and distance skims):
+#   - Baseline bike speed in mixed traffic: 13 km/h (Kanton Zürich, 2017); the
+#     model's Altstetten–Dietikon skim gives 8.0 km in 37.0 min = 13.0 km/h.
+#   - Bike highway speed: 16 km/h (cantonal CBA lists 20 km/h, reduced for the
+#     remaining obstacles) -> speed_increase_pct = (16 / 13 - 1) * 100 = 23.1.
+#   - More direct routing: distance_reduction_pct = 5.0.
+#   - Time factor on an improved OD pair = 0.95 / 1.231 = 0.772 (-22.8 %).
+#   - Through trips Altstetten <-> Dietikon use each stretch for about half their
+#     length: time factor 0.5 + 0.5 * 0.772 = 0.886, encoded per package as
+#     distance_reduction_pct 2.5 and speed_increase_pct 10.1 (0.975 / 1.101 = 0.886).
+#
+# Appraisal derivation (2016 cantonal estimate, indexed with BFS construction
+# price index +19.6 % to 2025; ASTRA (2010) unit costs indexed +17.9 %):
+#   - East route: CHF 12.7 M (5 km cantonal estimate) * 1.196       = CHF 15.19 M
+#   - West route: 3 km * 2'540 CHF/m * 1.196 = 9.11 M; bridges
+#     CHF 2.1 M * 1.196 = 2.51 M                                      = CHF 11.62 M
+#   - Major underpass: (20 m * 15'000 + 2 * 90'000) * 0.95 * 1.179   = CHF 0.538 M each
+#   - Land acquisition: 10 % of the indexed route cost
+# CAPEX below includes route, underpasses and land; parameters.CAPEX_MULTIPLIER
+# is applied on top.
 PACKAGES = {
-    # --- Station package ---
-    # ⚠️ STUDENT INSTRUCTION:
-    # The station and tunnel packages are SBB MehrSpur-specific examples.
-    # For your own project, replace these blocks completely with your own interventions.
-    # For example, use the "bike_highways" key (see Cheat Sheet above) to model a new cycle path.
-
-    # SBB MehrSpur station scope:
-
-    #       A3 Dietlikon: 4-track expansion & grade-separated flyover (Entflechtung),
-    #       eliminating cross-track bottlenecks towards the airport and Winterthur.
-
-    #       A4 Bassersdorf: Station modernization, portal approach tracks, and multimodal
-    #       hub integration (Velostation & P+R).
-
-    #       A5 Wallisellen: Grade-separated junction towards Zurich HB/Airport,
-    #       barrier-free platform access, and improved bus feeder connectivity.
-
-    # Transport & Economic Impact:
-    #       Relieves surface bottlenecks before tunnel completion, stabilizing network timetables.
-    #       Reduces station access/egress and physical transfer walking.
-    #       Shortens service headway and raises the section comfort threshold.
-
-
+    # --- Package 1: East stretch, Zürich-Altstetten – Schlieren / golf park Unterengstringen ---
+    # Bike highway (5.0 km, 4.8 m) with two of the three grade-separated underpasses
+    # at the cantonal main roads (assumed allocation; check against report Figure 3).
     "stations": {
-        "name": "Stage 1 – Local Stations & Access Package",
+        "name": "Stage 1 – East stretch Altstetten–Schlieren",
 
-        # Railway improvements
-        # Section minutes follow parameters.SECTION route coverage, including
-        # through travelers. Shorter headways reduce initial and transfer waiting
-        # between different CORRIDOR_MUNICIPALITIES, in both directions.
-        "railway_expansions": [
+        "bike_highways": [
             {
-                "section_time_saving_min": 1.0,  # In-vehicle minutes saved relative to baseline.
-                "headway_reduction_min": 1.0,  # Minutes removed from the baseline service interval.
-                "capacity_increase": 0.10,  # Fraction of baseline peak-hour comfort capacity (+10%).
-            },
-        ],
-
-        # Hub & Node Interventions
-        "mobility_hubs": [
-            {
-                "name": "Station Upgrades (Dietlikon, Bassersdorf, Wallisellen)",
-                "zones": [
-                    {"municipality_name": "Dietlikon"},
-                    {"municipality_name": "Bassersdorf"},
-                    {"municipality_name": "Wallisellen"}
+                "name": "East stretch: trips within the stretch",
+                "area_pairs": [
+                    {"origin": {"city_quartier": "Altstetten"}, "destination": {"municipality_name": "Schlieren"}},
+                    {"origin": {"city_quartier": "Altstetten"}, "destination": {"municipality_name": "Unterengstringen"}},
                 ],
+                "both_directions": True,
                 "effects": {
-                    "access_time_reduction_pct": 25.0,  # Improved pedestrian ramps & bus loop access
-                    "transfer_time_reduction_pct": 15.0, # Shorter platform transfer paths
-                    # Frequency savings belong to the railway package only.
-                    "egress_time_reduction_pct": 20.0,
-                }
-            }
+                    "distance_reduction_pct": 5.0,  # More direct routing (report Table 3).
+                    "speed_increase_pct": 23.1,  # 13 -> 16 km/h.
+                },
+            },
+            {
+                "name": "East stretch: share of through trips to Dietikon",
+                "area_pairs": [
+                    {"origin": {"city_quartier": "Altstetten"}, "destination": {"municipality_name": "Dietikon"}},
+                ],
+                "both_directions": True,
+                "effects": {
+                    "distance_reduction_pct": 2.5,  # Half the route is improved.
+                    "speed_increase_pct": 10.1,  # Time factor 0.886 on the whole trip.
+                },
+            },
         ],
 
         # Appraisal considerations
@@ -208,73 +217,58 @@ PACKAGES = {
         # Only capital_share retains residual value; the rest has none.
         # At horizon H, opening in year y means H - y + 1 operated years.
         # The remaining eligible value decreases linearly to zero over lifetime_years.
-        # Set capital_share to 0 to disable residual valuation (lifetime may then be None).
         # No asset replacement is assumed.
         "appraisal": {
-            "capital_cost_chf": 925_000_000,  # Station-package CAPEX (CHF).
-            "lifetime_years": 80,  # Service life of the share valued below (years).
-            "capital_share": 0.60,  # Fraction of actual capital paid eligible for residual value.
-            # Total construction emissions (tonnes CO2e), spread over construction years.
-            # Pre-horizon emissions are charged at time zero; omitted entries mean zero.
-            # "construction_co2_tonnes": 0.0,  # Add a project-specific total when available.
+            # 15.19 M route + 2 * 0.538 M underpasses + 1.52 M land.
+            "capital_cost_chf": 17_786_000,
+            "lifetime_years": 50,  # ASSUMPTION: service life of substructure/underpasses; cite a source.
+            "capital_share": 0.50,  # ASSUMPTION: share of CAPEX in long-lived structures (rest: surface, land).
+            # ESTIMATE, to be replaced by a KBOB-based quantity calculation:
+            # ~65 t CO2e/km path (asphalt + base layer) * 5.0 km + ~150 t per underpass * 2.
+            "construction_co2_tonnes": 625.0,
         },
     },
 
-    # --- Tunnel package ---
-    # Core Tunnel & Winterthur Hub Package (A0 Gesamt, A1 Winterthur, A2 Tunnel)
-    #
-    # ⚠️ STUDENT INSTRUCTION:
-    # Replace this package with your own long-term or secondary interventions.
-    #
-    # SBB MehrSpur tunnel scope (opening dates are configured in adaptive_planning.py):
-    #
-    #       A0 Gesamtprojekt: System-wide technical integration,
-    #       ETCS Level 2 signaling, traction power supply, and overall project management.
-    #
-    #       A1 Winterthur: Major track layout reconfiguration at Winterthur HB,
-    #       adding grade-separated flyovers, extended platforms, and conflict-free routing.
-    #
-    #       A2 Tunnel: 8.3 km twin-tube Brüttenertunnel cutting directly between
-    #       Dietlikon/Bassersdorf and Winterthur, bypassing the curvy Effretikon bottleneck.
-    #
-    # Transport & Economic Impact:
-    #       Saves 4 minutes on covered routes and raises the comfort threshold by 15%.
-    #       Provides 17-minute service and the Winterthur hub improvements;
-    #       both packages together provide 15-minute service.
+    # --- Package 2: West stretch, golf park Unterengstringen – Dietikon (cantonal border) ---
+    # Bike highway (3.0 km, 4.8 m), the two Limmat bridges and the remaining
+    # underpass at a cantonal main road.
     "tunnel": {
-        "name": "Stage 2 - Tunnel & Winterthur Hub only",
+        "name": "Stage 2 – West stretch Schlieren–Dietikon",
 
-        # Railway improvements: the same section and service OD scope as above.
-        "railway_expansions": [
+        "bike_highways": [
             {
-                "section_time_saving_min": 4.0,  # In-vehicle minutes saved relative to baseline.
-                "headway_reduction_min": 3.0,  # Minutes removed from the baseline service interval.
-                "capacity_increase": 0.15,  # Fraction of baseline peak-hour comfort capacity (+15%).
-            },
-        ],
-
-        # Hub & Node Interventions
-        "mobility_hubs": [
-            {
-                "name": "Winterthur Multimodal Hub (A1)",
-                "zones": [
-                    {"municipality_name": "Winterthur"}
+                "name": "West stretch: trips within the stretch",
+                "area_pairs": [
+                    {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Dietikon"}},
+                    {"origin": {"municipality_name": "Unterengstringen"}, "destination": {"municipality_name": "Dietikon"}},
                 ],
+                "both_directions": True,
                 "effects": {
-                    "access_time_reduction_pct": 25.0,
-                    "transfer_time_reduction_pct": 15.0, # Optimized platform connections at Winterthur HB
-                    # Frequency savings belong to the railway package only.
-                    "egress_time_reduction_pct": 20.0,
-                }
-            }
+                    "distance_reduction_pct": 5.0,
+                    "speed_increase_pct": 23.1,
+                },
+            },
+            {
+                "name": "West stretch: share of through trips to Altstetten",
+                "area_pairs": [
+                    {"origin": {"city_quartier": "Altstetten"}, "destination": {"municipality_name": "Dietikon"}},
+                ],
+                "both_directions": True,
+                "effects": {
+                    "distance_reduction_pct": 2.5,
+                    "speed_increase_pct": 10.1,
+                },
+            },
         ],
 
         # Appraisal considerations: the same valuation and construction conventions.
         "appraisal": {
-            "capital_cost_chf": 2_302_600_000,  # Tunnel/Winterthur package CAPEX (CHF).
-            "lifetime_years": 80,  # Service life of the share valued below (years).
-            "capital_share": 0.60,  # Fraction of actual capital paid eligible for residual value.
-            "construction_co2_tonnes": 300_000.0,  # Total construction emissions (tonnes CO2e).
+            # 11.62 M route and bridges + 1 * 0.538 M underpass + 1.16 M land.
+            "capital_cost_chf": 13_320_000,
+            "lifetime_years": 50,  # ASSUMPTION, as Package 1.
+            "capital_share": 0.50,  # ASSUMPTION, as Package 1.
+            # ESTIMATE: ~65 t/km * 3.0 km + 150 t underpass + ~400 t per Limmat bridge * 2.
+            "construction_co2_tonnes": 1_145.0,
         },
     },
 }
@@ -282,27 +276,21 @@ PACKAGES = {
 # =============================================================================
 # 2. COMBINED-ONLY BENEFITS
 # =============================================================================
-# Extra effects available only when BOTH packages are operating. These minutes
-# are added to the package values: 6 minutes of section saving and 5 minutes
-# of headway reduction in total (20-minute baseline -> 15-minute service).
+# Continuity bonus when the whole route is open: through trips Altstetten <-> Dietikon
+# ride one continuous bike highway without changing infrastructure at the golf park.
+# The two half-route effects multiply to 0.886 * 0.886 = 0.785; the full-route
+# factor is 0.772, so the bonus adds the missing 1.7 % (0.785 / 1.017 = 0.772).
 COMBINED_EFFECTS = {
-    "railway_expansions": [
+    "bike_highways": [
         {
-            "section_time_saving_min": 1.0,
-            "headway_reduction_min": 1.0,
-            "capacity_increase": 0.05,  # Extra fraction of baseline capacity, only when both packages operate.
+            "name": "Continuity bonus: full Altstetten–Dietikon route",
+            "area_pairs": [
+                {"origin": {"city_quartier": "Altstetten"}, "destination": {"municipality_name": "Dietikon"}},
+            ],
+            "both_directions": True,
+            "effects": {"speed_increase_pct": 1.7},
         },
     ],
-    # Capacity increases are additive: +10% stations +15% tunnel +5% combined = +30% of baseline.
-    # Additional physical interventions can use the same dictionaries as above:
-    # "mobility_hubs": [{
-    #     "name": "Shared interchange improvement",
-    #     "zones": [{"municipality_name": "Dietlikon"}],
-    #     "effects": {"transfer_time_reduction_pct": 10.0},
-    # }],
-    # Add OD-specific PT effects as further railway_expansions entries.
-    # Other supported keys: bike_highways, road_capacity.
-    # Specify frequency changes above, to apply their waiting benefit only once.
 }
 
 
@@ -310,7 +298,7 @@ COMBINED_EFFECTS = {
 # INTERNAL ASSEMBLY AND APPRAISAL HELPERS (normally leave unchanged)
 # =============================================================================
 STATE_IDS = (0, 1, 2, 3)
-STATE_LABELS = {0: "Baseline", 1: "Stations only", 2: "Tunnel only", 3: "Stations + tunnel"}
+STATE_LABELS = {0: "Baseline", 1: "East stretch only", 2: "West stretch only", 3: "Full route"}
 STATE_COLORS = {0: "#9E9E9E", 1: "#FFC107", 2: "#2196F3", 3: "#4CAF50"}
 _STATE_COMPONENTS = {0: (False, False), 1: (True, False), 2: (False, True), 3: (True, True)}
 
@@ -513,7 +501,7 @@ def _assemble_stages(packages: dict, params: dict, service_od_pairs: list[dict],
         }
         stages[stage] = specification
     combined = deepcopy(stages[2])
-    combined["name"] = "Both stages - Tunnel and Hubs"
+    combined["name"] = "Both stages – Full route Altstetten–Dietikon"
     combined["section_time_saving_min"] = minute_effect(3, "section_time_saving_min")
     for key in ("railway_expansions", "mobility_hubs", "bike_highways", "road_capacity"):
         if key in stages[1] or key in stages[2] or key in combined_effects:
