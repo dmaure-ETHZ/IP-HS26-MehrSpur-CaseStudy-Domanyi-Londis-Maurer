@@ -149,7 +149,9 @@ NOMINAL_PARAMS = {
     # -------------------------------------------------------------------------
     "MAX_AVG_TT": 15.0,  # Acceptability ceiling for peak car/PT in-vehicle time plus car delay (min/trip).
     "PT_SHARE_TARGET": 0.35,  # Teaching minimum for PT share of strategic passenger-km; baseline is about 31.9%.
-    "MIN_STRATEGIC_PKM_DISTANCE": 3.0,  # Minimum OD distance for strategic mode-share indicators (km); not an appraisal cutoff.
+    # Limmattal: 2 km instead of the MehrSpur 5 km, because the corridor is only ~10 km long and
+    # cycling is strongest at 1-5 km (see NB02 section 1.5); a 5 km filter would drop most bike trips.
+    "MIN_STRATEGIC_PKM_DISTANCE": 2.0,  # Minimum OD distance for strategic mode-share indicators (km); not an appraisal cutoff.
     # Internal shared keys for appraisal and uncertainties; edit values in stages.py.
     **package_parameter_defaults(),
 }
@@ -174,6 +176,21 @@ CORRIDOR_MUNICIPALITIES = (
         muni for munis in CORRIDOR_REGIONS.values() for muni in munis
     ]
 )
+
+# Municipalities shown in the municipality-level OD explorers (NB02 section 1.4).
+# Display only: the corridor perimeter is defined by PROJECT_ZONES. "Zürich" is the
+# whole city incl. Altstetten, as the main commuter destination of the Limmattal.
+OD_EXPLORER_MUNICIPALITIES = [
+    "Dietikon",
+    "Schlieren",
+    "Urdorf",
+    "Unterengstringen",
+    "Oberengstringen",
+    "Weiningen (ZH)",
+    "Geroldswil",
+    "Oetwil an der Limmat",
+    "Zürich",
+]
 
 # Optional project-relative or absolute detailed road-network cache path.
 # Notebook 02 prepares a missing cache; later notebooks require it to exist.
