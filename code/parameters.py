@@ -106,8 +106,8 @@ NOMINAL_PARAMS = {
     # Health rates apply to standalone cycling/walking person-km, including e-bikes.
     # The PT rate applies once per person-trip, including supplementary PT passengers.
     # Positive rates reduce societal costs; omitted rates default to zero.
-    "BENEFIT_HEALTH_BIKE_PER_KM": 1.306,  # Cycling health benefit (CHF/person-km); Kanton Zürich (2017), KNA Veloschnellroute Limmattal.
-    "BENEFIT_HEALTH_WALK_PER_KM": 0.0,  # Walking health benefit (CHF/person-km); not valued (no project-specific source).
+    "BENEFIT_HEALTH_BIKE_PER_KM": 0.29,  # External health benefit net of external accident costs (CHF/pkm); ARE 2021, pkm-weighted over bike, pedelec and fast e-bike.
+    "BENEFIT_HEALTH_WALK_PER_KM": 0.96,  # External health benefit of walking net of external accident costs (CHF/pkm); ARE 2021.
     "BENEFIT_SOCIOECONOMIC_PT_PER_TRIP": 0.0,  # Additional PT benefit (CHF/person-trip); not valued for the bike project.
     # -------------------------------------------------------------------------
     # Physical CO2 emissions and their common monetary value
@@ -139,11 +139,11 @@ NOMINAL_PARAMS = {
     # Shared operation, investment multipliers and flexibility options
     # -------------------------------------------------------------------------
     # Package-specific CAPEX is defined in stages.py, alongside each intervention.
-    "OPEX_RATE": 0.005,  # Annual O&M cost as a fraction of base construction cost; Kanton Zürich (2017): 3.84 CHF/m2/a * 40,800 m2 = ~0.5 % of CAPEX.
+    "OPEX_RATE": 0.01,  # Annual O&M as a fraction of base CAPEX; Kanton Zürich (2017) 3.84 CHF/m2/a (~0.6 %) plus periodic resurfacing.
     "OPEX_MULTIPLIER": 1.0,  # Multiplier on annual infrastructure operating/maintenance costs.
     "CAPEX_MULTIPLIER": 1.2,  # Multiplier on construction costs and upfront option premiums.
     # Flexibility Premium (for pre-engineering or reservation)
-    "C_FLEX": 400_000,  # Upfront CHF per adaptive package; two options are paid at time zero even if unused.
+    "C_FLEX": 2_000_000,  # Upfront CHF per adaptive package (paid for both options at time zero); ~15 % of the west-stretch CAPEX (13.32 M) for preliminary design and land reservation.
     # -------------------------------------------------------------------------
     # Performance requirements and strategic mode-share indicators
     # -------------------------------------------------------------------------
