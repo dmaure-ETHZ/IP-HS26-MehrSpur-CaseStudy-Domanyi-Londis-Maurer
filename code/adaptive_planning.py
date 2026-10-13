@@ -117,11 +117,11 @@ PLAN_DEFINITIONS = {
         "initial_packages": [], "stations": None, "tunnel": None,
     },
     "static1": {
-        "name": "Static 1",
+        "name": "Static 1 – East section",
         "initial_packages": ["stations"], "stations": None, "tunnel": None,
     },
     "static2": {
-        "name": "Static 2",
+        "name": "Static 2 – Complete connection",
         "initial_packages": ["stations", "tunnel"], "stations": None, "tunnel": None,
     },
     "staged1": {
@@ -304,7 +304,8 @@ def construction_emissions_in_year(package: int, year: int, opening_year, lead_t
 def _describe_plan(spec: dict) -> str:
     parts = []
     if spec["initial_stage"]:
-        parts.append(f"{stages.STATE_LABELS[spec['initial_stage']]} from Year 1")
+        static_labels = {1: "East section Altstetten–Schlieren", 2: "West section Schlieren–Dietikon", 3: "Complete connection Altstetten–Dietikon"}
+        parts.append(f"{static_labels[spec['initial_stage']]} from Year 1")
     for key, package in (("to1", "Stations"), ("to2", "Tunnel")):
         transition = spec[key]
         if transition is None:
