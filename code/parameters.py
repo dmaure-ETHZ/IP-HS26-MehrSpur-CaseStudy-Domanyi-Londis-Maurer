@@ -52,7 +52,7 @@ NOMINAL_PARAMS = {
     "PT_ASC_SHIFT": 0.0,  # Additive preference shift for both PT access modes (utility units, not percent).
     "PT_ASC_SHIFT_Y40": 0.10,  # Nominal final PT preference shift (utility units).
     "BIKE_ASC_SHIFT": 0.0,  # Additive preference shift for standalone cycling (utility units).
-    # "BIKE_ASC_SHIFT_Y40": 0.20,  # Optional nominal final cycling preference shift (utility units).
+    "BIKE_ASC_SHIFT_Y40": 0.20,  # Optional nominal final cycling preference shift (utility units).
     "EBIKE_SHARE": 0.25,  # Baseline e-bike fraction of cycling and PT bicycle access/egress trips (0 to 1).
     "EBIKE_SHARE_Y40": 0.50,  # Nominal final e-bike share.
     "EBIKE_SPEED_MULTIPLIER": 1.5,  # E-bike speed divided by conventional-bike speed; 1.5 means 50% faster.
@@ -433,8 +433,8 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
         "use": "scenarios",
         "transient": True,
         "distribution": "triangular",
-        "minimum": -0.20,
-        "maximum": 0.50,
+        "minimum": -0.05,
+        "maximum": 0.60,
     },
     "PT_ASC_SHIFT": {  # Final additive PT preference shift; negative values reduce PT attractiveness.
         "category": "transport_modelling",
@@ -445,13 +445,13 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
         "maximum": 0.30,
     },
     # Uncomment together with BIKE_ASC_SHIFT_Y40 above to include cycling preferences.
-    # "BIKE_ASC_SHIFT": {
-    #     "category": "transport_modelling",
-    #     "use": "scenarios",
-    #     "transient": True,
-    #     "distribution": "triangular",
-    #     "minimum": -0.50,
-    #     "maximum": 1.00,
+    "BIKE_ASC_SHIFT": {
+         "category": "transport_modelling",
+         "use": "scenarios",
+         "transient": True,
+         "distribution": "triangular",
+         "minimum": -0.50,
+         "maximum": 1.00,
     # },
     "EBIKE_SHARE": {  # Final e-bike fraction; starts from the known baseline share.
         "category": "transport_modelling",
@@ -498,10 +498,10 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
     "CAR_CO2_KG_PER_VEHICLE_KM": {  # Final car emissions (kg CO2/vehicle-km); sigma is relative to its nominal endpoint.
         "category": "post_modelling",
         "use": "scenarios",
-        "transient": True,
-        "distribution": "normal",
-        "sigma": 0.15,
-        "relative_sigma": True,
+        "transient": False,
+        "distribution": "triangular",
+        "minimum": 0.01,
+        "maximum": 0.08,
     },
     "NUMBER_OF_PEAK_HOURS": {  # Sensitivity: equally likely 3, 4 or 5 peak hours, constant over time.
         "category": "post_modelling",
@@ -525,8 +525,8 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
         "use": "scenarios",
         "transient": False,
         "distribution": "triangular",
-        "minimum": 0.80,
-        "maximum": 1.20,
+        "minimum": 1,
+        "maximum": 1.80,
     },
     "ACCIDENT_COST_MULTIPLIER": {  # Final road/rail accident-cost factor.
         "category": "post_modelling",
