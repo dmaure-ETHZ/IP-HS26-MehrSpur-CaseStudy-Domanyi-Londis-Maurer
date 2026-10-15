@@ -444,15 +444,14 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
         "minimum": -0.10,
         "maximum": 0.30,
     },
-    # Uncomment together with BIKE_ASC_SHIFT_Y40 above to include cycling preferences.
-    "BIKE_ASC_SHIFT": {
-         "category": "transport_modelling",
-         "use": "scenarios",
-         "transient": True,
-         "distribution": "triangular",
-         "minimum": -0.50,
-         "maximum": 1.00,
-    # },
+    "BIKE_ASC_SHIFT": {  # Final additive cycling preference shift (utility units); exogenous cycling-culture change.
+        "category": "transport_modelling",
+        "use": "scenarios",
+        "transient": True,
+        "distribution": "triangular",
+        "minimum": -0.50,
+        "maximum": 1.00,
+    },
     "EBIKE_SHARE": {  # Final e-bike fraction; starts from the known baseline share.
         "category": "transport_modelling",
         "use": "scenarios",
@@ -495,10 +494,10 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
         "minimum": 140.0,
         "maximum": 860.0,
     },
-    "CAR_CO2_KG_PER_VEHICLE_KM": {  # Final car emissions (kg CO2/vehicle-km); sigma is relative to its nominal endpoint.
+    "CAR_CO2_KG_PER_VEHICLE_KM": {  # Final car emissions (kg CO2/vehicle-km); wide range for the uncertain EV transition.
         "category": "post_modelling",
         "use": "scenarios",
-        "transient": False,
+        "transient": True,
         "distribution": "triangular",
         "minimum": 0.01,
         "maximum": 0.08,
