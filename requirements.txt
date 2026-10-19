@@ -16,7 +16,7 @@ seaborn
 plotly
 lonboard
 tqdm==4.67.1
-ema-workbench
+ema-workbench==2.5.2
 SALib
 ipywidgets
 ipympl

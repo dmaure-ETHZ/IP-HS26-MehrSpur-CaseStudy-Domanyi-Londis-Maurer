@@ -178,6 +178,11 @@ def equation_identity(roots, source_texts=None):
                     and isinstance(node.body[0].value, ast.Constant)
                     and isinstance(node.body[0].value.value, str)):
                 node.body = node.body[1:]
+            # Python < 3.12 lacks the empty type_params field; add it so the
+            # hashes match artifacts built under Python 3.12.
+            if not hasattr(node, "type_params"):
+                node.type_params = []
+                node._fields = (*node._fields, "type_params")
             return node
 
         visit_AsyncFunctionDef = visit_FunctionDef
