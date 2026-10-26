@@ -1,0 +1,107 @@
+% Notebook 03 companion appendix. Place after the report's existing \appendix command.
+% Paths assume the repository figures/ folder is copied to the LaTeX project.
+\section{Static-plan comparisons under uncertainty}
+\label{app:nb03-plan-evidence}
+
+All plans use the same 2,000 sampled futures. Percentile ranges describe the middle 80\% of sampled outcomes, not confidence intervals. Operating emissions exclude construction emissions.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Year-40 absolute outcomes by plan.}
+\label{tab:nb03-percentiles}
+\begin{tabular}{llrrr}
+\toprule
+Plan & Indicator & p10 & Median & p90 \\
+\midrule
+baseline & Cycling share [\%] & 17.12 & 22.01 & 28.42 \\
+static1 & Cycling share [\%] & 17.21 & 22.11 & 28.52 \\
+static2 & Cycling share [\%] & 17.30 & 22.21 & 28.64 \\
+baseline & Road delay [person-hours/year] & 2,376,445.22 & 3,046,641.13 & 3,754,382.18 \\
+static1 & Road delay [person-hours/year] & 2,370,151.38 & 3,040,351.67 & 3,745,910.20 \\
+static2 & Road delay [person-hours/year] & 2,363,216.16 & 3,036,243.79 & 3,744,046.82 \\
+baseline & Operating CO$_2$ [t/year] & 15,025.84 & 24,635.69 & 38,573.39 \\
+static1 & Operating CO$_2$ [t/year] & 15,032.09 & 24,660.94 & 38,589.45 \\
+static2 & Operating CO$_2$ [t/year] & 15,026.03 & 24,620.42 & 38,571.91 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/03_uncertainty_modeling/03_plan_distributions.png}
+\caption{Year-1 and Year-40 outcome distributions; each indicator uses common vertical limits across years.}
+\label{fig:nb03-distributions}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/03_uncertainty_modeling/03_paired_system_changes.png}
+\caption{Paired Year-40 changes relative to the same-future baseline. Modal-share changes are percentage points.}
+\label{fig:nb03-paired}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/03_uncertainty_modeling/03_paired_project_changes.png}
+\caption{Paired changes in car and walking trip shares and annual passenger-car vehicle-kilometres.}
+\label{fig:nb03-project-paired}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/03_uncertainty_modeling/03_feature_scores_by_plan.png}
+\caption{Predictive feature scores for Year-40 cycling trip share. Scores do not quantify causal effects or variance contributions.}
+\label{fig:nb03-feature-scores}
+\end{figure}
+\section{Target vulnerability and complete PRIM bounds}
+\label{app:nb03-prim-evidence}
+
+Failure means a Year-40 cycling trip share below the 22\% model-based benchmark. PRIM uses all five transport uncertainties, with cycling preference and e-bike share displayed. Qualifying boxes require density of at least 75\% and at least one restricted input. All listed boxes were discovered separately for their respective plan.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Target failure and selected PRIM boxes. Each plan has 2,000 scenarios; density, coverage and mass are percentages.}
+\label{tab:nb03-prim-summary}
+\begin{tabular}{lrrrrr}
+\toprule
+Plan & Failures & Failure [\%] & Density [\%] & Coverage [\%] & Mass [\%] \\
+\midrule
+baseline & 998 & 49.90 & 100.00 & 62.63 & 31.25 \\
+static1 & 977 & 48.85 & 100.00 & 63.97 & 31.25 \\
+static2 & 953 & 47.65 & 100.00 & 58.97 & 28.10 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{table}[htbp]
+\centering\small
+\caption{Every restricted PRIM input. Endpoint values refer to Year 40. Unlisted inputs remain unrestricted within the sampled range. The PT-preference restriction of the baseline is hidden in the two-dimensional projection.}
+\label{tab:nb03-prim-bounds}
+\begin{tabular}{lllll}
+\toprule
+Plan & Input & Quantile bounds & Endpoint bounds & Unit \\
+\midrule
+baseline & PT preference & 0.1069--0.9995 & -0.008--0.294 & utility units \\
+baseline & Cycling preference & 0.0002--0.3866 & -0.484--0.137 & utility units \\
+baseline & E-bike share & 0.0003--0.9032 & 35.453--68.566 & \% \\
+static1 & PT preference & 0.1069--0.9995 & -0.008--0.294 & utility units \\
+static1 & Cycling preference & 0.0002--0.3866 & -0.484--0.137 & utility units \\
+static1 & E-bike share & 0.0003--0.9032 & 35.453--68.566 & \% \\
+static2 & Cycling preference & 0.0002--0.3115 & -0.484--0.072 & utility units \\
+static2 & E-bike share & 0.0003--0.9032 & 35.453--68.566 & \% \\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/03_uncertainty_modeling/03_prim_box_overlay.png}
+\caption{Baseline failure scenarios and the projected PRIM box. The full box also restricts PT preference.}
+\label{fig:nb03-baseline-prim}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/03_uncertainty_modeling/03_prim_static_plans.png}
+\caption{Plan-specific PRIM boxes for the East stretch and full route. All narrowed inputs for these boxes are displayed.}
+\label{fig:nb03-static-prim}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/03_uncertainty_modeling/03_prim_tradeoff.png}
+\caption{Baseline peeling trajectory. The selected diagnostic core prioritises density over coverage; step 4 provides a broader monitoring alternative.}
+\label{fig:nb03-peeling}
+\end{figure}

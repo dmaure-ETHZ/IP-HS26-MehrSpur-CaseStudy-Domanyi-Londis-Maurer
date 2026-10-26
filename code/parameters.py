@@ -374,7 +374,7 @@ SECTION = {  # Active project section and endpoints used for its travel-time ref
     "destination": {
         "municipality_name": "Winterthur"
     },  # Destination of that reference.
-    "crowding_enabled": True,  # Value extra PT discomfort using the section comfort threshold.
+    "crowding_enabled": False,  # No PT crowding appraisal for the cycling project.
 }
 
 # Alternative definitions (replace SECTION above; disable PT crowding for these).
@@ -405,7 +405,7 @@ EXTERNAL_FLOW = {  # One cohort shared by baseline and projects, added after mod
     # 120,000 target - 66,891.950467 modeled passengers/day, both directions.
     # Winterthur approach towards Effretikon; connectivity-refined road network.
     # Keep this cohort fixed across alternatives; only general demand growth applies.
-    "additional_trips_daily": 53_108.0495332632,  # Baseline supplementary person-trips/day, both directions.
+    "additional_trips_daily": 0.0,  # No supplementary external passengers for the cycling project.
 }
 
 
