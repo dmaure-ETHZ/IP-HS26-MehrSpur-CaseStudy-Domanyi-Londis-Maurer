@@ -70,23 +70,30 @@ SIGNPOSTS = {
     "bike_share_trips": {"label": "Bike share of trips", "unit": "trip share (0-1)"},
 }
 
+# Thresholds calibrated on the NB03 baseline scenarios (2,000 futures): peak-hour
+# bike trips start at ~13,100 in Year 1; Year 40 ranges 14,900-30,700 (5-95 %),
+# median 21,600. 17,000 (~+30 %) opens the East stretch in ~80 % of futures,
+# 20,000 (~+50 %) the West stretch in ~50 % (lead times 4/6 years), so both triggers stay selective.
 DEFAULT_TRIGGERS = {
     # Trigger 1: growing cycling demand -> package 1 (East stretch)
     "trigger1": {
         "signpost":        "bike_trips",
-        "threshold":       15_000,
+        "threshold":       17_000,
         "persistence":     2,       # Consecutive years above threshold
-        "lead_time":       6,       # Retained planning/construction assumption; validate for East stretch.
+        # ASSUMPTION: ~3 years planning and approval (cantonal road project, public
+        # display) + ~1 year construction; 5 km path along existing corridors, two underpasses.
+        "lead_time":       4,
     },
     # Trigger 2: higher cycling demand -> package 2 (West stretch).
     # Both packages remain independent; the lower East threshold does not
     # impose a mandatory order on commitments or openings.
     "trigger2": {
         "signpost":        "bike_trips",
-        "threshold":       18_000,
+        "threshold":       20_000,
         "persistence":     2,
-        # Retained planning/construction assumption; validate for West stretch.
-        "lead_time":       10,
+        # ASSUMPTION: ~4 years planning and approval (two Limmat bridges add water-body
+        # and flood-protection permits) + ~2 years construction.
+        "lead_time":       6,
     }
 }
 
@@ -108,7 +115,7 @@ DEFAULT_TRIGGERS = {
 # Fixed years must fall within 1..N_YEARS. Trigger decisions use the previous
 # year's observation; opening occurs in decision year + lead_time.
 # Construction emissions are spread across that lead time, before opening.
-# Fixed/initial packages use the matching DEFAULT_TRIGGERS lead time (6/10 years)
+# Fixed/initial packages use the matching DEFAULT_TRIGGERS lead time (4/6 years)
 # unless their fixed rule specifies lead_time. Pre-horizon emissions are booked
 # at time zero, the start of Year 1, using its carbon price.
 # Costs come from parameters.py; physical effects and asset lives from stages.py.
