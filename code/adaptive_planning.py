@@ -42,10 +42,12 @@ from additional import uncertainty as uc
 #   - Persistence: consecutive years the threshold must be exceeded before deciding
 #   - Lead time: construction/implementation duration from decision to opening
 #
-# MehrSpur monitors daily passenger-trips through parameters.SECTION, summed
-# across the configured directions. The count includes modeled passengers and
-# the optional supplementary cohort. It is distinct from all municipal-corridor
-# PT trips and from the comfort-capacity thresholds used to price crowding.
+# The Limmattal cycling case monitors total modeled bicycle trips in the
+# reporting area per peak hour, not route counts or counting-section passengers.
+# Nominal baseline demand is approximately 13,138 trips in Year 1 and 21,229
+# in Year 40. Rounded thresholds of 15,000 and 18,000 define exploratory
+# demand-responsive deployment assumptions, not measured route capacities.
+# They do not guarantee compliance with a minimum cycling-share benchmark.
 # Both rules use the previous year's observations and operate independently.
 # Either package can be built first, or both can be under construction together.
 
@@ -69,21 +71,21 @@ SIGNPOSTS = {
 }
 
 DEFAULT_TRIGGERS = {
-    # Trigger 1: Section demand -> package 1 (local stations and access)
+    # Trigger 1: growing cycling demand -> package 1 (East stretch)
     "trigger1": {
         "signpost":        "bike_trips",
-        "threshold":       125_000,
+        "threshold":       15_000,
         "persistence":     2,       # Consecutive years above threshold
-        "lead_time":       6,       # Years of planning and station civil works
+        "lead_time":       6,       # Retained planning/construction assumption; validate for East stretch.
     },
-    # Trigger 2: The same section count -> package 2 (Brüttenertunnel)
-    # An absolute daily count keeps the signpost comparable when stations add
-    # capacity. The action threshold is separate from comfort capacity.
+    # Trigger 2: higher cycling demand -> package 2 (West stretch).
+    # Both packages remain independent; the lower East threshold does not
+    # impose a mandatory order on commitments or openings.
     "trigger2": {
         "signpost":        "bike_trips",
-        "threshold":       122_000,
+        "threshold":       18_000,
         "persistence":     2,
-        # Years of tunnel planning and construction after the decision.
+        # Retained planning/construction assumption; validate for West stretch.
         "lead_time":       10,
     }
 }
