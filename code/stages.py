@@ -169,7 +169,13 @@ from math import isfinite
 #   - Through trips Altstetten <-> Dietikon use each stretch for about half their
 #     length: time factor 0.5 + 0.5 * 0.772 = 0.886, encoded per package as
 #     distance_reduction_pct 2.5 and speed_increase_pct 10.1 (0.975 / 1.101 = 0.886).
+#   - Trips to the Zürich quartiers beyond Altstetten (ZH_WEST_CITY) use the route only
+#     up to Altstetten (demand-weighted bike skim distances): Schlieren/Unterengstringen
+#     3.4-5.3 of 6.7-7.8 km (~50 %) -> time factor 0.886 as above; Dietikon 7.6 of
+#     10.5 km (72 %, 36 % per stretch) -> per package 1 - 0.36 * 0.228 = 0.918, encoded
+#     as distance_reduction_pct 1.8 and speed_increase_pct 7.0 (0.982 / 1.070 = 0.918).
 #
+
 # Appraisal derivation (2016 cantonal estimate, indexed with BFS construction
 # price index +19.6 % to 2025; ASTRA (2010) unit costs indexed +17.9 %):
 #   - East route: CHF 12.7 M (5 km cantonal estimate) * 1.196       = CHF 15.19 M
@@ -179,6 +185,12 @@ from math import isfinite
 #   - Land acquisition: 10 % of the indexed route cost
 # CAPEX below includes route, underpasses and land; parameters.CAPEX_MULTIPLIER
 # is applied on top.
+
+# External Zürich quartiers on the route extension Altstetten -> Kreis 5 -> HB (outside
+# the perimeter; selected by location and Limmattal demand, 2,032 trips/peak h).
+# One area pair per quartier: the stage map cannot draw list-valued selectors.
+ZH_WEST_CITY = ["Hard", "Escher Wyss", "Gewerbeschule", "Langstrasse", "City"]
+
 PACKAGES = {
     # --- Package 1: East stretch, Zürich-Altstetten – Schlieren / golf park Unterengstringen ---
     # Bike highway (5.0 km, 4.8 m) with two of the three grade-separated underpasses
@@ -208,6 +220,31 @@ PACKAGES = {
                 "effects": {
                     "distance_reduction_pct": 2.5,  # Half the route is improved.
                     "speed_increase_pct": 10.1,  # Time factor 0.886 on the whole trip.
+                },
+            },
+            {
+                "name": "East stretch: trips Schlieren/Unterengstringen to Zürich West/City",
+                "area_pairs": [
+                    {"origin": {"municipality_name": muni}, "destination": {"city_quartier": quartier}}
+                    for muni in ("Schlieren", "Unterengstringen")
+                    for quartier in ZH_WEST_CITY
+                ],
+                "both_directions": True,
+                "effects": {
+                    "distance_reduction_pct": 2.5,  # About half the trip is on the route.
+                    "speed_increase_pct": 10.1,  # Time factor 0.886.
+                },
+            },
+            {
+                "name": "East stretch: share of Dietikon trips to Zürich West/City",
+                "area_pairs": [
+                    {"origin": {"municipality_name": "Dietikon"}, "destination": {"city_quartier": quartier}}
+                    for quartier in ZH_WEST_CITY
+                ],
+                "both_directions": True,
+                "effects": {
+                    "distance_reduction_pct": 1.8,  # 36 % of the trip on this stretch.
+                    "speed_increase_pct": 7.0,  # Time factor 0.918.
                 },
             },
         ],
@@ -259,6 +296,18 @@ PACKAGES = {
                     "speed_increase_pct": 10.1,
                 },
             },
+            {
+                "name": "West stretch: share of Dietikon trips to Zürich West/City",
+                "area_pairs": [
+                    {"origin": {"municipality_name": "Dietikon"}, "destination": {"city_quartier": quartier}}
+                    for quartier in ZH_WEST_CITY
+                ],
+                "both_directions": True,
+                "effects": {
+                    "distance_reduction_pct": 1.8,
+                    "speed_increase_pct": 7.0,
+                },
+            },
         ],
 
         # Appraisal considerations: the same valuation and construction conventions.
@@ -289,6 +338,16 @@ COMBINED_EFFECTS = {
             ],
             "both_directions": True,
             "effects": {"speed_increase_pct": 1.7},
+        },
+        {
+            # 0.918 * 0.918 = 0.843; full-route factor 1 - 0.72 * 0.228 = 0.836.
+            "name": "Continuity bonus: Dietikon to Zürich West/City",
+            "area_pairs": [
+                {"origin": {"municipality_name": "Dietikon"}, "destination": {"city_quartier": quartier}}
+                for quartier in ZH_WEST_CITY
+            ],
+            "both_directions": True,
+            "effects": {"speed_increase_pct": 0.8},
         },
     ],
 }
