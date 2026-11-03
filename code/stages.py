@@ -174,6 +174,20 @@ from math import isfinite
 #     3.4-5.3 of 6.7-7.8 km (~50 %) -> time factor 0.886 as above; Dietikon 7.6 of
 #     10.5 km (72 %, 36 % per stretch) -> per package 1 - 0.36 * 0.228 = 0.918, encoded
 #     as distance_reduction_pct 1.8 and speed_increase_pct 7.0 (0.982 / 1.070 = 0.918).
+#   - Selection rule for the quartiers: demand-weighted bike distance from Dietikon
+#     <= 12.5 km and shortest route via Altstetten <= 5 % longer than the direct route
+#     (bike skim). The added quartiers give similar shares: Schlieren ~51 %, Dietikon
+#     ~68 % (kept at 72 %), so the factors above remain valid for the extended list.
+#   - Urdorf joins the route in Schlieren (3.4 km on the East stretch): ~36 % of its
+#     trips to ZH_WEST_CITY -> 0.918 as Dietikon per stretch; ~54 % to Altstetten ->
+#     0.886 as the through trips (slightly conservative).
+#   - Höngg (north bank) is ~10 % longer via Altstetten than via the direct route, so
+#     ASSUMPTION: half of the trips use the route. Schlieren 62 % * 0.5 = 31 % -> 0.929
+#     (distance 1.5, speed 6.0); Urdorf 41 % * 0.5 and Dietikon 83 % * 0.5 / 2 per stretch,
+#     both ~21 % -> 0.952 (distance 1.0, speed 4.0). Unterengstringen <-> Höngg is excluded
+#     (33 % detour, direct along the north bank). No continuity bonus (< 0.2 %).
+#   - Not represented: Aargau is outside the 1,223-zone model, so cyclists from
+#     Spreitenbach/Baden etc. are missing (benefits, especially West stretch, understated).
 #
 
 # Appraisal derivation (2016 cantonal estimate, indexed with BFS construction
@@ -186,10 +200,17 @@ from math import isfinite
 # CAPEX below includes route, underpasses and land; parameters.CAPEX_MULTIPLIER
 # is applied on top.
 
-# External Zürich quartiers on the route extension Altstetten -> Kreis 5 -> HB (outside
-# the perimeter; selected by location and Limmattal demand, 2,032 trips/peak h).
+# External Zürich quartiers beyond Altstetten reached via the route (outside the
+# perimeter; selection rule above). Kreis 5/HB from the original selection, extended
+# by Kreis 3/4/9/10, the old town, Unterstrass and Enge. NB02 reads this list for its
+# corridor relation tables. Höngg is listed separately because of its reduced effect.
 # One area pair per quartier: the stage map cannot draw list-valued selectors.
-ZH_WEST_CITY = ["Hard", "Escher Wyss", "Gewerbeschule", "Langstrasse", "City"]
+ZH_WEST_CITY = [
+    "Hard", "Escher Wyss", "Gewerbeschule", "Langstrasse", "City",
+    "Albisrieden", "Sihlfeld", "Wipkingen", "Alt-Wiedikon", "Werd",
+    "Friesenberg", "Lindenhof", "Unterstrass", "Enge",
+]
+ZH_HOENGG = ["Höngg"]
 
 PACKAGES = {
     # --- Package 1: East stretch, Zürich-Altstetten – Schlieren / golf park Unterengstringen ---
@@ -245,6 +266,54 @@ PACKAGES = {
                 "effects": {
                     "distance_reduction_pct": 1.8,  # 36 % of the trip on this stretch.
                     "speed_increase_pct": 7.0,  # Time factor 0.918.
+                },
+            },
+            {
+                "name": "East stretch: share of Urdorf trips to Altstetten",
+                "area_pairs": [
+                    {"origin": {"municipality_name": "Urdorf"}, "destination": {"city_quartier": "Altstetten"}},
+                ],
+                "both_directions": True,
+                "effects": {
+                    "distance_reduction_pct": 2.5,  # ~54 % of the trip on the route.
+                    "speed_increase_pct": 10.1,  # Time factor 0.886.
+                },
+            },
+            {
+                "name": "East stretch: share of Urdorf trips to Zürich West/City",
+                "area_pairs": [
+                    {"origin": {"municipality_name": "Urdorf"}, "destination": {"city_quartier": quartier}}
+                    for quartier in ZH_WEST_CITY
+                ],
+                "both_directions": True,
+                "effects": {
+                    "distance_reduction_pct": 1.8,  # ~36 % of the trip on the route.
+                    "speed_increase_pct": 7.0,  # Time factor 0.918.
+                },
+            },
+            {
+                "name": "East stretch: half of Schlieren trips to Höngg",
+                "area_pairs": [
+                    {"origin": {"municipality_name": "Schlieren"}, "destination": {"city_quartier": quartier}}
+                    for quartier in ZH_HOENGG
+                ],
+                "both_directions": True,
+                "effects": {
+                    "distance_reduction_pct": 1.5,  # 62 % on the route * 50 % route users.
+                    "speed_increase_pct": 6.0,  # Time factor 0.929.
+                },
+            },
+            {
+                "name": "East stretch: half of Urdorf/Dietikon trips to Höngg",
+                "area_pairs": [
+                    {"origin": {"municipality_name": muni}, "destination": {"city_quartier": quartier}}
+                    for muni in ("Urdorf", "Dietikon")
+                    for quartier in ZH_HOENGG
+                ],
+                "both_directions": True,
+                "effects": {
+                    "distance_reduction_pct": 1.0,  # ~21 % on this stretch (incl. 50 % route users).
+                    "speed_increase_pct": 4.0,  # Time factor 0.952.
                 },
             },
         ],
@@ -306,6 +375,18 @@ PACKAGES = {
                 "effects": {
                     "distance_reduction_pct": 1.8,
                     "speed_increase_pct": 7.0,
+                },
+            },
+            {
+                "name": "West stretch: half of Dietikon trips to Höngg",
+                "area_pairs": [
+                    {"origin": {"municipality_name": "Dietikon"}, "destination": {"city_quartier": quartier}}
+                    for quartier in ZH_HOENGG
+                ],
+                "both_directions": True,
+                "effects": {
+                    "distance_reduction_pct": 1.0,
+                    "speed_increase_pct": 4.0,
                 },
             },
         ],

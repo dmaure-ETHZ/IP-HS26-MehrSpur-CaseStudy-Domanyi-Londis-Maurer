@@ -185,18 +185,18 @@
     "G20"
   ],
   "od_labels_hash": "62405ef3877a47c9e3a9",
-  "n_train_total": 120,
+  "n_train_total": 140,
   "n_validation_total": 20,
   "adaptive_fill_in": {
     "enabled": true,
-    "max_points": 20,
+    "max_points": 40,
     "batch_size": 4,
     "targets": {
       "weighted_rmse_min": 0.2
     },
-    "points_added": 20,
+    "points_added": 40,
     "final_holdout_metrics": {
-      "weighted_rmse_min": 0.27459991034965964
+      "weighted_rmse_min": 0.26207301227365787
     },
     "target_reached": false
   },
@@ -306,9 +306,9 @@
     "fill_002_stage0",
     "fill_003_stage0",
     "fill_004_stage1",
-    "fill_005_stage2",
-    "fill_006_stage2",
-    "fill_007_stage1",
+    "fill_005_stage1",
+    "fill_006_stage1",
+    "fill_007_stage2",
     "fill_008_stage3",
     "fill_009_stage1",
     "fill_010_stage3",
@@ -316,11 +316,31 @@
     "fill_012_stage2",
     "fill_013_stage2",
     "fill_014_stage2",
-    "fill_015_stage2",
-    "fill_016_stage0",
+    "fill_015_stage3",
+    "fill_016_stage1",
     "fill_017_stage0",
     "fill_018_stage0",
-    "fill_019_stage0"
+    "fill_019_stage0",
+    "fill_020_stage2",
+    "fill_021_stage2",
+    "fill_022_stage2",
+    "fill_023_stage1",
+    "fill_024_stage3",
+    "fill_025_stage0",
+    "fill_026_stage0",
+    "fill_027_stage0",
+    "fill_028_stage0",
+    "fill_029_stage3",
+    "fill_030_stage1",
+    "fill_031_stage0",
+    "fill_032_stage3",
+    "fill_033_stage3",
+    "fill_034_stage3",
+    "fill_035_stage2",
+    "fill_036_stage3",
+    "fill_037_stage1",
+    "fill_038_stage1",
+    "fill_039_stage0"
   ],
   "validation_record_ids": [
     "test_000_stage0",
@@ -344,17 +364,17 @@
     "test_004_stage2",
     "test_004_stage3"
   ],
-  "design_sha256": "1aade0440d600f4d43928dea698e94b18e38dd83f59bc5de7134c8035dc38a94",
+  "design_sha256": "a55ad07dbfba5d2143cc1f031b3c6fa8abc6abbdc8aa46231261e2fa962db5ac",
   "training_counts_by_stage": {
-    "0": 33,
-    "1": 28,
-    "2": 32,
-    "3": 27
+    "0": 38,
+    "1": 34,
+    "2": 34,
+    "3": 34
   },
   "seed": 42,
   "design": "continuous LHS with balanced stage labels; independent paired-stage LHS holdout",
-  "model_fingerprint": "aded9b1c27d1f408eb11",
-  "cache_namespace": "4ca021c26796ebb91f71",
+  "model_fingerprint": "5de61e352f2e75a8b9d2",
+  "cache_namespace": "3d6598535e4b2e1d087b",
   "portable_model_inputs": {
     "identity_version": 3,
     "corridor": {
@@ -514,6 +534,540 @@
               "distance_reduction_pct": 2.5,
               "speed_increase_pct": 10.1
             }
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Hard"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Escher Wyss"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Gewerbeschule"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Langstrasse"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "City"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Albisrieden"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Sihlfeld"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Wipkingen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Alt-Wiedikon"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Werd"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Friesenberg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Lindenhof"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Unterstrass"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Enge"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Hard"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Escher Wyss"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Gewerbeschule"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Langstrasse"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "City"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Albisrieden"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Sihlfeld"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Wipkingen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Alt-Wiedikon"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Werd"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Friesenberg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Lindenhof"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Unterstrass"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Enge"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "distance_reduction_pct": 2.5,
+              "speed_increase_pct": 10.1
+            }
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Hard"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Escher Wyss"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Gewerbeschule"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Langstrasse"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "City"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Albisrieden"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Sihlfeld"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Wipkingen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Alt-Wiedikon"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Werd"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Friesenberg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Lindenhof"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Unterstrass"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Enge"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "distance_reduction_pct": 1.8,
+              "speed_increase_pct": 7.0
+            }
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "distance_reduction_pct": 2.5,
+              "speed_increase_pct": 10.1
+            }
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Hard"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Escher Wyss"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Gewerbeschule"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Langstrasse"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "City"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Albisrieden"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Sihlfeld"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Wipkingen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Alt-Wiedikon"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Werd"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Friesenberg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Lindenhof"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Unterstrass"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Enge"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "distance_reduction_pct": 1.8,
+              "speed_increase_pct": 7.0
+            }
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "distance_reduction_pct": 1.5,
+              "speed_increase_pct": 6.0
+            }
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "distance_reduction_pct": 1.0,
+              "speed_increase_pct": 4.0
+            }
           }
         ],
         "railway_expansions": [
@@ -578,6 +1132,144 @@
             "effects": {
               "distance_reduction_pct": 2.5,
               "speed_increase_pct": 10.1
+            }
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Hard"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Escher Wyss"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Gewerbeschule"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Langstrasse"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "City"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Albisrieden"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Sihlfeld"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Wipkingen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Alt-Wiedikon"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Werd"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Friesenberg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Lindenhof"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Unterstrass"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Enge"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "distance_reduction_pct": 1.8,
+              "speed_increase_pct": 7.0
+            }
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "distance_reduction_pct": 1.0,
+              "speed_increase_pct": 4.0
             }
           }
         ],
@@ -652,6 +1344,540 @@
                   "municipality_name": "Schlieren"
                 },
                 "destination": {
+                  "city_quartier": "Hard"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Escher Wyss"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Gewerbeschule"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Langstrasse"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "City"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Albisrieden"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Sihlfeld"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Wipkingen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Alt-Wiedikon"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Werd"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Friesenberg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Lindenhof"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Unterstrass"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Enge"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Hard"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Escher Wyss"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Gewerbeschule"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Langstrasse"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "City"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Albisrieden"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Sihlfeld"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Wipkingen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Alt-Wiedikon"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Werd"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Friesenberg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Lindenhof"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Unterstrass"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Enge"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "distance_reduction_pct": 2.5,
+              "speed_increase_pct": 10.1
+            }
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Hard"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Escher Wyss"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Gewerbeschule"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Langstrasse"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "City"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Albisrieden"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Sihlfeld"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Wipkingen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Alt-Wiedikon"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Werd"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Friesenberg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Lindenhof"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Unterstrass"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Enge"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "distance_reduction_pct": 1.8,
+              "speed_increase_pct": 7.0
+            }
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "distance_reduction_pct": 2.5,
+              "speed_increase_pct": 10.1
+            }
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Hard"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Escher Wyss"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Gewerbeschule"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Langstrasse"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "City"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Albisrieden"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Sihlfeld"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Wipkingen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Alt-Wiedikon"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Werd"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Friesenberg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Lindenhof"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Unterstrass"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Enge"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "distance_reduction_pct": 1.8,
+              "speed_increase_pct": 7.0
+            }
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "distance_reduction_pct": 1.5,
+              "speed_increase_pct": 6.0
+            }
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "distance_reduction_pct": 1.0,
+              "speed_increase_pct": 4.0
+            }
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
                   "municipality_name": "Dietikon"
                 }
               },
@@ -691,6 +1917,144 @@
             "area_pairs": [
               {
                 "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Hard"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Escher Wyss"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Gewerbeschule"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Langstrasse"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "City"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Albisrieden"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Sihlfeld"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Wipkingen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Alt-Wiedikon"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Werd"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Friesenberg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Lindenhof"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Unterstrass"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Enge"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "distance_reduction_pct": 1.8,
+              "speed_increase_pct": 7.0
+            }
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "distance_reduction_pct": 1.0,
+              "speed_increase_pct": 4.0
+            }
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
                   "city_quartier": "Altstetten"
                 },
                 "destination": {
@@ -701,6 +2065,126 @@
             "both_directions": true,
             "effects": {
               "speed_increase_pct": 1.7
+            }
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Hard"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Escher Wyss"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Gewerbeschule"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Langstrasse"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "City"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Albisrieden"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Sihlfeld"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Wipkingen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Alt-Wiedikon"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Werd"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Friesenberg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Lindenhof"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Unterstrass"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Enge"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "speed_increase_pct": 0.8
             }
           }
         ],
@@ -917,7 +2401,7 @@
   },
   "cache_contract": {
     "format_version": 3,
-    "model_fingerprint": "aded9b1c27d1f408eb11",
+    "model_fingerprint": "5de61e352f2e75a8b9d2",
     "reference_equations": "22e421069e233216dd8c",
     "solver_settings": {
       "stopping_rule": "road_relative_gap",
@@ -940,20 +2424,20 @@
     "od_threshold": 0.0,
     "drive_occupancy": 1.14
   },
-  "source_fingerprint": "25e9e0cb9f59d541abbc",
+  "source_fingerprint": "00e5b42f3efa434271d4",
   "source_convergence_passed": true,
   "gp_diagnostics": {
     "mode": "pooled",
     "stage_counts": {
-      "0": 33,
-      "1": 28,
-      "2": 32,
-      "3": 27
+      "0": 38,
+      "1": 34,
+      "2": 34,
+      "3": 34
     },
     "feature_encoding": "5 continuous + 4 one-hot",
     "models": {
       "pooled": {
-        "n_simulations": 120,
+        "n_simulations": 140,
         "n_features": 9,
         "n_outputs": 19321,
         "n_varying_outputs": 18625,
@@ -964,47 +2448,47 @@
         "target_reduction": "none; exact Gram likelihood identity",
         "prediction_storage": "original training targets; exact posterior identity",
         "stored_target_dtype": "float32",
-        "kernel": "1.47**2 * Matern(length_scale=[1.56, 5.75, 2.7, 5.04, 7.67, 10, 10, 10, 10], nu=2.5) + WhiteKernel(noise_level=0.00145)",
+        "kernel": "1.39**2 * Matern(length_scale=[1.55, 5.73, 2.68, 5.17, 8, 10, 10, 10, 10], nu=2.5) + WhiteKernel(noise_level=0.00148)",
         "theta": [
-          0.7713330585823646,
-          0.44686451987415055,
-          1.7487345873692115,
-          0.9935994054108938,
-          1.6182217907337237,
-          2.036811882491867,
+          0.6608874683676668,
+          0.4359549310435149,
+          1.7464741342804406,
+          0.9845277714691774,
+          1.6421651587107458,
+          2.0788640849508204,
           2.302585092994046,
           2.302585092994046,
           2.302585092994046,
           2.302585092994046,
-          -6.535009730641989
+          -6.517026382948069
         ],
         "length_scales": [
-          1.563402474973687,
-          5.747325334485365,
-          2.7009387706457404,
-          5.044112848813377,
-          7.666129675576601,
+          1.5464390967824222,
+          5.734348447528568,
+          2.676547643777795,
+          5.166343364626217,
+          7.9953816797362665,
           10.000000000000002,
           10.000000000000002,
           10.000000000000002,
           10.000000000000002
         ],
-        "amplitude_variance": 2.162647268579532,
-        "noise_variance_normalized": 0.0014517149015663428,
-        "nll_per_varying_output": -120.470121154789,
+        "amplitude_variance": 1.9365101635435826,
+        "noise_variance_normalized": 0.0014780577517731841,
+        "nll_per_varying_output": -147.92665487649464,
         "selected_optimizer_success": true,
         "optimizer_attempts": [
           {
             "success": true,
             "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
-            "iterations": 28,
-            "nll_per_output": -120.470121154789
+            "iterations": 33,
+            "nll_per_output": -147.92665487649464
           },
           {
             "success": true,
             "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
-            "iterations": 37,
-            "nll_per_output": -92.66009618996172
+            "iterations": 38,
+            "nll_per_output": -116.81917016147378
           }
         ],
         "parameters_near_bound": [
@@ -1013,21 +2497,21 @@
           8,
           9
         ],
-        "fit_seconds": 9.687004041974433
+        "fit_seconds": 17.974577124929056
       }
     },
-    "fit_seconds": 9.687004041974433
+    "fit_seconds": 17.974577124929056
   },
   "validation": {
     "od": {
       "n_cases": 20,
-      "weighted_mae_min": 0.15515379472835172,
-      "weighted_rmse_min": 0.27459991034965964,
-      "weighted_bias_min": 0.05218530690563972,
-      "maximum_case_mae_min": 0.4422522268106842,
-      "weighted_95pct_latent_coverage": 0.7544832700898372,
-      "weighted_nrmse": 0.012963013130509985,
-      "maximum_case_scaled_error": 0.026657016701927803,
+      "weighted_mae_min": 0.1382804797011494,
+      "weighted_rmse_min": 0.26207301227365787,
+      "weighted_bias_min": 0.05467056838040628,
+      "maximum_case_mae_min": 0.4360271763091681,
+      "weighted_95pct_latent_coverage": 0.7625024603967756,
+      "weighted_nrmse": 0.012426013197963187,
+      "maximum_case_scaled_error": 0.025519671586051847,
       "limits": {
         "weighted_mae_min": 0.1,
         "weighted_rmse_min": 0.2
@@ -1036,276 +2520,276 @@
         {
           "id": "test_000_stage0",
           "stage": 0,
-          "weighted_mae_min": 0.3894188047839561,
-          "weighted_mse_min2": 0.3492167096268314,
-          "weighted_rmse_min": 0.5909456063182392,
+          "weighted_mae_min": 0.3892884247549462,
+          "weighted_mse_min2": 0.3481888165038196,
+          "weighted_rmse_min": 0.590075263423082,
           "weighted_truth_rms_min": 24.14286987557004,
-          "scaled_error": 0.024477024039143414,
-          "weighted_bias_min": 0.3889284060553742,
-          "weighted_95pct_latent_coverage": 0.4686990296309276,
-          "negative_prediction_fraction_weighted": 0.00011458966119917588
+          "scaled_error": 0.024440974352439106,
+          "weighted_bias_min": 0.38884536183892626,
+          "weighted_95pct_latent_coverage": 0.46534096435406824,
+          "negative_prediction_fraction_weighted": 2.7940832450375864e-05
         },
         {
           "id": "test_000_stage1",
           "stage": 1,
-          "weighted_mae_min": 0.23365600709394446,
-          "weighted_mse_min2": 0.12355863157434903,
-          "weighted_rmse_min": 0.35150907751343924,
-          "weighted_truth_rms_min": 25.060908144069312,
-          "scaled_error": 0.014026190730706788,
-          "weighted_bias_min": -0.2293417390460336,
-          "weighted_95pct_latent_coverage": 0.5626928774851437,
-          "negative_prediction_fraction_weighted": 0.0
+          "weighted_mae_min": 0.041599864957511404,
+          "weighted_mse_min2": 0.004493507007029135,
+          "weighted_rmse_min": 0.0670336259427247,
+          "weighted_truth_rms_min": 24.597530817577518,
+          "scaled_error": 0.0027252176830213437,
+          "weighted_bias_min": 0.028388470736465055,
+          "weighted_95pct_latent_coverage": 0.8768659489148922,
+          "negative_prediction_fraction_weighted": 2.7940832450375864e-05
         },
         {
           "id": "test_000_stage2",
           "stage": 2,
-          "weighted_mae_min": 0.21319058152248793,
-          "weighted_mse_min2": 0.10612062609210762,
-          "weighted_rmse_min": 0.32576160929751624,
-          "weighted_truth_rms_min": 25.076153116950668,
-          "scaled_error": 0.01299089249368604,
-          "weighted_bias_min": -0.20379098328074702,
-          "weighted_95pct_latent_coverage": 0.5978566839440802,
+          "weighted_mae_min": 0.4360271763091681,
+          "weighted_mse_min2": 0.3787098548093729,
+          "weighted_rmse_min": 0.6153940646523761,
+          "weighted_truth_rms_min": 24.114497813080355,
+          "scaled_error": 0.025519671586051847,
+          "weighted_bias_min": 0.43409553638312587,
+          "weighted_95pct_latent_coverage": 0.24054796121824684,
           "negative_prediction_fraction_weighted": 0.0
         },
         {
           "id": "test_000_stage3",
           "stage": 3,
-          "weighted_mae_min": 0.4422522268106842,
-          "weighted_mse_min2": 0.41392644271983525,
-          "weighted_rmse_min": 0.6433711547154063,
-          "weighted_truth_rms_min": 24.135152178108456,
-          "scaled_error": 0.026657016701927803,
-          "weighted_bias_min": 0.44184235158921525,
-          "weighted_95pct_latent_coverage": 0.2532682714821258,
+          "weighted_mae_min": 0.2778086668054248,
+          "weighted_mse_min2": 0.1734443422535287,
+          "weighted_rmse_min": 0.4164664959555915,
+          "weighted_truth_rms_min": 24.99387242643542,
+          "scaled_error": 0.016662743925791382,
+          "weighted_bias_min": -0.274420761752872,
+          "weighted_95pct_latent_coverage": 0.4496203766842505,
           "negative_prediction_fraction_weighted": 0.0
         },
         {
           "id": "test_001_stage0",
           "stage": 0,
-          "weighted_mae_min": 0.09293209232029272,
-          "weighted_mse_min2": 0.014669953660796715,
-          "weighted_rmse_min": 0.12111958413401491,
+          "weighted_mae_min": 0.15010374566631424,
+          "weighted_mse_min2": 0.041847788803802785,
+          "weighted_rmse_min": 0.2045673209576808,
           "weighted_truth_rms_min": 24.84618601141067,
-          "scaled_error": 0.004874775713197609,
-          "weighted_bias_min": 0.0674450223588588,
-          "weighted_95pct_latent_coverage": 0.8497583943840612,
+          "scaled_error": 0.008233349008323964,
+          "weighted_bias_min": 0.14142572247125573,
+          "weighted_95pct_latent_coverage": 0.7757732995040232,
           "negative_prediction_fraction_weighted": 0.0
         },
         {
           "id": "test_001_stage1",
           "stage": 1,
-          "weighted_mae_min": 0.03769214718282888,
-          "weighted_mse_min2": 0.0029597340235477327,
-          "weighted_rmse_min": 0.05440343760781788,
-          "weighted_truth_rms_min": 24.870948938539414,
-          "scaled_error": 0.0021874291062338857,
-          "weighted_bias_min": -0.02913540023640218,
-          "weighted_95pct_latent_coverage": 0.8946874675383936,
+          "weighted_mae_min": 0.07775649274393927,
+          "weighted_mse_min2": 0.012561580017456274,
+          "weighted_rmse_min": 0.11207845474245384,
+          "weighted_truth_rms_min": 24.831938920905962,
+          "scaled_error": 0.0045134798011320495,
+          "weighted_bias_min": -0.033855726027628444,
+          "weighted_95pct_latent_coverage": 0.8643805071643371,
           "negative_prediction_fraction_weighted": 0.0
         },
         {
           "id": "test_001_stage2",
           "stage": 2,
-          "weighted_mae_min": 0.19030064277683467,
-          "weighted_mse_min2": 0.06184090638691961,
-          "weighted_rmse_min": 0.24867831909299937,
-          "weighted_truth_rms_min": 24.844236153911627,
-          "scaled_error": 0.010009497476695252,
-          "weighted_bias_min": 0.18533913138132357,
-          "weighted_95pct_latent_coverage": 0.6129855870501892,
+          "weighted_mae_min": 0.06577032659121919,
+          "weighted_mse_min2": 0.007477781692977244,
+          "weighted_rmse_min": 0.08647416777845997,
+          "weighted_truth_rms_min": 24.852028234759594,
+          "scaled_error": 0.0034795617871346135,
+          "weighted_bias_min": -0.006820604956781578,
+          "weighted_95pct_latent_coverage": 0.9081930795363744,
           "negative_prediction_fraction_weighted": 0.0
         },
         {
           "id": "test_001_stage3",
           "stage": 3,
-          "weighted_mae_min": 0.120917735312086,
-          "weighted_mse_min2": 0.02861638675690832,
-          "weighted_rmse_min": 0.16916378677751429,
-          "weighted_truth_rms_min": 24.860286380611402,
-          "scaled_error": 0.006804579166451016,
-          "weighted_bias_min": 0.10269734890603388,
-          "weighted_95pct_latent_coverage": 0.660316276510915,
+          "weighted_mae_min": 0.046636949741612546,
+          "weighted_mse_min2": 0.004706453562115527,
+          "weighted_rmse_min": 0.06860359729719373,
+          "weighted_truth_rms_min": 24.821406236091867,
+          "scaled_error": 0.0027638884213352843,
+          "weighted_bias_min": 0.013697761177360178,
+          "weighted_95pct_latent_coverage": 0.8491272726549706,
           "negative_prediction_fraction_weighted": 0.0
         },
         {
           "id": "test_002_stage0",
           "stage": 0,
-          "weighted_mae_min": 0.16431349598292733,
-          "weighted_mse_min2": 0.05927193127518102,
-          "weighted_rmse_min": 0.24345827419740948,
+          "weighted_mae_min": 0.07058272772735334,
+          "weighted_mse_min2": 0.009176790273951444,
+          "weighted_rmse_min": 0.09579556500147303,
           "weighted_truth_rms_min": 15.063879973369447,
-          "scaled_error": 0.016161724245533363,
-          "weighted_bias_min": 0.15791654846685832,
-          "weighted_95pct_latent_coverage": 0.7786866941936624,
-          "negative_prediction_fraction_weighted": 0.0005040178939465944
+          "scaled_error": 0.00635928891964251,
+          "weighted_bias_min": 0.052061519657680105,
+          "weighted_95pct_latent_coverage": 0.9163340330078841,
+          "negative_prediction_fraction_weighted": 0.0001776986330626815
         },
         {
           "id": "test_002_stage1",
           "stage": 1,
-          "weighted_mae_min": 0.13495635138411535,
-          "weighted_mse_min2": 0.038191589683312634,
-          "weighted_rmse_min": 0.19542668621074408,
-          "weighted_truth_rms_min": 15.046111153358696,
-          "scaled_error": 0.012988518044220323,
-          "weighted_bias_min": 0.12055475466154486,
-          "weighted_95pct_latent_coverage": 0.9031692828326402,
-          "negative_prediction_fraction_weighted": 0.0003319451170676799
+          "weighted_mae_min": 0.04309696732146624,
+          "weighted_mse_min2": 0.0034781891411308757,
+          "weighted_rmse_min": 0.05897617435143514,
+          "weighted_truth_rms_min": 15.023721954741145,
+          "scaled_error": 0.003925536862909234,
+          "weighted_bias_min": 0.020768975523825506,
+          "weighted_95pct_latent_coverage": 0.9752829560197233,
+          "negative_prediction_fraction_weighted": 0.00043752083217253715
         },
         {
           "id": "test_002_stage2",
           "stage": 2,
-          "weighted_mae_min": 0.10168705742180467,
-          "weighted_mse_min2": 0.023832860905945955,
-          "weighted_rmse_min": 0.15437895227635778,
-          "weighted_truth_rms_min": 15.061625972898446,
-          "scaled_error": 0.010249819810566524,
-          "weighted_bias_min": 0.07242468437234069,
-          "weighted_95pct_latent_coverage": 0.9791598324668367,
-          "negative_prediction_fraction_weighted": 0.0002207435457790557
+          "weighted_mae_min": 0.08761634401141925,
+          "weighted_mse_min2": 0.0153308714527906,
+          "weighted_rmse_min": 0.12381789633486187,
+          "weighted_truth_rms_min": 15.044543325714006,
+          "scaled_error": 0.008230086726742537,
+          "weighted_bias_min": 0.0670182969008206,
+          "weighted_95pct_latent_coverage": 0.9755130073251348,
+          "negative_prediction_fraction_weighted": 0.0010071256559983314
         },
         {
           "id": "test_002_stage3",
           "stage": 3,
-          "weighted_mae_min": 0.10691747622842511,
-          "weighted_mse_min2": 0.02352692647530636,
-          "weighted_rmse_min": 0.15338489650322928,
-          "weighted_truth_rms_min": 15.054183524129801,
-          "scaled_error": 0.010188855228008496,
-          "weighted_bias_min": -0.09038233620996215,
-          "weighted_95pct_latent_coverage": 0.9219343315704744,
-          "negative_prediction_fraction_weighted": 0.00021735545586850405
+          "weighted_mae_min": 0.033085102587810514,
+          "weighted_mse_min2": 0.003005990224105687,
+          "weighted_rmse_min": 0.05482691149522912,
+          "weighted_truth_rms_min": 15.002992155471754,
+          "scaled_error": 0.003654398464457848,
+          "weighted_bias_min": -0.0015581726887555678,
+          "weighted_95pct_latent_coverage": 0.9139306279458673,
+          "negative_prediction_fraction_weighted": 0.0002207435457790557
         },
         {
           "id": "test_003_stage0",
           "stage": 0,
-          "weighted_mae_min": 0.12996270077287403,
-          "weighted_mse_min2": 0.04155825828082771,
-          "weighted_rmse_min": 0.20385842705374657,
+          "weighted_mae_min": 0.13181798606328282,
+          "weighted_mse_min2": 0.042238502559102525,
+          "weighted_rmse_min": 0.2055200782383622,
           "weighted_truth_rms_min": 20.7517563661379,
-          "scaled_error": 0.009823670992321242,
-          "weighted_bias_min": 0.12243139078301671,
-          "weighted_95pct_latent_coverage": 0.726141258632429,
-          "negative_prediction_fraction_weighted": 7.135813881587461e-06
+          "scaled_error": 0.009903743789789464,
+          "weighted_bias_min": 0.12531531604316387,
+          "weighted_95pct_latent_coverage": 0.7229475314047196,
+          "negative_prediction_fraction_weighted": 0.0
         },
         {
           "id": "test_003_stage1",
           "stage": 1,
-          "weighted_mae_min": 0.06784830500168842,
-          "weighted_mse_min2": 0.008640385451577486,
-          "weighted_rmse_min": 0.09295367368521529,
-          "weighted_truth_rms_min": 20.726250371085168,
-          "scaled_error": 0.004484828274336266,
-          "weighted_bias_min": 0.04697963456359916,
-          "weighted_95pct_latent_coverage": 0.850400261667597,
+          "weighted_mae_min": 0.0953168203535264,
+          "weighted_mse_min2": 0.01621481258441459,
+          "weighted_rmse_min": 0.12733739664534763,
+          "weighted_truth_rms_min": 20.703062327957575,
+          "scaled_error": 0.006150655136336533,
+          "weighted_bias_min": -0.07608822320656825,
+          "weighted_95pct_latent_coverage": 0.7478541246717285,
           "negative_prediction_fraction_weighted": 3.503748122545226e-05
         },
         {
           "id": "test_003_stage2",
           "stage": 2,
-          "weighted_mae_min": 0.07487376365384754,
-          "weighted_mse_min2": 0.01145828062782726,
-          "weighted_rmse_min": 0.10704335863484134,
-          "weighted_truth_rms_min": 20.734164413420874,
-          "scaled_error": 0.005162656015477237,
-          "weighted_bias_min": 0.05311126733730161,
-          "weighted_95pct_latent_coverage": 0.893456367065738,
-          "negative_prediction_fraction_weighted": 6.649706177405727e-05
+          "weighted_mae_min": 0.09932657975190748,
+          "weighted_mse_min2": 0.024071827617505905,
+          "weighted_rmse_min": 0.15515098329532398,
+          "weighted_truth_rms_min": 20.716404929227032,
+          "scaled_error": 0.00748928126406887,
+          "weighted_bias_min": 0.08014351255486343,
+          "weighted_95pct_latent_coverage": 0.7359752801899501,
+          "negative_prediction_fraction_weighted": 3.503748122545226e-05
         },
         {
           "id": "test_003_stage3",
           "stage": 3,
-          "weighted_mae_min": 0.2193427366701277,
-          "weighted_mse_min2": 0.1202028893737044,
-          "weighted_rmse_min": 0.3467028834228299,
-          "weighted_truth_rms_min": 21.157617402996866,
-          "scaled_error": 0.016386669482629044,
-          "weighted_bias_min": -0.2175878729121633,
-          "weighted_95pct_latent_coverage": 0.5815140287395288,
-          "negative_prediction_fraction_weighted": 0.00012172547508076333
+          "weighted_mae_min": 0.07707371135771385,
+          "weighted_mse_min2": 0.014006497877859778,
+          "weighted_rmse_min": 0.11834905102221892,
+          "weighted_truth_rms_min": 20.67876057587863,
+          "scaled_error": 0.005723217819943753,
+          "weighted_bias_min": 0.06788259525512647,
+          "weighted_95pct_latent_coverage": 0.8521486600996268,
+          "negative_prediction_fraction_weighted": 7.135813881587461e-06
         },
         {
           "id": "test_004_stage0",
           "stage": 0,
-          "weighted_mae_min": 0.13707161045131572,
-          "weighted_mse_min2": 0.03469758838206306,
-          "weighted_rmse_min": 0.1862728868677969,
+          "weighted_mae_min": 0.0643587277954611,
+          "weighted_mse_min2": 0.008491139558349783,
+          "weighted_rmse_min": 0.09214737955226825,
           "weighted_truth_rms_min": 18.948669748399652,
-          "scaled_error": 0.009830393866225303,
-          "weighted_bias_min": 0.12000604352983063,
-          "weighted_95pct_latent_coverage": 0.8780310105820017,
-          "negative_prediction_fraction_weighted": 0.00022787935966064318
+          "scaled_error": 0.004862999924311349,
+          "weighted_bias_min": -0.01887876640490778,
+          "weighted_95pct_latent_coverage": 0.9154591937666092,
+          "negative_prediction_fraction_weighted": 0.00018108672297323315
         },
         {
           "id": "test_004_stage1",
           "stage": 1,
-          "weighted_mae_min": 0.0892560801459617,
-          "weighted_mse_min2": 0.017266679182566087,
-          "weighted_rmse_min": 0.13140273658705168,
-          "weighted_truth_rms_min": 18.96505808221199,
-          "scaled_error": 0.006928675673832976,
-          "weighted_bias_min": -0.04734326658674659,
-          "weighted_95pct_latent_coverage": 0.8909122116128856,
-          "negative_prediction_fraction_weighted": 0.0002207435457790557
+          "weighted_mae_min": 0.15777110251782997,
+          "weighted_mse_min2": 0.05608276881858913,
+          "weighted_rmse_min": 0.23681800780048196,
+          "weighted_truth_rms_min": 18.47275436739269,
+          "scaled_error": 0.012819853666137786,
+          "weighted_bias_min": 0.1496121442172159,
+          "weighted_95pct_latent_coverage": 0.6881587597912276,
+          "negative_prediction_fraction_weighted": 0.0002801047936715255
         },
         {
           "id": "test_004_stage2",
           "stage": 2,
-          "weighted_mae_min": 0.05544702003551365,
-          "weighted_mse_min2": 0.006327820990710643,
-          "weighted_rmse_min": 0.07954760204249178,
-          "weighted_truth_rms_min": 18.954394322139954,
-          "scaled_error": 0.004196789445789627,
-          "weighted_bias_min": 0.018903419222526304,
-          "weighted_95pct_latent_coverage": 0.8927216596782044,
-          "negative_prediction_fraction_weighted": 0.00032631926088391293
+          "weighted_mae_min": 0.25629503816700155,
+          "weighted_mse_min2": 0.14729127239547252,
+          "weighted_rmse_min": 0.3837854509950482,
+          "weighted_truth_rms_min": 19.307698313421405,
+          "scaled_error": 0.019877327932365015,
+          "weighted_bias_min": -0.21848220978122332,
+          "weighted_95pct_latent_coverage": 0.6243736744913233,
+          "negative_prediction_fraction_weighted": 0.0002207435457790557
         },
         {
           "id": "test_004_stage3",
           "stage": 3,
-          "weighted_mae_min": 0.10103905901531826,
-          "weighted_mse_min2": 0.022217613810503783,
-          "weighted_rmse_min": 0.14905574061573001,
-          "weighted_truth_rms_min": 18.939894030063986,
-          "scaled_error": 0.007869935300542252,
-          "weighted_bias_min": -0.03729226684297478,
-          "weighted_95pct_latent_coverage": 0.8932738747289084,
-          "negative_prediction_fraction_weighted": 0.0002486452131229205
+          "weighted_mae_min": 0.164276838798079,
+          "weighted_mse_min2": 0.06282648809040137,
+          "weighted_rmse_min": 0.25065212564508876,
+          "weighted_truth_rms_min": 18.475751371667045,
+          "scaled_error": 0.013566545717294567,
+          "weighted_bias_min": 0.15426061966703375,
+          "weighted_95pct_latent_coverage": 0.7522219491905549,
+          "negative_prediction_fraction_weighted": 0.00022787935966064318
         }
       ],
       "by_stage": {
         "0": {
           "n_cases": 5,
-          "weighted_mae_min": 0.18273974086227315,
-          "weighted_rmse_min": 0.3160425418280583,
-          "weighted_bias_min": 0.17134548223878773,
-          "maximum_case_mae_min": 0.3894188047839561,
-          "weighted_95pct_latent_coverage": 0.7402632774846165
+          "weighted_mae_min": 0.16123032240147156,
+          "weighted_rmse_min": 0.299981011965433,
+          "weighted_bias_min": 0.13775383072122363,
+          "maximum_case_mae_min": 0.3892884247549462,
+          "weighted_95pct_latent_coverage": 0.7591710044074608
         },
         "1": {
           "n_cases": 5,
-          "weighted_mae_min": 0.11268177816170777,
-          "weighted_rmse_min": 0.19525215487433317,
-          "weighted_bias_min": -0.027657203328807667,
-          "maximum_case_mae_min": 0.23365600709394446,
-          "weighted_95pct_latent_coverage": 0.8203724202273321
+          "weighted_mae_min": 0.08310824957885465,
+          "weighted_rmse_min": 0.1362577392801011,
+          "weighted_bias_min": 0.01776512824866195,
+          "maximum_case_mae_min": 0.15777110251782997,
+          "weighted_95pct_latent_coverage": 0.8305084593123817
         },
         "2": {
           "n_cases": 5,
-          "weighted_mae_min": 0.12709981308209767,
-          "weighted_rmse_min": 0.20473421551050575,
-          "weighted_bias_min": 0.025197503806549032,
-          "maximum_case_mae_min": 0.21319058152248793,
-          "weighted_95pct_latent_coverage": 0.7952360260410097
+          "weighted_mae_min": 0.1890070929661431,
+          "weighted_rmse_min": 0.3384912430087724,
+          "weighted_bias_min": 0.071190906220161,
+          "maximum_case_mae_min": 0.4360271763091681,
+          "weighted_95pct_latent_coverage": 0.696920600552206
         },
         "3": {
           "n_cases": 5,
-          "weighted_mae_min": 0.19809384680732825,
-          "weighted_rmse_min": 0.34885247860270624,
-          "weighted_bias_min": 0.03985544490602978,
-          "maximum_case_mae_min": 0.4422522268106842,
-          "weighted_95pct_latent_coverage": 0.6620613566063905
+          "weighted_mae_min": 0.11977625385812814,
+          "weighted_rmse_min": 0.227151831164977,
+          "weighted_bias_min": -0.00802759166842144,
+          "maximum_case_mae_min": 0.2778086668054248,
+          "weighted_95pct_latent_coverage": 0.763409777315054
         }
       },
       "weighting": "fixed nominal all-passenger OD collapsed to corridor, reachable off-diagonal",
@@ -1317,12 +2801,12 @@
       "passed": true,
       "checks": {
         "total_benefit_mae": {
-          "value": 742167.6736903668,
+          "value": 638181.9858908335,
           "limit": 1000000.0,
           "passed": true
         },
         "total_benefit_p95_error": {
-          "value": 2383038.611830282,
+          "value": 1911080.892509507,
           "limit": 5000000.0,
           "passed": true
         },
@@ -1337,12 +2821,12 @@
           "passed": true
         },
         "maximum_mode_share_error_pp": {
-          "value": 0.34115712557798994,
+          "value": 0.32548385392743295,
           "limit": 1.0,
           "passed": true
         },
         "median_mode_share_error_pp": {
-          "value": 0.025270059263766964,
+          "value": 0.011088223002997388,
           "limit": 0.25,
           "passed": true
         },
@@ -1360,92 +2844,92 @@
       "paired_components": {
         "bike_health": {
           "n": 15,
-          "mean_reference": 341067.03321622015,
-          "mean_absolute_error": 72408.4028516998,
-          "rmse": 104953.60010095632,
-          "nrmse": 0.22461789214830644,
+          "mean_reference": 1266712.9424583802,
+          "mean_absolute_error": 60573.85508197943,
+          "rmse": 89934.27258196216,
+          "nrmse": 0.0498291932431746,
           "median_absolute_relative_error": null,
           "max_absolute_relative_error": null,
           "material": false,
-          "mean_absolute_reference": 341067.03321622015,
+          "mean_absolute_reference": 1266712.9424583802,
           "error_limit_chf_per_year": 1000000.0,
           "passed": null
         },
         "bike_time": {
           "n": 15,
-          "mean_reference": 2838095.6611488857,
-          "mean_absolute_error": 348.426924820741,
-          "rmse": 644.0937715565224,
-          "nrmse": 0.00015248534950550795,
-          "median_absolute_relative_error": null,
-          "max_absolute_relative_error": null,
-          "material": false,
-          "mean_absolute_reference": 2838095.6611488857,
+          "mean_reference": 6733372.384560168,
+          "mean_absolute_error": 2117.6944492737452,
+          "rmse": 2876.6500528397787,
+          "nrmse": 0.000251978220845552,
+          "median_absolute_relative_error": 0.00021619111248254093,
+          "max_absolute_relative_error": 0.001691619787305049,
+          "material": true,
+          "mean_absolute_reference": 6733372.384560168,
           "error_limit_chf_per_year": 1000000.0,
-          "passed": null
+          "passed": true
         },
         "car_acc": {
           "n": 15,
-          "mean_reference": 177803.6369164447,
-          "mean_absolute_error": 165169.34655648717,
-          "rmse": 241145.8058992878,
-          "nrmse": 0.3546468421771423,
+          "mean_reference": 264036.8728510732,
+          "mean_absolute_error": 145775.56622681816,
+          "rmse": 213074.91512616715,
+          "nrmse": 0.22776774477073927,
           "median_absolute_relative_error": null,
           "max_absolute_relative_error": null,
           "material": false,
-          "mean_absolute_reference": 177803.6369164447,
+          "mean_absolute_reference": 266936.79085858417,
           "error_limit_chf_per_year": 1000000.0,
           "passed": null
         },
         "car_air": {
           "n": 15,
-          "mean_reference": 39221.700265184416,
-          "mean_absolute_error": 36434.70243906913,
-          "rmse": 53194.34789532874,
-          "nrmse": 0.3546468421771419,
+          "mean_reference": 58243.887838964285,
+          "mean_absolute_error": 32156.628872685134,
+          "rmse": 47002.19073153908,
+          "nrmse": 0.22776774477074024,
           "median_absolute_relative_error": null,
           "max_absolute_relative_error": null,
           "material": false,
-          "mean_absolute_reference": 39221.700265184416,
+          "mean_absolute_reference": 58883.580686966205,
           "error_limit_chf_per_year": 1000000.0,
           "passed": null
         },
         "car_co2": {
           "n": 15,
-          "mean_reference": 125901.23656552633,
-          "mean_absolute_error": 116955.00347922494,
-          "rmse": 170753.2853761472,
-          "nrmse": 0.3546468421771431,
+          "mean_reference": 186962.25435740626,
+          "mean_absolute_error": 103222.43328251218,
+          "rmse": 150876.5273911972,
+          "nrmse": 0.22776774477073788,
           "median_absolute_relative_error": null,
           "max_absolute_relative_error": null,
           "material": false,
-          "mean_absolute_reference": 125901.23656552633,
+          "mean_absolute_reference": 189015.6615284639,
           "error_limit_chf_per_year": 1000000.0,
           "passed": null
         },
         "car_noise": {
           "n": 15,
-          "mean_reference": 31385.78592649009,
-          "mean_absolute_error": 29155.588955001098,
-          "rmse": 42566.90567349102,
-          "nrmse": 0.3546468421771401,
+          "mean_reference": 46607.622384563154,
+          "mean_absolute_error": 25732.211074274903,
+          "rmse": 37611.84972609712,
+          "nrmse": 0.22776774477073622,
           "median_absolute_relative_error": null,
           "max_absolute_relative_error": null,
           "material": false,
-          "mean_absolute_reference": 31385.78592649009,
+          "mean_absolute_reference": 47119.51408355516,
           "error_limit_chf_per_year": 1000000.0,
           "passed": null
         },
         "car_time": {
           "n": 15,
-          "mean_reference": -534444.601668346,
-          "mean_absolute_error": 1166868.207626899,
-          "rmse": 1652353.1688340122,
-          "nrmse": 0.36449081348195633,
+          "mean_reference": 613351.8053970059,
+          "mean_absolute_error": 1006955.8110785007,
+          "rmse": 1455922.8713009832,
+          "nrmse": 0.28443689120132304,
           "median_absolute_relative_error": null,
           "max_absolute_relative_error": null,
           "material": false,
-          "mean_absolute_reference": 752933.757495447,
+          "mean_absolute_reference": 1211373.4023359655,
           "error_limit_chf_per_year": 1000000.0,
           "passed": null
         },
@@ -1672,14 +3156,14 @@
         },
         "total": {
           "n": 15,
-          "mean_reference": 2663570.281940937,
-          "mean_absolute_error": 742167.6736903668,
-          "rmse": 1034534.4062321647,
-          "nrmse": 0.17242736444990453,
-          "median_absolute_relative_error": null,
-          "max_absolute_relative_error": null,
+          "mean_reference": 8780541.578771703,
+          "mean_absolute_error": 638181.9858908335,
+          "rmse": 913739.189501697,
+          "nrmse": 0.06147278133688369,
+          "median_absolute_relative_error": 0.05593740441077577,
+          "max_absolute_relative_error": 0.24231645624204232,
           "material": false,
-          "mean_absolute_reference": 2828452.0641973815,
+          "mean_absolute_reference": 8780541.578771703,
           "error_limit_chf_per_year": 1000000.0,
           "passed": null
         },
@@ -1698,14 +3182,14 @@
         },
         "walk_health": {
           "n": 15,
-          "mean_reference": -148086.8370962292,
-          "mean_absolute_error": 4594.5329729706045,
-          "rmse": 7053.627933545897,
-          "nrmse": 0.034024401552784196,
+          "mean_reference": -181372.85774265628,
+          "mean_absolute_error": 3630.610397292177,
+          "rmse": 6133.602319704269,
+          "nrmse": 0.023034294159176818,
           "median_absolute_relative_error": null,
           "max_absolute_relative_error": null,
           "material": false,
-          "mean_absolute_reference": 148086.8370962292,
+          "mean_absolute_reference": 181372.85774265628,
           "error_limit_chf_per_year": 1000000.0,
           "passed": null
         },
@@ -1728,47 +3212,47 @@
           "avg_tt_min": {
             "n": 5,
             "mean_reference": 15.366095970321325,
-            "mean_absolute_error": 0.007767674214851183,
-            "rmse": 0.008774612991839514,
-            "nrmse": 0.006209121418931658,
-            "median_absolute_relative_error": 0.0005861033122859626,
-            "max_absolute_relative_error": 0.000965622994647209
+            "mean_absolute_error": 0.004754257589370781,
+            "rmse": 0.005440591222096104,
+            "nrmse": 0.00384988962136398,
+            "median_absolute_relative_error": 0.00028169405964899053,
+            "max_absolute_relative_error": 0.0005973089801906695
           },
           "bike_share": {
             "n": 5,
-            "mean_reference": 0.1579211548006575,
-            "mean_absolute_error": 0.0002247141264260344,
-            "rmse": 0.0002644172314707896,
-            "nrmse": 0.004155087702294939,
-            "median_absolute_relative_error": 0.0009521033932295434,
-            "max_absolute_relative_error": 0.003449648333190303
+            "mean_reference": 0.16314585102915508,
+            "mean_absolute_error": 0.00017158279374794306,
+            "rmse": 0.00023311896314407205,
+            "nrmse": 0.003561146055151847,
+            "median_absolute_relative_error": 0.0008137539835679433,
+            "max_absolute_relative_error": 0.0032470301255146357
           },
           "car_share": {
             "n": 5,
-            "mean_reference": 0.4544528243637106,
-            "mean_absolute_error": 0.0013326982485802551,
-            "rmse": 0.0015812528858640024,
-            "nrmse": 0.03475706832230292,
-            "median_absolute_relative_error": 0.0020928199254009886,
-            "max_absolute_relative_error": 0.0068328173714257475
+            "mean_reference": 0.44008516694573735,
+            "mean_absolute_error": 0.0010403994839277453,
+            "rmse": 0.0014257612852647391,
+            "nrmse": 0.03244347511326827,
+            "median_absolute_relative_error": 0.0020665879017382357,
+            "max_absolute_relative_error": 0.006768159243563263
           },
           "co2_tonnes": {
             "n": 5,
             "mean_reference": 83892.1296858837,
-            "mean_absolute_error": 244.67962726694532,
-            "rmse": 310.44948169414477,
-            "nrmse": 0.010773503939417912,
-            "median_absolute_relative_error": 0.0019974252991613287,
-            "max_absolute_relative_error": 0.006528799655787343
+            "mean_absolute_error": 215.76905028448672,
+            "rmse": 308.32027679439614,
+            "nrmse": 0.010699614309291651,
+            "median_absolute_relative_error": 0.002003988991160996,
+            "max_absolute_relative_error": 0.006587816097723388
           },
           "pt_share": {
             "n": 5,
-            "mean_reference": 0.34829173204049574,
-            "mean_absolute_error": 0.0011026289872759886,
-            "rmse": 0.0013115299724534982,
-            "nrmse": 0.020106148129860706,
-            "median_absolute_relative_error": 0.0023066006728242184,
-            "max_absolute_relative_error": 0.006552290237583295
+            "mean_reference": 0.3382096230449629,
+            "mean_absolute_error": 0.0008645851073693534,
+            "rmse": 0.0011871563365303695,
+            "nrmse": 0.01892096245592453,
+            "median_absolute_relative_error": 0.002177836184167312,
+            "max_absolute_relative_error": 0.006482530706399222
           },
           "section_modeled_peak": {
             "n": 5,
@@ -1782,67 +3266,67 @@
           "total_cost": {
             "n": 5,
             "mean_reference": 2114624657.3866725,
-            "mean_absolute_error": 938477.2489320278,
-            "rmse": 1101749.1002536807,
-            "nrmse": 0.0011190376012756142,
-            "median_absolute_relative_error": 0.0003985913310051909,
-            "max_absolute_relative_error": 0.0008237303065639263
+            "mean_absolute_error": 760187.7530078411,
+            "rmse": 1049457.674583874,
+            "nrmse": 0.0010659256254769963,
+            "median_absolute_relative_error": 0.00027528340059893583,
+            "max_absolute_relative_error": 0.0008309920290560921
           },
           "walk_share": {
             "n": 5,
-            "mean_reference": 0.03933428879513616,
-            "mean_absolute_error": 5.355134878308465e-06,
-            "rmse": 6.696786061979515e-06,
-            "nrmse": 0.0007513703025202022,
-            "median_absolute_relative_error": 0.0001010236084355397,
-            "max_absolute_relative_error": 0.0002935536648552421
+            "mean_reference": 0.058559358980144714,
+            "mean_absolute_error": 4.4144456881750616e-06,
+            "rmse": 6.24135321583166e-06,
+            "nrmse": 0.0005300604849657114,
+            "median_absolute_relative_error": 5.5269824022061024e-05,
+            "max_absolute_relative_error": 0.0002013559989953366
           }
         },
         "1": {
           "avg_tt_min": {
             "n": 5,
-            "mean_reference": 15.374797300602918,
-            "mean_absolute_error": 0.0032388269307308095,
-            "rmse": 0.004377897132938369,
-            "nrmse": 0.0030968980768437747,
-            "median_absolute_relative_error": 0.0001115054794641674,
-            "max_absolute_relative_error": 0.0005749976430948972
+            "mean_reference": 15.344226933338044,
+            "mean_absolute_error": 0.002460120631524987,
+            "rmse": 0.003505789420226084,
+            "nrmse": 0.00249518822931981,
+            "median_absolute_relative_error": 8.131701548425894e-05,
+            "max_absolute_relative_error": 0.0004690533050145203
           },
           "bike_share": {
             "n": 5,
-            "mean_reference": 0.1589864067430276,
-            "mean_absolute_error": 0.00011895378739047446,
-            "rmse": 0.00015242181723098256,
-            "nrmse": 0.002393937727482798,
-            "median_absolute_relative_error": 0.0003761977609760828,
-            "max_absolute_relative_error": 0.0020213594925077923
+            "mean_reference": 0.16781424100489423,
+            "mean_absolute_error": 6.558830980690766e-05,
+            "rmse": 8.662254320077243e-05,
+            "nrmse": 0.0013081115344686163,
+            "median_absolute_relative_error": 0.0003468446068776807,
+            "max_absolute_relative_error": 0.000966700437062496
           },
           "car_share": {
             "n": 5,
-            "mean_reference": 0.4530620027354885,
-            "mean_absolute_error": 0.0007262513083735711,
-            "rmse": 0.0009152871760553862,
-            "nrmse": 0.01903239734594013,
-            "median_absolute_relative_error": 0.001061230036350909,
-            "max_absolute_relative_error": 0.004071827009644429
+            "mean_reference": 0.4382526054466398,
+            "mean_absolute_error": 0.0004395293873982742,
+            "rmse": 0.0005786956231318722,
+            "nrmse": 0.01320402883694192,
+            "median_absolute_relative_error": 0.0008212906092935854,
+            "max_absolute_relative_error": 0.002481503520962182
           },
           "co2_tonnes": {
             "n": 5,
-            "mean_reference": 83613.93358568221,
-            "mean_absolute_error": 131.99788084735627,
-            "rmse": 178.46420191752415,
-            "nrmse": 0.00622319746309988,
-            "median_absolute_relative_error": 0.0010073849502997318,
-            "max_absolute_relative_error": 0.0038879448956289347
+            "mean_reference": 83532.59035526562,
+            "mean_absolute_error": 80.1141547183419,
+            "rmse": 101.6642310888713,
+            "nrmse": 0.0035441326484592435,
+            "median_absolute_relative_error": 0.0007993127589497239,
+            "max_absolute_relative_error": 0.002399259104136622
           },
           "pt_share": {
             "n": 5,
-            "mean_reference": 0.34873091238655024,
-            "mean_absolute_error": 0.0006045393585511483,
-            "rmse": 0.000760314760589859,
-            "nrmse": 0.01095186950880319,
-            "median_absolute_relative_error": 0.0012247117905560085,
-            "max_absolute_relative_error": 0.003816830792175366
+            "mean_reference": 0.33553000947005246,
+            "mean_absolute_error": 0.0003735479749089277,
+            "rmse": 0.0004923911965137468,
+            "nrmse": 0.007610697004369734,
+            "median_absolute_relative_error": 0.000908060831457924,
+            "max_absolute_relative_error": 0.002800359837668453
           },
           "section_modeled_peak": {
             "n": 5,
@@ -1855,68 +3339,68 @@
           },
           "total_cost": {
             "n": 5,
-            "mean_reference": 2112683341.0960948,
-            "mean_absolute_error": 464758.46094059944,
-            "rmse": 597673.4883210486,
-            "nrmse": 0.0006054068223448546,
-            "median_absolute_relative_error": 0.00015340464040722624,
-            "max_absolute_relative_error": 0.0004667616714546292
+            "mean_reference": 2104550677.1875806,
+            "mean_absolute_error": 288818.6145406723,
+            "rmse": 409527.9616087918,
+            "nrmse": 0.00041678372144920175,
+            "median_absolute_relative_error": 9.060625555125161e-05,
+            "max_absolute_relative_error": 0.0004154434772136396
           },
           "walk_share": {
             "n": 5,
-            "mean_reference": 0.039220678134933615,
-            "mean_absolute_error": 3.101745750770657e-06,
-            "rmse": 3.977752057860366e-06,
-            "nrmse": 0.00044405765744920286,
-            "median_absolute_relative_error": 3.711551252578312e-05,
-            "max_absolute_relative_error": 0.00015978327640229999
+            "mean_reference": 0.058403144078413495,
+            "mean_absolute_error": 1.4729471486951695e-06,
+            "rmse": 1.6920579819946884e-06,
+            "nrmse": 0.00014323497729728317,
+            "median_absolute_relative_error": 1.9000733752387108e-05,
+            "max_absolute_relative_error": 5.421005394241913e-05
           }
         },
         "2": {
           "avg_tt_min": {
             "n": 5,
-            "mean_reference": 15.383032681210391,
-            "mean_absolute_error": 0.002643411796020345,
-            "rmse": 0.0039430774001111635,
-            "nrmse": 0.002793343099485058,
-            "median_absolute_relative_error": 0.00010655246071764996,
-            "max_absolute_relative_error": 0.000523678825786364
+            "mean_reference": 15.370196982781641,
+            "mean_absolute_error": 0.005173478981101809,
+            "rmse": 0.007194811171024072,
+            "nrmse": 0.005101078188645742,
+            "median_absolute_relative_error": 0.0001536573392572933,
+            "max_absolute_relative_error": 0.0009529602455146197
           },
           "bike_share": {
             "n": 5,
-            "mean_reference": 0.15912690487709086,
-            "mean_absolute_error": 0.00011792593311155675,
-            "rmse": 0.00014362038116981553,
-            "nrmse": 0.0022482333133251797,
-            "median_absolute_relative_error": 0.0005087766569655154,
-            "max_absolute_relative_error": 0.001548218488734773
+            "mean_reference": 0.16542503856871668,
+            "mean_absolute_error": 0.0001823059461432852,
+            "rmse": 0.0002627880174563853,
+            "nrmse": 0.003977907676894737,
+            "median_absolute_relative_error": 0.0005328699300947417,
+            "max_absolute_relative_error": 0.003739439301501258
           },
           "car_share": {
             "n": 5,
-            "mean_reference": 0.4527594454823962,
-            "mean_absolute_error": 0.0007368520590412709,
-            "rmse": 0.0009155986203081632,
-            "nrmse": 0.01907871206357691,
-            "median_absolute_relative_error": 0.0010640233023268143,
-            "max_absolute_relative_error": 0.0033047844691104318
+            "mean_reference": 0.438625363421527,
+            "mean_absolute_error": 0.0011514403010294606,
+            "rmse": 0.0016195245245897154,
+            "nrmse": 0.03685266043898604,
+            "median_absolute_relative_error": 0.0013554028925404128,
+            "max_absolute_relative_error": 0.007694546119896509
           },
           "co2_tonnes": {
             "n": 5,
-            "mean_reference": 83561.2932367591,
-            "mean_absolute_error": 141.77384670938483,
-            "rmse": 183.4894464928134,
-            "nrmse": 0.006392330004037581,
-            "median_absolute_relative_error": 0.001014237171543205,
-            "max_absolute_relative_error": 0.0031529359821714873
+            "mean_reference": 83630.64994649425,
+            "mean_absolute_error": 228.3823244266503,
+            "rmse": 341.773609044099,
+            "nrmse": 0.011861487004843817,
+            "median_absolute_relative_error": 0.0013142239224303248,
+            "max_absolute_relative_error": 0.007489130026308722
           },
           "pt_share": {
             "n": 5,
-            "mean_reference": 0.3488937030323358,
-            "mean_absolute_error": 0.0006163485916568789,
-            "rmse": 0.0007682563209859726,
-            "nrmse": 0.01106700169048501,
-            "median_absolute_relative_error": 0.0012572647445336963,
-            "max_absolute_relative_error": 0.0031323919643692633
+            "mean_reference": 0.3375100668071151,
+            "mean_absolute_error": 0.0009640365128703587,
+            "rmse": 0.001350108219210304,
+            "nrmse": 0.02155307526429596,
+            "median_absolute_relative_error": 0.0014241187309602193,
+            "max_absolute_relative_error": 0.00732809222173921
           },
           "section_modeled_peak": {
             "n": 5,
@@ -1929,68 +3413,68 @@
           },
           "total_cost": {
             "n": 5,
-            "mean_reference": 2112881322.9584916,
-            "mean_absolute_error": 493865.97687215806,
-            "rmse": 630861.8849164885,
-            "nrmse": 0.0006389307943711906,
-            "median_absolute_relative_error": 0.00014387978342672664,
-            "max_absolute_relative_error": 0.0004510466639269404
+            "mean_reference": 2110922038.465966,
+            "mean_absolute_error": 805302.2676353932,
+            "rmse": 1210481.7413798105,
+            "nrmse": 0.001231257961285025,
+            "median_absolute_relative_error": 0.00017231463060680895,
+            "max_absolute_relative_error": 0.0009943745430087744
           },
           "walk_share": {
             "n": 5,
-            "mean_reference": 0.03921994660817707,
-            "mean_absolute_error": 3.1230430738965474e-06,
-            "rmse": 4.464936479079431e-06,
-            "nrmse": 0.0004972888918085607,
-            "median_absolute_relative_error": 4.829774281344433e-05,
-            "max_absolute_relative_error": 0.00020980756457315963
+            "mean_reference": 0.058439531202641046,
+            "mean_absolute_error": 5.144878618865145e-06,
+            "rmse": 8.035447713233908e-06,
+            "nrmse": 0.0006797805845397645,
+            "median_absolute_relative_error": 3.307533541297971e-05,
+            "max_absolute_relative_error": 0.0002643697491154651
           }
         },
         "3": {
           "avg_tt_min": {
             "n": 5,
-            "mean_reference": 15.388164091727337,
-            "mean_absolute_error": 0.007671473241545712,
-            "rmse": 0.008855820888793364,
-            "nrmse": 0.0062676978650506275,
-            "median_absolute_relative_error": 0.0006079814312208395,
-            "max_absolute_relative_error": 0.0008240601439387192
+            "mean_reference": 15.346517261155128,
+            "mean_absolute_error": 0.003948499526639537,
+            "rmse": 0.0046535712221564786,
+            "nrmse": 0.0033158872776847446,
+            "median_absolute_relative_error": 0.0002276256428347923,
+            "max_absolute_relative_error": 0.0005445943884551319
           },
           "bike_share": {
             "n": 5,
-            "mean_reference": 0.15998957190188673,
-            "mean_absolute_error": 0.0002492751431814322,
-            "rmse": 0.0003078265666472146,
-            "nrmse": 0.004784259324762472,
-            "median_absolute_relative_error": 0.001038136016887591,
-            "max_absolute_relative_error": 0.00393273946241444
+            "mean_reference": 0.17037562765503508,
+            "mean_absolute_error": 0.00011958330807154138,
+            "rmse": 0.0001572008278422567,
+            "nrmse": 0.0023541291437644218,
+            "median_absolute_relative_error": 0.00042485375779252615,
+            "max_absolute_relative_error": 0.0019786217344308892
           },
           "car_share": {
             "n": 5,
-            "mean_reference": 0.45294610005814473,
-            "mean_absolute_error": 0.001463787776845138,
-            "rmse": 0.001808677360394862,
-            "nrmse": 0.037928914811829646,
-            "median_absolute_relative_error": 0.0019686365125335344,
-            "max_absolute_relative_error": 0.007828148382948645
+            "mean_reference": 0.43656413786416604,
+            "mean_absolute_error": 0.000719740815529879,
+            "rmse": 0.0009935302563975794,
+            "nrmse": 0.022578888655865353,
+            "median_absolute_relative_error": 0.0011113195907203781,
+            "max_absolute_relative_error": 0.0043777881381293045
           },
           "co2_tonnes": {
             "n": 5,
-            "mean_reference": 83622.78151498522,
-            "mean_absolute_error": 278.48907951468425,
-            "rmse": 363.8235573146711,
-            "nrmse": 0.012641145948084957,
-            "median_absolute_relative_error": 0.0018806098881411228,
-            "max_absolute_relative_error": 0.007478568611929814
+            "mean_reference": 83208.7609347931,
+            "mean_absolute_error": 142.2018224369036,
+            "rmse": 203.81721015826827,
+            "nrmse": 0.00712052197047517,
+            "median_absolute_relative_error": 0.0010773909223527854,
+            "max_absolute_relative_error": 0.004259275696390139
           },
           "pt_share": {
             "n": 5,
-            "mean_reference": 0.34796446231543243,
-            "mean_absolute_error": 0.001209333886418118,
-            "rmse": 0.0014949592742359683,
-            "nrmse": 0.02290056395100379,
-            "median_absolute_relative_error": 0.0022662539409336237,
-            "max_absolute_relative_error": 0.007487883599874488
+            "mean_reference": 0.33477547787058026,
+            "mean_absolute_error": 0.000597071109734304,
+            "rmse": 0.0008335981145342976,
+            "nrmse": 0.0125679544432154,
+            "median_absolute_relative_error": 0.0011717828793934158,
+            "max_absolute_relative_error": 0.004121201577693033
           },
           "section_modeled_peak": {
             "n": 5,
@@ -2003,21 +3487,21 @@
           },
           "total_cost": {
             "n": 5,
-            "mean_reference": 2109686895.7053692,
-            "mean_absolute_error": 1037451.5893100739,
-            "rmse": 1291908.4856557576,
-            "nrmse": 0.0013140668827229588,
-            "median_absolute_relative_error": 0.0003892469339248085,
-            "max_absolute_relative_error": 0.0009747585499772412
+            "mean_reference": 2100152542.867288,
+            "mean_absolute_error": 541495.4084557533,
+            "rmse": 698062.4756949511,
+            "nrmse": 0.0007105919440878999,
+            "median_absolute_relative_error": 0.00015747214194757777,
+            "max_absolute_relative_error": 0.0004905712084633906
           },
           "walk_share": {
             "n": 5,
-            "mean_reference": 0.03909986572453604,
-            "mean_absolute_error": 5.4685319342190345e-06,
-            "rmse": 7.674173645199068e-06,
-            "nrmse": 0.0008550309488537874,
-            "median_absolute_relative_error": 7.90471257257845e-05,
-            "max_absolute_relative_error": 0.00036794764763623585
+            "mean_reference": 0.058284756610218535,
+            "mean_absolute_error": 3.132422579560368e-06,
+            "rmse": 4.168845375619163e-06,
+            "nrmse": 0.0003512736185452756,
+            "median_absolute_relative_error": 4.825146136723617e-05,
+            "max_absolute_relative_error": 0.00012760221280527548
           }
         }
       },
@@ -2026,7 +3510,7 @@
       "scope": "Paired annual baseline/project matched benefits and physical indicators, not full-future NPV.",
       "n_holdouts_per_stage": 5,
       "n_independent_physical_futures": 5,
-      "surrogate_fingerprint": "aded9b1c27d1f408eb11",
+      "surrogate_fingerprint": "5de61e352f2e75a8b9d2",
       "component_rule": "Material mean benefit >= CHF5m/year: MAE <= max(10%, CHF1m/year).",
       "current_parameters": {
         "N_YEARS": 40,
@@ -2089,7 +3573,7 @@
         "C_FLEX": 2000000,
         "MAX_AVG_TT": 15.0,
         "PT_SHARE_TARGET": 0.35,
-        "MIN_STRATEGIC_PKM_DISTANCE": 2.0,
+        "MIN_STRATEGIC_PKM_DISTANCE": 0.0,
         "C_INV_STAGE1": 17786000,
         "CAPACITY_INCREASE_STAGE1": 0.0,
         "C_INV_STAGE2": 13320000,
@@ -2099,17 +3583,17 @@
     },
     "passed": false
   },
-  "artifact_sha256": "51b49c5f7a0e5687927082b50201f7e395031674b0527dd12afcd53fe9d86d20",
-  "validation_data_sha256": "b216435ac6a199bf486dc31d6b9e566a42454940c4a009ccfbe785d1e364e0f3",
+  "artifact_sha256": "5393156bf6f953e12c638a6a77e62090dc4433d9f177257fa4b78361db7ecade",
+  "validation_data_sha256": "71102ddd9b2fec337659ce0434af8c52b2cc4d746e414002c210859f3ad83f1a",
   "validation_passed": false,
   "validation_status": "failed",
-  "runtime_seconds": 1277.015557417064,
+  "runtime_seconds": 7670.326481916942,
   "response_table": {
     "file": "response_table.npz",
     "schema": "transport_response_v1",
-    "fingerprint": "d53eaa92426f2c2747d7",
-    "sha256": "fd5dbddcbe00544abc083fc9e7031d88f59b9b96ffd6047138f5d1b6240f906f",
+    "fingerprint": "5529e15df981341c2b8f",
+    "sha256": "ddf7c487dcd4a20b5af0259783d55567175d73ab69049867f1cedde9dd677167",
     "n_conditions": 768,
-    "preparation_seconds": 270.08941479201894
+    "preparation_seconds": 237.93458012491465
   }
 }
