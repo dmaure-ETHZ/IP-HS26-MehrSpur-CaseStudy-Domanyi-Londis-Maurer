@@ -1,0 +1,7 @@
+﻿plan,name,description,initial state,East stretch,West stretch
+baseline,Baseline — Baseline throughout the 40-year horizon,Baseline throughout the 40-year horizon,Stage 0 – Baseline Network,no later addition,no later addition
+static1,Static 1 – East section — East section Altstetten–Schlieren from Year 1,East section Altstetten–Schlieren from Year 1,Stage 1 – East stretch Altstetten–Schlieren,no later addition,no later addition
+static2,Static 2 – Complete connection — Complete connection Altstetten–Dietikon from Year 1,Complete connection Altstetten–Dietikon from Year 1,Both stages – Full route Altstetten–Dietikon,no later addition,no later addition
+staged1,"Staged 1 – Early — East stretch in Year 5, West stretch in Year 10","East stretch in Year 5, West stretch in Year 10",Stage 0 – Baseline Network,fixed,fixed
+staged2,"Staged 2 – Expected demand — East stretch in Year 20, West stretch in Year 32","East stretch in Year 20, West stretch in Year 32",Stage 0 – Baseline Network,fixed,fixed
+adaptive,"Adaptive — East stretch via Trigger 1, West stretch via Trigger 2","East stretch via Trigger 1, West stretch via Trigger 2",Stage 0 – Baseline Network,"When Peak-hour bike demand exceeds 17,000 trips/peak hour for 2 consecutive years, decide to build; open after a 4-year lead time.","When Peak-hour bike demand exceeds 20,000 trips/peak hour for 2 consecutive years, decide to build; open after a 6-year lead time."

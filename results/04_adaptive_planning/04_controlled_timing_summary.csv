@@ -1,0 +1,7 @@
+﻿shape,parameter,endpoint,failure_years,bike_share_trips_failure_years,bike_share_trips_first_failure_year,package_1_decision_year,package_1_opening_year,package_2_decision_year,package_2_opening_year,discounted_expenditure_MCHF
+linear,BIKE_ASC_SHIFT,0.5757359312880714,0,0,,17,21,25,31.0,30.150724348998228
+early,BIKE_ASC_SHIFT,0.5757359312880714,0,0,,11,15,19,25.0,34.237696495575356
+late,BIKE_ASC_SHIFT,0.5757359312880714,0,0,,23,27,31,37.0,26.52161004304567
+logistic,BIKE_ASC_SHIFT,0.5757359312880714,0,0,,19,23,24,30.0,29.618080555307788
+almost_flat,BIKE_ASC_SHIFT,0.5757359312880714,7,7,30.0,30,34,37,,16.284472768811483
+random_walk,BIKE_ASC_SHIFT,0.5757359312880714,0,0,,17,21,24,30.0,30.397285702968293
