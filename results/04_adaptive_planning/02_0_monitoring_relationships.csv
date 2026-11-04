@@ -1,0 +1,16 @@
+﻿comparison,monitoring_indicator,outcome,monitoring_unit,outcome_unit,n,r_squared,slope,spearman_r,outcome_range
+baseline,bike_trips,bike_share_trips,person-trips/peak hour,%,100,0.7201,3.067e-03,0.8335,13.8571
+baseline,bike_share_trips,bike_share_trips,%,%,100,0.9979,3.591e+00,0.9997,13.8571
+baseline,car_share_trips,bike_share_trips,%,%,100,0.4929,-6.870e+00,-0.6623,13.8571
+baseline,pt_trips,bike_share_trips,person-trips/peak hour,%,100,0.1217,-1.473e-03,-0.3354,13.8571
+baseline,congestion_delay_hours,bike_share_trips,person-hours/year,%,100,0.0336,-4.181e-06,-0.1519,13.8571
+stage1_change,bike_trips,bike_share_trips,person-trips/peak hour,percentage points,100,0.6734,2.085e-05,0.8463,0.0961
+stage1_change,bike_share_trips,bike_share_trips,%,percentage points,100,0.865,2.351e-02,0.972,0.0961
+stage1_change,car_share_trips,bike_share_trips,%,percentage points,100,0.4883,-4.808e-02,-0.6938,0.0961
+stage1_change,pt_trips,bike_share_trips,person-trips/peak hour,percentage points,100,0.0648,-7.556e-06,-0.2584,0.0961
+stage1_change,congestion_delay_hours,bike_share_trips,person-hours/year,percentage points,100,0.0101,-1.612e-08,-0.0834,0.0961
+stage2_change,bike_trips,bike_share_trips,person-trips/peak hour,percentage points,100,0.6755,1.576e-05,0.8088,0.0711
+stage2_change,bike_share_trips,bike_share_trips,%,percentage points,100,0.9589,1.868e-02,0.984,0.0711
+stage2_change,car_share_trips,bike_share_trips,%,percentage points,100,0.4976,-3.662e-02,-0.665,0.0711
+stage2_change,pt_trips,bike_share_trips,person-trips/peak hour,percentage points,100,0.1128,-7.524e-06,-0.333,0.0711
+stage2_change,congestion_delay_hours,bike_share_trips,person-hours/year,percentage points,100,0.0421,-2.483e-08,-0.1812,0.0711

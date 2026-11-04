@@ -44,8 +44,8 @@ from additional import uncertainty as uc
 #
 # The Limmattal cycling case monitors total modeled bicycle trips in the
 # reporting area per peak hour, not route counts or counting-section passengers.
-# Nominal baseline demand is approximately 13,138 trips in Year 1 and 21,229
-# in Year 40. Rounded thresholds of 15,000 and 18,000 define exploratory
+# Baseline demand is approximately 13,100 trips in Year 1 (see the calibration
+# note above DEFAULT_TRIGGERS). Rounded thresholds of 17,000 and 20,000 define
 # demand-responsive deployment assumptions, not measured route capacities.
 # They do not guarantee compliance with a minimum cycling-share benchmark.
 # Both rules use the previous year's observations and operate independently.
@@ -133,17 +133,22 @@ PLAN_DEFINITIONS = {
         "name": "Static 2 – Complete connection",
         "initial_packages": ["stations", "tunnel"], "stations": None, "tunnel": None,
     },
+    # Staged 1: build as early as possible; East decided in Year 1 (4-year lead
+    # time), West decided in Year 4 (6-year lead time).
     "staged1": {
-        "name": "Staged 1",
+        "name": "Staged 1 – Early",
         "initial_packages": [],
-        "stations": {"type": "fixed", "opening_year": 8},
-        "tunnel": {"type": "fixed", "opening_year": 11},
+        "stations": {"type": "fixed", "opening_year": 5},
+        "tunnel": {"type": "fixed", "opening_year": 10},
     },
+    # Staged 2: fixed in advance along the expected (median NB03, linear) demand
+    # path, which passes 17,000 peak-hour bike trips around Year 19 and 20,000
+    # around Year 33; mirrors the trigger timing of a median future.
     "staged2": {
-        "name": "Staged 2",
+        "name": "Staged 2 – Expected demand",
         "initial_packages": [],
-        "stations": {"type": "fixed", "opening_year": 6},
-        "tunnel": {"type": "fixed", "opening_year": 15},
+        "stations": {"type": "fixed", "opening_year": 20},
+        "tunnel": {"type": "fixed", "opening_year": 32},
     },
     "flexible": {
         "name": "Flexible",
@@ -315,7 +320,7 @@ def _describe_plan(spec: dict) -> str:
     if spec["initial_stage"]:
         static_labels = {1: "East section Altstetten–Schlieren", 2: "West section Schlieren–Dietikon", 3: "Complete connection Altstetten–Dietikon"}
         parts.append(f"{static_labels[spec['initial_stage']]} from Year 1")
-    for key, package in (("to1", "Stations"), ("to2", "Tunnel")):
+    for key, package in (("to1", "East stretch"), ("to2", "West stretch")):
         transition = spec[key]
         if transition is None:
             continue
