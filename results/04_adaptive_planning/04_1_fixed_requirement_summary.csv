@@ -1,0 +1,5 @@
+﻿requirement,failure_percent,mean_failure_years,configuration
+Cycling trip share >= 22 % (Years 30–40),61.5,5.99,Stage 0 – Baseline Network
+Cycling trip share >= 22 % (Years 30–40),56.0,5.6,Stage 1 – East stretch Altstetten–Schlieren
+Cycling trip share >= 22 % (Years 30–40),58.5,5.8,Stage 2 – West stretch Schlieren–Dietikon
+Cycling trip share >= 22 % (Years 30–40),53.5,5.38,Both stages – Full route Altstetten–Dietikon

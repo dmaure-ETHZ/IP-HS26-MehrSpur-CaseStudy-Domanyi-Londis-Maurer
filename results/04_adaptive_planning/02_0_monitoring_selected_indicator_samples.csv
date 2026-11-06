@@ -19,15 +19,15 @@
 18,bike_trips,15348.394001946166,Baseline,bike_share_trips,21.829411020784118
 19,bike_trips,13424.80978158862,Baseline,bike_share_trips,16.740589960950338
 20,bike_trips,14232.688614901463,Baseline,bike_share_trips,19.64811162253051
-21,bike_trips,14699.18504317487,Baseline,bike_share_trips,20.889695290744733
-22,bike_trips,15290.424795467463,Baseline,bike_share_trips,20.898070065486795
+21,bike_trips,14699.18504317487,Baseline,bike_share_trips,20.889695290744736
+22,bike_trips,15290.424795467463,Baseline,bike_share_trips,20.89807006548679
 23,bike_trips,15679.523474812071,Baseline,bike_share_trips,25.272526918975764
 24,bike_trips,14565.993059472015,Baseline,bike_share_trips,19.895463059911165
 25,bike_trips,15388.535488538286,Baseline,bike_share_trips,25.666759133694338
 26,bike_trips,15969.587288001314,Baseline,bike_share_trips,25.399789972658372
 27,bike_trips,13978.511209077118,Baseline,bike_share_trips,16.766142599922663
 28,bike_trips,14461.896854269075,Baseline,bike_share_trips,22.907098183960834
-29,bike_trips,15549.418632650015,Baseline,bike_share_trips,20.3900906577154
+29,bike_trips,15549.418632650015,Baseline,bike_share_trips,20.390090657715405
 30,bike_trips,14232.073199671731,Baseline,bike_share_trips,18.173231615529097
 31,bike_trips,14626.228602882227,Baseline,bike_share_trips,18.217996235091167
 32,bike_trips,14525.681402308679,Baseline,bike_share_trips,18.696282281585695
@@ -36,14 +36,14 @@
 35,bike_trips,14428.397662244852,Baseline,bike_share_trips,16.717922448313203
 36,bike_trips,16263.142508562787,Baseline,bike_share_trips,24.528906163306026
 37,bike_trips,14960.277598364932,Baseline,bike_share_trips,18.1404592331726
-38,bike_trips,16072.703229416182,Baseline,bike_share_trips,23.181223670721966
+38,bike_trips,16072.703229416182,Baseline,bike_share_trips,23.181223670721963
 39,bike_trips,15796.314364529584,Baseline,bike_share_trips,24.13435987759729
-40,bike_trips,16036.235805205022,Baseline,bike_share_trips,24.38042171270627
-41,bike_trips,14527.717886997394,Baseline,bike_share_trips,19.782146794634095
-42,bike_trips,14823.145167910894,Baseline,bike_share_trips,22.341105945975944
+40,bike_trips,16036.235805205022,Baseline,bike_share_trips,24.380421712706273
+41,bike_trips,14527.717886997394,Baseline,bike_share_trips,19.782146794634098
+42,bike_trips,14823.145167910894,Baseline,bike_share_trips,22.341105945975947
 43,bike_trips,13014.551281122542,Baseline,bike_share_trips,15.305298172353274
 44,bike_trips,14060.681505424163,Baseline,bike_share_trips,17.186036648283157
-45,bike_trips,14702.727555531186,Baseline,bike_share_trips,19.91339618515652
+45,bike_trips,14702.727555531186,Baseline,bike_share_trips,19.91339618515653
 46,bike_trips,14652.470838825862,Baseline,bike_share_trips,23.425486221822243
 47,bike_trips,15266.905605729007,Baseline,bike_share_trips,19.591172954372695
 48,bike_trips,13981.995682594954,Baseline,bike_share_trips,19.695623251517663
@@ -53,14 +53,14 @@
 52,bike_trips,14563.84538047998,Baseline,bike_share_trips,19.433274005894933
 53,bike_trips,16395.16606632302,Baseline,bike_share_trips,24.51978615540874
 54,bike_trips,15612.009193588636,Baseline,bike_share_trips,21.22708946330614
-55,bike_trips,14440.476551179961,Baseline,bike_share_trips,19.71391619402799
+55,bike_trips,14440.476551179961,Baseline,bike_share_trips,19.713916194027995
 56,bike_trips,15629.865772733561,Baseline,bike_share_trips,22.98203744457952
 57,bike_trips,14834.4903528971,Baseline,bike_share_trips,20.828106380925146
 58,bike_trips,14722.583151947603,Baseline,bike_share_trips,21.605447276883403
 59,bike_trips,14899.191588171432,Baseline,bike_share_trips,23.965290824188937
 60,bike_trips,13653.523621116263,Baseline,bike_share_trips,17.977505080004047
-61,bike_trips,16827.772134018713,Baseline,bike_share_trips,26.981039412473233
-62,bike_trips,15310.106341625968,Baseline,bike_share_trips,24.187437796309688
+61,bike_trips,16827.772134018713,Baseline,bike_share_trips,26.98103941247323
+62,bike_trips,15310.106341625968,Baseline,bike_share_trips,24.187437796309695
 63,bike_trips,14765.728474291745,Baseline,bike_share_trips,20.647289482202904
 64,bike_trips,15559.763653477954,Baseline,bike_share_trips,20.593304897486846
 65,bike_trips,14473.854403489257,Baseline,bike_share_trips,20.426089037892016
@@ -68,7 +68,7 @@
 67,bike_trips,16010.352727934309,Baseline,bike_share_trips,27.03615738457696
 68,bike_trips,14057.639747132864,Baseline,bike_share_trips,19.162951879115838
 69,bike_trips,14052.133952424841,Baseline,bike_share_trips,17.87591031682843
-70,bike_trips,16247.42373045288,Baseline,bike_share_trips,23.06978570325012
+70,bike_trips,16247.42373045288,Baseline,bike_share_trips,23.069785703250123
 71,bike_trips,15622.32353896973,Baseline,bike_share_trips,24.428018086583577
 72,bike_trips,13334.328084027795,Baseline,bike_share_trips,15.509188738532654
 73,bike_trips,16442.1140119568,Baseline,bike_share_trips,26.066695887967157
@@ -79,7 +79,7 @@
 78,bike_trips,15346.38438266844,Baseline,bike_share_trips,21.972278857869505
 79,bike_trips,14467.303450733474,Baseline,bike_share_trips,20.119561305131697
 80,bike_trips,14309.581338692056,Baseline,bike_share_trips,17.539140461080017
-81,bike_trips,14022.684110210992,Baseline,bike_share_trips,17.899023877907165
+81,bike_trips,14022.684110210992,Baseline,bike_share_trips,17.89902387790716
 82,bike_trips,12920.532945812683,Baseline,bike_share_trips,16.25356974090992
 83,bike_trips,14336.536482225296,Baseline,bike_share_trips,19.46437402857118
 84,bike_trips,15115.33596481189,Baseline,bike_share_trips,21.15335215226054
@@ -89,19 +89,19 @@
 88,bike_trips,14213.661808403396,Baseline,bike_share_trips,20.248205816879334
 89,bike_trips,15718.809244094491,Baseline,bike_share_trips,23.0343747812017
 90,bike_trips,14942.64739165191,Baseline,bike_share_trips,21.393156896036757
-91,bike_trips,14460.792732552694,Baseline,bike_share_trips,17.296273343806863
-92,bike_trips,15904.845010842626,Baseline,bike_share_trips,25.102204000995087
+91,bike_trips,14460.792732552694,Baseline,bike_share_trips,17.296273343806867
+92,bike_trips,15904.845010842626,Baseline,bike_share_trips,25.102204000995094
 93,bike_trips,14638.048290846928,Baseline,bike_share_trips,22.851707233339617
 94,bike_trips,15157.469310807875,Baseline,bike_share_trips,20.198327605242806
 95,bike_trips,16740.934370804174,Baseline,bike_share_trips,29.162370996496563
 96,bike_trips,14110.112929130946,Baseline,bike_share_trips,16.437342514173377
-97,bike_trips,15568.62072137777,Baseline,bike_share_trips,22.401884507907653
+97,bike_trips,15568.62072137777,Baseline,bike_share_trips,22.401884507907656
 98,bike_trips,15126.433588438109,Baseline,bike_share_trips,18.445757037951843
 99,bike_trips,14636.686263452659,Baseline,bike_share_trips,19.862083868276574
 100,bike_trips,14872.766576588894,Baseline,bike_share_trips,20.85082392836448
 1,bike_trips,16228.905021669301,East stretch,bike_share_trips,26.51063336932367
 2,bike_trips,15246.193933724218,East stretch,bike_share_trips,23.9160069167629
-3,bike_trips,14669.376974909423,East stretch,bike_share_trips,19.817826608719333
+3,bike_trips,14669.376974909423,East stretch,bike_share_trips,19.81782660871933
 4,bike_trips,14544.10695498328,East stretch,bike_share_trips,19.213584747644887
 5,bike_trips,15173.073147349447,East stretch,bike_share_trips,20.11593196520821
 6,bike_trips,14769.032612303708,East stretch,bike_share_trips,22.72354405895011
@@ -109,18 +109,18 @@
 8,bike_trips,14597.550995102149,East stretch,bike_share_trips,18.892351473272925
 9,bike_trips,15230.248943009818,East stretch,bike_share_trips,21.498966361208286
 10,bike_trips,14818.62489501586,East stretch,bike_share_trips,20.681437403608825
-11,bike_trips,15400.21662035475,East stretch,bike_share_trips,19.263111503668462
+11,bike_trips,15400.21662035475,East stretch,bike_share_trips,19.263111503668465
 12,bike_trips,15016.141675289835,East stretch,bike_share_trips,21.996409567226884
 13,bike_trips,16274.030274191127,East stretch,bike_share_trips,28.42746935522407
 14,bike_trips,14262.920352214762,East stretch,bike_share_trips,22.109099243076994
-15,bike_trips,13838.304634405236,East stretch,bike_share_trips,16.676612733046017
+15,bike_trips,13838.304634405236,East stretch,bike_share_trips,16.67661273304602
 16,bike_trips,15646.055481183319,East stretch,bike_share_trips,22.31704484456798
-17,bike_trips,13868.108520627344,East stretch,bike_share_trips,18.273612258996376
-18,bike_trips,15348.394001946166,East stretch,bike_share_trips,22.180299682923522
+17,bike_trips,13868.108520627344,East stretch,bike_share_trips,18.27361225899638
+18,bike_trips,15348.394001946166,East stretch,bike_share_trips,22.180299682923515
 19,bike_trips,13424.80978158862,East stretch,bike_share_trips,17.04032620254252
-20,bike_trips,14232.688614901463,East stretch,bike_share_trips,19.972136193536986
+20,bike_trips,14232.688614901463,East stretch,bike_share_trips,19.97213619353699
 21,bike_trips,14699.18504317487,East stretch,bike_share_trips,21.234105771486774
-22,bike_trips,15290.424795467463,East stretch,bike_share_trips,21.245638825601347
+22,bike_trips,15290.424795467463,East stretch,bike_share_trips,21.245638825601343
 23,bike_trips,15679.523474812071,East stretch,bike_share_trips,25.63826967928305
 24,bike_trips,14565.993059472015,East stretch,bike_share_trips,20.234585403064784
 25,bike_trips,15388.535488538286,East stretch,bike_share_trips,26.015943629075586
@@ -132,7 +132,7 @@
 31,bike_trips,14626.228602882227,East stretch,bike_share_trips,18.534455554077113
 32,bike_trips,14525.681402308679,East stretch,bike_share_trips,19.02399623504589
 33,bike_trips,15898.81551878672,East stretch,bike_share_trips,25.487086165269098
-34,bike_trips,14742.508604853101,East stretch,bike_share_trips,19.887639682452864
+34,bike_trips,14742.508604853101,East stretch,bike_share_trips,19.887639682452868
 35,bike_trips,14428.397662244852,East stretch,bike_share_trips,17.024345760351355
 36,bike_trips,16263.142508562787,East stretch,bike_share_trips,24.88543384052928
 37,bike_trips,14960.277598364932,East stretch,bike_share_trips,18.45827803572353
@@ -141,8 +141,8 @@
 40,bike_trips,16036.235805205022,East stretch,bike_share_trips,24.736214954978667
 41,bike_trips,14527.717886997394,East stretch,bike_share_trips,20.11628297371314
 42,bike_trips,14823.145167910894,East stretch,bike_share_trips,22.69429082031601
-43,bike_trips,13014.551281122542,East stretch,bike_share_trips,15.583551704394601
-44,bike_trips,14060.681505424163,East stretch,bike_share_trips,17.492474003001465
+43,bike_trips,13014.551281122542,East stretch,bike_share_trips,15.583551704394605
+44,bike_trips,14060.681505424163,East stretch,bike_share_trips,17.49247400300147
 45,bike_trips,14702.727555531186,East stretch,bike_share_trips,20.24894170445446
 46,bike_trips,14652.470838825862,East stretch,bike_share_trips,23.779717547451135
 47,bike_trips,15266.905605729007,East stretch,bike_share_trips,19.927290443749655
@@ -160,7 +160,7 @@
 59,bike_trips,14899.191588171432,East stretch,bike_share_trips,24.324193000862014
 60,bike_trips,13653.523621116263,East stretch,bike_share_trips,18.289700461692814
 61,bike_trips,16827.772134018713,East stretch,bike_share_trips,27.340285456254282
-62,bike_trips,15310.106341625968,East stretch,bike_share_trips,24.547730206829222
+62,bike_trips,15310.106341625968,East stretch,bike_share_trips,24.54773020682922
 63,bike_trips,14765.728474291745,East stretch,bike_share_trips,20.986523091721683
 64,bike_trips,15559.763653477954,East stretch,bike_share_trips,20.93339700350399
 65,bike_trips,14473.854403489257,East stretch,bike_share_trips,20.76219033670236
@@ -168,31 +168,31 @@
 67,bike_trips,16010.352727934309,East stretch,bike_share_trips,27.400182927097035
 68,bike_trips,14057.639747132864,East stretch,bike_share_trips,19.495053718760474
 69,bike_trips,14052.133952424841,East stretch,bike_share_trips,18.185082728945694
-70,bike_trips,16247.42373045288,East stretch,bike_share_trips,23.425645187637098
+70,bike_trips,16247.42373045288,East stretch,bike_share_trips,23.4256451876371
 71,bike_trips,15622.32353896973,East stretch,bike_share_trips,24.778500418489863
-72,bike_trips,13334.328084027795,East stretch,bike_share_trips,15.787691733261175
+72,bike_trips,13334.328084027795,East stretch,bike_share_trips,15.787691733261179
 73,bike_trips,16442.1140119568,East stretch,bike_share_trips,26.433651392158602
 74,bike_trips,13404.566205727104,East stretch,bike_share_trips,17.815576719442003
 75,bike_trips,14613.577726630712,East stretch,bike_share_trips,18.05622321980926
 76,bike_trips,15615.762229569214,East stretch,bike_share_trips,22.0364574093727
-77,bike_trips,14992.13467460032,East stretch,bike_share_trips,19.718556239916243
+77,bike_trips,14992.13467460032,East stretch,bike_share_trips,19.71855623991624
 78,bike_trips,15346.38438266844,East stretch,bike_share_trips,22.312923337806946
 79,bike_trips,14467.303450733474,East stretch,bike_share_trips,20.447361840565637
 80,bike_trips,14309.581338692056,East stretch,bike_share_trips,17.83871245204929
 81,bike_trips,14022.684110210992,East stretch,bike_share_trips,18.214213878017105
-82,bike_trips,12920.532945812683,East stretch,bike_share_trips,16.539741000500545
+82,bike_trips,12920.532945812683,East stretch,bike_share_trips,16.539741000500538
 83,bike_trips,14336.536482225296,East stretch,bike_share_trips,19.793546259201072
 84,bike_trips,15115.33596481189,East stretch,bike_share_trips,21.498220146048077
 85,bike_trips,14735.527506808288,East stretch,bike_share_trips,19.120578227872297
 86,bike_trips,14533.746209857516,East stretch,bike_share_trips,20.93928832536047
-87,bike_trips,15644.849692564972,East stretch,bike_share_trips,23.136254918913377
+87,bike_trips,15644.849692564972,East stretch,bike_share_trips,23.136254918913373
 88,bike_trips,14213.661808403396,East stretch,bike_share_trips,20.584029827956023
-89,bike_trips,15718.809244094491,East stretch,bike_share_trips,23.384770908819085
+89,bike_trips,15718.809244094491,East stretch,bike_share_trips,23.38477090881908
 90,bike_trips,14942.64739165191,East stretch,bike_share_trips,21.74076544927803
 91,bike_trips,14460.792732552694,East stretch,bike_share_trips,17.60449431709629
 92,bike_trips,15904.845010842626,East stretch,bike_share_trips,25.462808654231367
-93,bike_trips,14638.048290846928,East stretch,bike_share_trips,23.205637187987968
-94,bike_trips,15157.469310807875,East stretch,bike_share_trips,20.535478134440257
+93,bike_trips,14638.048290846928,East stretch,bike_share_trips,23.20563718798797
+94,bike_trips,15157.469310807875,East stretch,bike_share_trips,20.53547813444026
 95,bike_trips,16740.934370804174,East stretch,bike_share_trips,29.51660350400954
 96,bike_trips,14110.112929130946,East stretch,bike_share_trips,16.732838290963613
 97,bike_trips,15568.62072137777,East stretch,bike_share_trips,22.756749136825277
@@ -203,7 +203,7 @@
 2,bike_trips,15246.193933724218,West stretch,bike_share_trips,23.736466262561983
 3,bike_trips,14669.376974909423,West stretch,bike_share_trips,19.640441542080662
 4,bike_trips,14544.10695498328,West stretch,bike_share_trips,19.0365816635849
-5,bike_trips,15173.073147349447,West stretch,bike_share_trips,19.935710368842688
+5,bike_trips,15173.073147349447,West stretch,bike_share_trips,19.935710368842685
 6,bike_trips,14769.032612303708,West stretch,bike_share_trips,22.545973279985674
 7,bike_trips,14724.177995048089,West stretch,bike_share_trips,22.080469458827192
 8,bike_trips,14597.550995102149,West stretch,bike_share_trips,18.712928393612057
@@ -215,8 +215,8 @@
 14,bike_trips,14262.920352214762,West stretch,bike_share_trips,21.929758275364875
 15,bike_trips,13838.304634405236,West stretch,bike_share_trips,16.51701085169064
 16,bike_trips,15646.055481183319,West stretch,bike_share_trips,22.130295397554498
-17,bike_trips,13868.108520627344,West stretch,bike_share_trips,18.10325793691111
-18,bike_trips,15348.394001946166,West stretch,bike_share_trips,21.99508898293705
+17,bike_trips,13868.108520627344,West stretch,bike_share_trips,18.103257936911106
+18,bike_trips,15348.394001946166,West stretch,bike_share_trips,21.995088982937048
 19,bike_trips,13424.80978158862,West stretch,bike_share_trips,16.877138786770807
 20,bike_trips,14232.688614901463,West stretch,bike_share_trips,19.79876427782107
 21,bike_trips,14699.18504317487,West stretch,bike_share_trips,21.052570486310426
@@ -226,7 +226,7 @@
 25,bike_trips,15388.535488538286,West stretch,bike_share_trips,25.84272560108748
 26,bike_trips,15969.587288001314,West stretch,bike_share_trips,25.591037423448586
 27,bike_trips,13978.511209077118,West stretch,bike_share_trips,16.90279015065945
-28,bike_trips,14461.896854269075,West stretch,bike_share_trips,23.074531275580828
+28,bike_trips,14461.896854269075,West stretch,bike_share_trips,23.074531275580824
 29,bike_trips,15549.418632650015,West stretch,bike_share_trips,20.54675220215822
 30,bike_trips,14232.073199671731,West stretch,bike_share_trips,18.32242121339129
 31,bike_trips,14626.228602882227,West stretch,bike_share_trips,18.36247942405454
@@ -236,14 +236,14 @@
 35,bike_trips,14428.397662244852,West stretch,bike_share_trips,16.85466095185117
 36,bike_trips,16263.142508562787,West stretch,bike_share_trips,24.707319059236696
 37,bike_trips,14960.277598364932,West stretch,bike_share_trips,18.286270731691836
-38,bike_trips,16072.703229416182,West stretch,bike_share_trips,23.354280209551394
-39,bike_trips,15796.314364529584,West stretch,bike_share_trips,24.31070674513312
+38,bike_trips,16072.703229416182,West stretch,bike_share_trips,23.35428020955139
+39,bike_trips,15796.314364529584,West stretch,bike_share_trips,24.310706745133125
 40,bike_trips,16036.235805205022,West stretch,bike_share_trips,24.556215180885154
-41,bike_trips,14527.717886997394,West stretch,bike_share_trips,19.937916572630005
+41,bike_trips,14527.717886997394,West stretch,bike_share_trips,19.93791657263001
 42,bike_trips,14823.145167910894,West stretch,bike_share_trips,22.51196018758625
 43,bike_trips,13014.551281122542,West stretch,bike_share_trips,15.430631686218094
 44,bike_trips,14060.681505424163,West stretch,bike_share_trips,17.3249725712802
-45,bike_trips,14702.727555531186,West stretch,bike_share_trips,20.070654769517965
+45,bike_trips,14702.727555531186,West stretch,bike_share_trips,20.07065476951797
 46,bike_trips,14652.470838825862,West stretch,bike_share_trips,23.60158251654178
 47,bike_trips,15266.905605729007,West stretch,bike_share_trips,19.7468197301683
 48,bike_trips,13981.995682594954,West stretch,bike_share_trips,19.8509360706045
@@ -253,13 +253,13 @@
 52,bike_trips,14563.84538047998,West stretch,bike_share_trips,19.584887871251254
 53,bike_trips,16395.16606632302,West stretch,bike_share_trips,24.69514973519717
 54,bike_trips,15612.009193588636,West stretch,bike_share_trips,21.390404237313675
-55,bike_trips,14440.476551179961,West stretch,bike_share_trips,19.869358090884724
+55,bike_trips,14440.476551179961,West stretch,bike_share_trips,19.86935809088472
 56,bike_trips,15629.865772733561,West stretch,bike_share_trips,23.152447087246575
 57,bike_trips,14834.4903528971,West stretch,bike_share_trips,20.99202396754547
 58,bike_trips,14722.583151947603,West stretch,bike_share_trips,21.767991171609896
 59,bike_trips,14899.191588171432,West stretch,bike_share_trips,24.14497139986891
 60,bike_trips,13653.523621116263,West stretch,bike_share_trips,18.1204492401859
-61,bike_trips,16827.772134018713,West stretch,bike_share_trips,27.166292488726363
+61,bike_trips,16827.772134018713,West stretch,bike_share_trips,27.16629248872637
 62,bike_trips,15310.106341625968,West stretch,bike_share_trips,24.36875849979171
 63,bike_trips,14765.728474291745,West stretch,bike_share_trips,20.807215501582046
 64,bike_trips,15559.763653477954,West stretch,bike_share_trips,20.75143749023402
@@ -274,7 +274,7 @@
 73,bike_trips,16442.1140119568,West stretch,bike_share_trips,26.255672741221137
 74,bike_trips,13404.566205727104,West stretch,bike_share_trips,17.648402258611103
 75,bike_trips,14613.577726630712,West stretch,bike_share_trips,17.88367146958672
-76,bike_trips,15615.762229569214,West stretch,bike_share_trips,21.850618276865927
+76,bike_trips,15615.762229569214,West stretch,bike_share_trips,21.85061827686593
 77,bike_trips,14992.13467460032,West stretch,bike_share_trips,19.542895179752783
 78,bike_trips,15346.38438266844,West stretch,bike_share_trips,22.13353583012493
 79,bike_trips,14467.303450733474,West stretch,bike_share_trips,20.27239777806748
@@ -282,18 +282,18 @@
 81,bike_trips,14022.684110210992,West stretch,bike_share_trips,18.042810781815668
 82,bike_trips,12920.532945812683,West stretch,bike_share_trips,16.384796475412333
 83,bike_trips,14336.536482225296,West stretch,bike_share_trips,19.616986332573703
-84,bike_trips,15115.33596481189,West stretch,bike_share_trips,21.316528234462822
+84,bike_trips,15115.33596481189,West stretch,bike_share_trips,21.31652823446282
 85,bike_trips,14735.527506808288,West stretch,bike_share_trips,18.945606709877485
-86,bike_trips,14533.746209857516,West stretch,bike_share_trips,20.75902411311726
+86,bike_trips,14533.746209857516,West stretch,bike_share_trips,20.759024113117256
 87,bike_trips,15644.849692564972,West stretch,bike_share_trips,22.953449282839223
 88,bike_trips,14213.661808403396,West stretch,bike_share_trips,20.40682072554013
 89,bike_trips,15718.809244094491,West stretch,bike_share_trips,23.20152319013646
 90,bike_trips,14942.64739165191,West stretch,bike_share_trips,21.557964833513203
-91,bike_trips,14460.792732552694,West stretch,bike_share_trips,17.43613151338541
+91,bike_trips,14460.792732552694,West stretch,bike_share_trips,17.436131513385412
 92,bike_trips,15904.845010842626,West stretch,bike_share_trips,25.286026422020658
-93,bike_trips,14638.048290846928,West stretch,bike_share_trips,23.02401848333579
+93,bike_trips,14638.048290846928,West stretch,bike_share_trips,23.024018483335787
 94,bike_trips,15157.469310807875,West stretch,bike_share_trips,20.355228731440416
-95,bike_trips,16740.934370804174,West stretch,bike_share_trips,29.351846053369176
+95,bike_trips,16740.934370804174,West stretch,bike_share_trips,29.35184605336917
 96,bike_trips,14110.112929130946,West stretch,bike_share_trips,16.569532284148668
 97,bike_trips,15568.62072137777,West stretch,bike_share_trips,22.574894312705442
 98,bike_trips,15126.433588438109,West stretch,bike_share_trips,18.59497045230541
