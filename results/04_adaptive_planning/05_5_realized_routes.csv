@@ -1,0 +1,7 @@
+﻿route,scenarios,share_percent
+Baseline → East stretch → Both,113,56.5
+Baseline → West stretch → Both,0,0.0
+Baseline → Both (simultaneous),0,0.0
+Baseline → East stretch only,52,26.0
+Baseline → West stretch only,0,0.0
+No package open within horizon,35,17.5

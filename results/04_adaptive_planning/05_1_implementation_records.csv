@@ -1,0 +1,401 @@
+﻿scenario,package,package_label,decision_year,scheduled_opening_year,opening_year,status
+200,1,East stretch,27.0,31.0,31.0,Open within horizon
+200,2,West stretch,,,,No decision
+201,1,East stretch,14.0,18.0,18.0,Open within horizon
+201,2,West stretch,20.0,26.0,26.0,Open within horizon
+202,1,East stretch,23.0,27.0,27.0,Open within horizon
+202,2,West stretch,34.0,40.0,40.0,Open within horizon
+203,1,East stretch,25.0,29.0,29.0,Open within horizon
+203,2,West stretch,40.0,46.0,,Committed; opening after horizon
+204,1,East stretch,24.0,28.0,28.0,Open within horizon
+204,2,West stretch,37.0,43.0,,Committed; opening after horizon
+205,1,East stretch,27.0,31.0,31.0,Open within horizon
+205,2,West stretch,,,,No decision
+206,1,East stretch,21.0,25.0,25.0,Open within horizon
+206,2,West stretch,29.0,35.0,35.0,Open within horizon
+207,1,East stretch,14.0,18.0,18.0,Open within horizon
+207,2,West stretch,19.0,25.0,25.0,Open within horizon
+208,1,East stretch,25.0,29.0,29.0,Open within horizon
+208,2,West stretch,39.0,45.0,,Committed; opening after horizon
+209,1,East stretch,,,,No decision
+209,2,West stretch,,,,No decision
+210,1,East stretch,14.0,18.0,18.0,Open within horizon
+210,2,West stretch,20.0,26.0,26.0,Open within horizon
+211,1,East stretch,21.0,25.0,25.0,Open within horizon
+211,2,West stretch,29.0,35.0,35.0,Open within horizon
+212,1,East stretch,23.0,27.0,27.0,Open within horizon
+212,2,West stretch,34.0,40.0,40.0,Open within horizon
+213,1,East stretch,22.0,26.0,26.0,Open within horizon
+213,2,West stretch,31.0,37.0,37.0,Open within horizon
+214,1,East stretch,18.0,22.0,22.0,Open within horizon
+214,2,West stretch,25.0,31.0,31.0,Open within horizon
+215,1,East stretch,17.0,21.0,21.0,Open within horizon
+215,2,West stretch,23.0,29.0,29.0,Open within horizon
+216,1,East stretch,27.0,31.0,31.0,Open within horizon
+216,2,West stretch,,,,No decision
+217,1,East stretch,35.0,39.0,39.0,Open within horizon
+217,2,West stretch,,,,No decision
+218,1,East stretch,20.0,24.0,24.0,Open within horizon
+218,2,West stretch,29.0,35.0,35.0,Open within horizon
+219,1,East stretch,32.0,36.0,36.0,Open within horizon
+219,2,West stretch,,,,No decision
+220,1,East stretch,21.0,25.0,25.0,Open within horizon
+220,2,West stretch,30.0,36.0,36.0,Open within horizon
+221,1,East stretch,25.0,29.0,29.0,Open within horizon
+221,2,West stretch,39.0,45.0,,Committed; opening after horizon
+222,1,East stretch,,,,No decision
+222,2,West stretch,,,,No decision
+223,1,East stretch,18.0,22.0,22.0,Open within horizon
+223,2,West stretch,25.0,31.0,31.0,Open within horizon
+224,1,East stretch,23.0,27.0,27.0,Open within horizon
+224,2,West stretch,32.0,38.0,38.0,Open within horizon
+225,1,East stretch,19.0,23.0,23.0,Open within horizon
+225,2,West stretch,25.0,31.0,31.0,Open within horizon
+226,1,East stretch,27.0,31.0,31.0,Open within horizon
+226,2,West stretch,,,,No decision
+227,1,East stretch,25.0,29.0,29.0,Open within horizon
+227,2,West stretch,38.0,44.0,,Committed; opening after horizon
+228,1,East stretch,31.0,35.0,35.0,Open within horizon
+228,2,West stretch,,,,No decision
+229,1,East stretch,32.0,36.0,36.0,Open within horizon
+229,2,West stretch,,,,No decision
+230,1,East stretch,19.0,23.0,23.0,Open within horizon
+230,2,West stretch,26.0,32.0,32.0,Open within horizon
+231,1,East stretch,28.0,32.0,32.0,Open within horizon
+231,2,West stretch,,,,No decision
+232,1,East stretch,20.0,24.0,24.0,Open within horizon
+232,2,West stretch,26.0,32.0,32.0,Open within horizon
+233,1,East stretch,17.0,21.0,21.0,Open within horizon
+233,2,West stretch,23.0,29.0,29.0,Open within horizon
+234,1,East stretch,20.0,24.0,24.0,Open within horizon
+234,2,West stretch,28.0,34.0,34.0,Open within horizon
+235,1,East stretch,20.0,24.0,24.0,Open within horizon
+235,2,West stretch,27.0,33.0,33.0,Open within horizon
+236,1,East stretch,,,,No decision
+236,2,West stretch,,,,No decision
+237,1,East stretch,26.0,30.0,30.0,Open within horizon
+237,2,West stretch,40.0,46.0,,Committed; opening after horizon
+238,1,East stretch,18.0,22.0,22.0,Open within horizon
+238,2,West stretch,27.0,33.0,33.0,Open within horizon
+239,1,East stretch,15.0,19.0,19.0,Open within horizon
+239,2,West stretch,21.0,27.0,27.0,Open within horizon
+240,1,East stretch,29.0,33.0,33.0,Open within horizon
+240,2,West stretch,,,,No decision
+241,1,East stretch,,,,No decision
+241,2,West stretch,,,,No decision
+242,1,East stretch,,,,No decision
+242,2,West stretch,,,,No decision
+243,1,East stretch,18.0,22.0,22.0,Open within horizon
+243,2,West stretch,25.0,31.0,31.0,Open within horizon
+244,1,East stretch,19.0,23.0,23.0,Open within horizon
+244,2,West stretch,26.0,32.0,32.0,Open within horizon
+245,1,East stretch,21.0,25.0,25.0,Open within horizon
+245,2,West stretch,29.0,35.0,35.0,Open within horizon
+246,1,East stretch,20.0,24.0,24.0,Open within horizon
+246,2,West stretch,27.0,33.0,33.0,Open within horizon
+247,1,East stretch,,,,No decision
+247,2,West stretch,,,,No decision
+248,1,East stretch,13.0,17.0,17.0,Open within horizon
+248,2,West stretch,19.0,25.0,25.0,Open within horizon
+249,1,East stretch,30.0,34.0,34.0,Open within horizon
+249,2,West stretch,,,,No decision
+250,1,East stretch,35.0,39.0,39.0,Open within horizon
+250,2,West stretch,,,,No decision
+251,1,East stretch,20.0,24.0,24.0,Open within horizon
+251,2,West stretch,29.0,35.0,35.0,Open within horizon
+252,1,East stretch,21.0,25.0,25.0,Open within horizon
+252,2,West stretch,29.0,35.0,35.0,Open within horizon
+253,1,East stretch,,,,No decision
+253,2,West stretch,,,,No decision
+254,1,East stretch,18.0,22.0,22.0,Open within horizon
+254,2,West stretch,25.0,31.0,31.0,Open within horizon
+255,1,East stretch,33.0,37.0,37.0,Open within horizon
+255,2,West stretch,,,,No decision
+256,1,East stretch,22.0,26.0,26.0,Open within horizon
+256,2,West stretch,31.0,37.0,37.0,Open within horizon
+257,1,East stretch,,,,No decision
+257,2,West stretch,,,,No decision
+258,1,East stretch,,,,No decision
+258,2,West stretch,,,,No decision
+259,1,East stretch,20.0,24.0,24.0,Open within horizon
+259,2,West stretch,28.0,34.0,34.0,Open within horizon
+260,1,East stretch,,,,No decision
+260,2,West stretch,,,,No decision
+261,1,East stretch,39.0,43.0,,Committed; opening after horizon
+261,2,West stretch,,,,No decision
+262,1,East stretch,,,,No decision
+262,2,West stretch,,,,No decision
+263,1,East stretch,,,,No decision
+263,2,West stretch,,,,No decision
+264,1,East stretch,28.0,32.0,32.0,Open within horizon
+264,2,West stretch,,,,No decision
+265,1,East stretch,36.0,40.0,40.0,Open within horizon
+265,2,West stretch,,,,No decision
+266,1,East stretch,34.0,38.0,38.0,Open within horizon
+266,2,West stretch,,,,No decision
+267,1,East stretch,20.0,24.0,24.0,Open within horizon
+267,2,West stretch,27.0,33.0,33.0,Open within horizon
+268,1,East stretch,21.0,25.0,25.0,Open within horizon
+268,2,West stretch,30.0,36.0,36.0,Open within horizon
+269,1,East stretch,17.0,21.0,21.0,Open within horizon
+269,2,West stretch,25.0,31.0,31.0,Open within horizon
+270,1,East stretch,18.0,22.0,22.0,Open within horizon
+270,2,West stretch,25.0,31.0,31.0,Open within horizon
+271,1,East stretch,22.0,26.0,26.0,Open within horizon
+271,2,West stretch,33.0,39.0,39.0,Open within horizon
+272,1,East stretch,14.0,18.0,18.0,Open within horizon
+272,2,West stretch,20.0,26.0,26.0,Open within horizon
+273,1,East stretch,16.0,20.0,20.0,Open within horizon
+273,2,West stretch,23.0,29.0,29.0,Open within horizon
+274,1,East stretch,15.0,19.0,19.0,Open within horizon
+274,2,West stretch,21.0,27.0,27.0,Open within horizon
+275,1,East stretch,15.0,19.0,19.0,Open within horizon
+275,2,West stretch,21.0,27.0,27.0,Open within horizon
+276,1,East stretch,29.0,33.0,33.0,Open within horizon
+276,2,West stretch,,,,No decision
+277,1,East stretch,19.0,23.0,23.0,Open within horizon
+277,2,West stretch,27.0,33.0,33.0,Open within horizon
+278,1,East stretch,22.0,26.0,26.0,Open within horizon
+278,2,West stretch,30.0,36.0,36.0,Open within horizon
+279,1,East stretch,24.0,28.0,28.0,Open within horizon
+279,2,West stretch,34.0,40.0,40.0,Open within horizon
+280,1,East stretch,,,,No decision
+280,2,West stretch,,,,No decision
+281,1,East stretch,33.0,37.0,37.0,Open within horizon
+281,2,West stretch,,,,No decision
+282,1,East stretch,,,,No decision
+282,2,West stretch,,,,No decision
+283,1,East stretch,18.0,22.0,22.0,Open within horizon
+283,2,West stretch,24.0,30.0,30.0,Open within horizon
+284,1,East stretch,18.0,22.0,22.0,Open within horizon
+284,2,West stretch,25.0,31.0,31.0,Open within horizon
+285,1,East stretch,32.0,36.0,36.0,Open within horizon
+285,2,West stretch,,,,No decision
+286,1,East stretch,20.0,24.0,24.0,Open within horizon
+286,2,West stretch,28.0,34.0,34.0,Open within horizon
+287,1,East stretch,19.0,23.0,23.0,Open within horizon
+287,2,West stretch,25.0,31.0,31.0,Open within horizon
+288,1,East stretch,,,,No decision
+288,2,West stretch,,,,No decision
+289,1,East stretch,15.0,19.0,19.0,Open within horizon
+289,2,West stretch,21.0,27.0,27.0,Open within horizon
+290,1,East stretch,21.0,25.0,25.0,Open within horizon
+290,2,West stretch,28.0,34.0,34.0,Open within horizon
+291,1,East stretch,19.0,23.0,23.0,Open within horizon
+291,2,West stretch,27.0,33.0,33.0,Open within horizon
+292,1,East stretch,20.0,24.0,24.0,Open within horizon
+292,2,West stretch,29.0,35.0,35.0,Open within horizon
+293,1,East stretch,21.0,25.0,25.0,Open within horizon
+293,2,West stretch,29.0,35.0,35.0,Open within horizon
+294,1,East stretch,,,,No decision
+294,2,West stretch,,,,No decision
+295,1,East stretch,21.0,25.0,25.0,Open within horizon
+295,2,West stretch,30.0,36.0,36.0,Open within horizon
+296,1,East stretch,20.0,24.0,24.0,Open within horizon
+296,2,West stretch,27.0,33.0,33.0,Open within horizon
+297,1,East stretch,23.0,27.0,27.0,Open within horizon
+297,2,West stretch,32.0,38.0,38.0,Open within horizon
+298,1,East stretch,18.0,22.0,22.0,Open within horizon
+298,2,West stretch,24.0,30.0,30.0,Open within horizon
+299,1,East stretch,,,,No decision
+299,2,West stretch,,,,No decision
+300,1,East stretch,17.0,21.0,21.0,Open within horizon
+300,2,West stretch,23.0,29.0,29.0,Open within horizon
+301,1,East stretch,27.0,31.0,31.0,Open within horizon
+301,2,West stretch,,,,No decision
+302,1,East stretch,31.0,35.0,35.0,Open within horizon
+302,2,West stretch,,,,No decision
+303,1,East stretch,22.0,26.0,26.0,Open within horizon
+303,2,West stretch,31.0,37.0,37.0,Open within horizon
+304,1,East stretch,23.0,27.0,27.0,Open within horizon
+304,2,West stretch,34.0,40.0,40.0,Open within horizon
+305,1,East stretch,24.0,28.0,28.0,Open within horizon
+305,2,West stretch,35.0,41.0,,Committed; opening after horizon
+306,1,East stretch,,,,No decision
+306,2,West stretch,,,,No decision
+307,1,East stretch,25.0,29.0,29.0,Open within horizon
+307,2,West stretch,38.0,44.0,,Committed; opening after horizon
+308,1,East stretch,20.0,24.0,24.0,Open within horizon
+308,2,West stretch,29.0,35.0,35.0,Open within horizon
+309,1,East stretch,23.0,27.0,27.0,Open within horizon
+309,2,West stretch,33.0,39.0,39.0,Open within horizon
+310,1,East stretch,23.0,27.0,27.0,Open within horizon
+310,2,West stretch,33.0,39.0,39.0,Open within horizon
+311,1,East stretch,24.0,28.0,28.0,Open within horizon
+311,2,West stretch,36.0,42.0,,Committed; opening after horizon
+312,1,East stretch,20.0,24.0,24.0,Open within horizon
+312,2,West stretch,27.0,33.0,33.0,Open within horizon
+313,1,East stretch,16.0,20.0,20.0,Open within horizon
+313,2,West stretch,22.0,28.0,28.0,Open within horizon
+314,1,East stretch,,,,No decision
+314,2,West stretch,,,,No decision
+315,1,East stretch,24.0,28.0,28.0,Open within horizon
+315,2,West stretch,35.0,41.0,,Committed; opening after horizon
+316,1,East stretch,21.0,25.0,25.0,Open within horizon
+316,2,West stretch,30.0,36.0,36.0,Open within horizon
+317,1,East stretch,12.0,16.0,16.0,Open within horizon
+317,2,West stretch,18.0,24.0,24.0,Open within horizon
+318,1,East stretch,19.0,23.0,23.0,Open within horizon
+318,2,West stretch,25.0,31.0,31.0,Open within horizon
+319,1,East stretch,13.0,17.0,17.0,Open within horizon
+319,2,West stretch,19.0,25.0,25.0,Open within horizon
+320,1,East stretch,28.0,32.0,32.0,Open within horizon
+320,2,West stretch,,,,No decision
+321,1,East stretch,17.0,21.0,21.0,Open within horizon
+321,2,West stretch,23.0,29.0,29.0,Open within horizon
+322,1,East stretch,21.0,25.0,25.0,Open within horizon
+322,2,West stretch,29.0,35.0,35.0,Open within horizon
+323,1,East stretch,26.0,30.0,30.0,Open within horizon
+323,2,West stretch,,,,No decision
+324,1,East stretch,16.0,20.0,20.0,Open within horizon
+324,2,West stretch,22.0,28.0,28.0,Open within horizon
+325,1,East stretch,23.0,27.0,27.0,Open within horizon
+325,2,West stretch,34.0,40.0,40.0,Open within horizon
+326,1,East stretch,31.0,35.0,35.0,Open within horizon
+326,2,West stretch,,,,No decision
+327,1,East stretch,22.0,26.0,26.0,Open within horizon
+327,2,West stretch,32.0,38.0,38.0,Open within horizon
+328,1,East stretch,39.0,43.0,,Committed; opening after horizon
+328,2,West stretch,,,,No decision
+329,1,East stretch,38.0,42.0,,Committed; opening after horizon
+329,2,West stretch,,,,No decision
+330,1,East stretch,20.0,24.0,24.0,Open within horizon
+330,2,West stretch,27.0,33.0,33.0,Open within horizon
+331,1,East stretch,28.0,32.0,32.0,Open within horizon
+331,2,West stretch,,,,No decision
+332,1,East stretch,20.0,24.0,24.0,Open within horizon
+332,2,West stretch,28.0,34.0,34.0,Open within horizon
+333,1,East stretch,30.0,34.0,34.0,Open within horizon
+333,2,West stretch,,,,No decision
+334,1,East stretch,16.0,20.0,20.0,Open within horizon
+334,2,West stretch,22.0,28.0,28.0,Open within horizon
+335,1,East stretch,26.0,30.0,30.0,Open within horizon
+335,2,West stretch,,,,No decision
+336,1,East stretch,18.0,22.0,22.0,Open within horizon
+336,2,West stretch,25.0,31.0,31.0,Open within horizon
+337,1,East stretch,,,,No decision
+337,2,West stretch,,,,No decision
+338,1,East stretch,28.0,32.0,32.0,Open within horizon
+338,2,West stretch,,,,No decision
+339,1,East stretch,23.0,27.0,27.0,Open within horizon
+339,2,West stretch,33.0,39.0,39.0,Open within horizon
+340,1,East stretch,26.0,30.0,30.0,Open within horizon
+340,2,West stretch,,,,No decision
+341,1,East stretch,35.0,39.0,39.0,Open within horizon
+341,2,West stretch,,,,No decision
+342,1,East stretch,,,,No decision
+342,2,West stretch,,,,No decision
+343,1,East stretch,17.0,21.0,21.0,Open within horizon
+343,2,West stretch,24.0,30.0,30.0,Open within horizon
+344,1,East stretch,16.0,20.0,20.0,Open within horizon
+344,2,West stretch,22.0,28.0,28.0,Open within horizon
+345,1,East stretch,37.0,41.0,,Committed; opening after horizon
+345,2,West stretch,,,,No decision
+346,1,East stretch,31.0,35.0,35.0,Open within horizon
+346,2,West stretch,,,,No decision
+347,1,East stretch,25.0,29.0,29.0,Open within horizon
+347,2,West stretch,,,,No decision
+348,1,East stretch,20.0,24.0,24.0,Open within horizon
+348,2,West stretch,29.0,35.0,35.0,Open within horizon
+349,1,East stretch,16.0,20.0,20.0,Open within horizon
+349,2,West stretch,22.0,28.0,28.0,Open within horizon
+350,1,East stretch,22.0,26.0,26.0,Open within horizon
+350,2,West stretch,32.0,38.0,38.0,Open within horizon
+351,1,East stretch,,,,No decision
+351,2,West stretch,,,,No decision
+352,1,East stretch,18.0,22.0,22.0,Open within horizon
+352,2,West stretch,25.0,31.0,31.0,Open within horizon
+353,1,East stretch,22.0,26.0,26.0,Open within horizon
+353,2,West stretch,31.0,37.0,37.0,Open within horizon
+354,1,East stretch,24.0,28.0,28.0,Open within horizon
+354,2,West stretch,35.0,41.0,,Committed; opening after horizon
+355,1,East stretch,20.0,24.0,24.0,Open within horizon
+355,2,West stretch,28.0,34.0,34.0,Open within horizon
+356,1,East stretch,20.0,24.0,24.0,Open within horizon
+356,2,West stretch,28.0,34.0,34.0,Open within horizon
+357,1,East stretch,31.0,35.0,35.0,Open within horizon
+357,2,West stretch,,,,No decision
+358,1,East stretch,17.0,21.0,21.0,Open within horizon
+358,2,West stretch,24.0,30.0,30.0,Open within horizon
+359,1,East stretch,17.0,21.0,21.0,Open within horizon
+359,2,West stretch,23.0,29.0,29.0,Open within horizon
+360,1,East stretch,19.0,23.0,23.0,Open within horizon
+360,2,West stretch,27.0,33.0,33.0,Open within horizon
+361,1,East stretch,19.0,23.0,23.0,Open within horizon
+361,2,West stretch,27.0,33.0,33.0,Open within horizon
+362,1,East stretch,,,,No decision
+362,2,West stretch,,,,No decision
+363,1,East stretch,26.0,30.0,30.0,Open within horizon
+363,2,West stretch,,,,No decision
+364,1,East stretch,17.0,21.0,21.0,Open within horizon
+364,2,West stretch,23.0,29.0,29.0,Open within horizon
+365,1,East stretch,,,,No decision
+365,2,West stretch,,,,No decision
+366,1,East stretch,20.0,24.0,24.0,Open within horizon
+366,2,West stretch,28.0,34.0,34.0,Open within horizon
+367,1,East stretch,29.0,33.0,33.0,Open within horizon
+367,2,West stretch,,,,No decision
+368,1,East stretch,33.0,37.0,37.0,Open within horizon
+368,2,West stretch,,,,No decision
+369,1,East stretch,17.0,21.0,21.0,Open within horizon
+369,2,West stretch,24.0,30.0,30.0,Open within horizon
+370,1,East stretch,19.0,23.0,23.0,Open within horizon
+370,2,West stretch,26.0,32.0,32.0,Open within horizon
+371,1,East stretch,28.0,32.0,32.0,Open within horizon
+371,2,West stretch,,,,No decision
+372,1,East stretch,,,,No decision
+372,2,West stretch,,,,No decision
+373,1,East stretch,23.0,27.0,27.0,Open within horizon
+373,2,West stretch,33.0,39.0,39.0,Open within horizon
+374,1,East stretch,23.0,27.0,27.0,Open within horizon
+374,2,West stretch,34.0,40.0,40.0,Open within horizon
+375,1,East stretch,16.0,20.0,20.0,Open within horizon
+375,2,West stretch,22.0,28.0,28.0,Open within horizon
+376,1,East stretch,19.0,23.0,23.0,Open within horizon
+376,2,West stretch,26.0,32.0,32.0,Open within horizon
+377,1,East stretch,23.0,27.0,27.0,Open within horizon
+377,2,West stretch,33.0,39.0,39.0,Open within horizon
+378,1,East stretch,22.0,26.0,26.0,Open within horizon
+378,2,West stretch,30.0,36.0,36.0,Open within horizon
+379,1,East stretch,,,,No decision
+379,2,West stretch,,,,No decision
+380,1,East stretch,,,,No decision
+380,2,West stretch,,,,No decision
+381,1,East stretch,20.0,24.0,24.0,Open within horizon
+381,2,West stretch,27.0,33.0,33.0,Open within horizon
+382,1,East stretch,19.0,23.0,23.0,Open within horizon
+382,2,West stretch,26.0,32.0,32.0,Open within horizon
+383,1,East stretch,19.0,23.0,23.0,Open within horizon
+383,2,West stretch,26.0,32.0,32.0,Open within horizon
+384,1,East stretch,25.0,29.0,29.0,Open within horizon
+384,2,West stretch,,,,No decision
+385,1,East stretch,19.0,23.0,23.0,Open within horizon
+385,2,West stretch,27.0,33.0,33.0,Open within horizon
+386,1,East stretch,16.0,20.0,20.0,Open within horizon
+386,2,West stretch,22.0,28.0,28.0,Open within horizon
+387,1,East stretch,22.0,26.0,26.0,Open within horizon
+387,2,West stretch,30.0,36.0,36.0,Open within horizon
+388,1,East stretch,21.0,25.0,25.0,Open within horizon
+388,2,West stretch,29.0,35.0,35.0,Open within horizon
+389,1,East stretch,22.0,26.0,26.0,Open within horizon
+389,2,West stretch,32.0,38.0,38.0,Open within horizon
+390,1,East stretch,25.0,29.0,29.0,Open within horizon
+390,2,West stretch,39.0,45.0,,Committed; opening after horizon
+391,1,East stretch,15.0,19.0,19.0,Open within horizon
+391,2,West stretch,22.0,28.0,28.0,Open within horizon
+392,1,East stretch,22.0,26.0,26.0,Open within horizon
+392,2,West stretch,32.0,38.0,38.0,Open within horizon
+393,1,East stretch,,,,No decision
+393,2,West stretch,,,,No decision
+394,1,East stretch,22.0,26.0,26.0,Open within horizon
+394,2,West stretch,31.0,37.0,37.0,Open within horizon
+395,1,East stretch,,,,No decision
+395,2,West stretch,,,,No decision
+396,1,East stretch,28.0,32.0,32.0,Open within horizon
+396,2,West stretch,,,,No decision
+397,1,East stretch,,,,No decision
+397,2,West stretch,,,,No decision
+398,1,East stretch,24.0,28.0,28.0,Open within horizon
+398,2,West stretch,37.0,43.0,,Committed; opening after horizon
+399,1,East stretch,,,,No decision
+399,2,West stretch,,,,No decision

@@ -1,0 +1,8 @@
+﻿timing_class,East stretch,West stretch
+Initial shortfall; opens,0.0,0.0
+Initial shortfall; not opened,0.0,0.0
+Opens by first failure,28.0,0.5
+Opens after first failure,16.0,15.5
+Reference failure; not opened,17.5,40.0
+Opens without reference failure,38.5,40.5
+No reference failure or opening,0.0,3.5

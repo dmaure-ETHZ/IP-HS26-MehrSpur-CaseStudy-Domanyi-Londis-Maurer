@@ -1,0 +1,7 @@
+﻿scenario,package,package_label,decision_year,scheduled_opening_year,opening_year,status,route
+235,1,East stretch,20.0,24.0,24.0,Open within horizon,Baseline → East stretch → Both
+235,2,West stretch,27.0,33.0,33.0,Open within horizon,Baseline → East stretch → Both
+231,1,East stretch,28.0,32.0,32.0,Open within horizon,Baseline → East stretch only
+231,2,West stretch,,,,No decision,Baseline → East stretch only
+209,1,East stretch,,,,No decision,No package open within horizon
+209,2,West stretch,,,,No decision,No package open within horizon
