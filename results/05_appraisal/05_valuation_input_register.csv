@@ -1,0 +1,18 @@
+﻿parameter,nominal_value,unit,basis_or_scope
+C_TT_CAR,45.29006060606061,CHF/person-hour,Retained course time value; no common-base conversion here
+C_TT_PT,28.23442424242424,CHF/person-hour,Retained course time value
+C_TT_PT_WAITING,28.23442424242424,CHF/person-hour,Initial and transfer waiting
+C_TT_PT_ACCESS,28.23442424242424,CHF/person-hour,PT access and egress
+C_TT_PT_TRANSFER,28.23442424242424,CHF/person-hour,Physical transfer walking
+C_TT_BIKE,35.0,CHF/person-hour,Configured cycling time value
+C_TT_WALK,16.0,CHF/person-hour,Configured walking time value
+BENEFIT_HEALTH_BIKE_PER_KM,0.30843592330978814,CHF/person-km,2021 source converted to 2025 CHF; net health/accident rate
+BENEFIT_HEALTH_WALK_PER_KM,1.021029263370333,CHF/person-km,2021 source converted to 2025 CHF; net health/accident rate
+CO2_VALUE_CHF_PER_TONNE,457.3360242179617,CHF/tonne,2025 CHF; calendar reference year remains 2021
+C_NOISE_CAR,0.015863232323232324,CHF/vehicle-km,NIBA 2014 price basis converted to 2025 CHF
+C_AIR_CAR,0.019823717171717173,CHF/vehicle-km,NIBA 2014 price basis converted to 2025 CHF
+C_ACCIDENT_CAR,0.08986680808080807,CHF/vehicle-km,NIBA 2014 price basis converted to 2025 CHF
+C_AIR_PT,0.003662383838383838,CHF/gross-tonne-km,NIBA 2014 price basis converted to 2025 CHF
+C_NOISE_PT,0.002171878787878788,CHF/gross-tonne-km,NIBA 2014 price basis converted to 2025 CHF
+C_ACCIDENT_PT,0.23645797979797978,CHF/train-km,NIBA 2014 price basis converted to 2025 CHF
+C_FLEX,2000000.0,CHF/package at time zero,2025 project cost assumption; before sampled CAPEX multiplier

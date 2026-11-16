@@ -1,0 +1,11 @@
+﻿plan_a,plan_b,empirical_comparison
+static1,static2,static2 weakly dominates empirically
+static1,staged1,staged1 weakly dominates empirically
+static1,staged2,static1 weakly dominates empirically
+static1,flexible,static1 weakly dominates empirically
+static2,staged1,static2 weakly dominates empirically
+static2,staged2,static2 weakly dominates empirically
+static2,flexible,static2 weakly dominates empirically
+staged1,staged2,staged1 weakly dominates empirically
+staged1,flexible,staged1 weakly dominates empirically
+staged2,flexible,Crossing empirical distributions

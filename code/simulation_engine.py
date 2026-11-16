@@ -275,7 +275,7 @@ def _value_of_time(params: dict, key: str) -> float:
 
 
 def carbon_value_chf_per_tonne(year_idx: int, params: dict | None = None) -> float:
-    """Carbon value in constant 2019 CHF, compounded from its reference year."""
+    """Carbon value in the configured constant-price CHF basis, with real escalation."""
     params = resolved_parameters(params)
     calendar_year = params["APPRAISAL_START_YEAR"] + year_idx
     return float(params["CO2_VALUE_CHF_PER_TONNE"] * (1.0 + params["CO2_VALUE_ANNUAL_GROWTH"])

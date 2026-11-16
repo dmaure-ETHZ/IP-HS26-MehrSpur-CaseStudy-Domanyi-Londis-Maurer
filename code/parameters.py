@@ -117,7 +117,7 @@ NOMINAL_PARAMS = {
     "RAIL_ENERGY_WH_PER_GROSS_TONNE_KM": 30.0,  # Rail electricity consumption (Wh/gross-tonne-km).
     "RAIL_ELECTRICITY_CO2_G_PER_KWH": 19.58,  # Rail electricity emissions (g CO2/kWh).
     # Both road and rail emissions use this carbon value. Its reference-year
-    # value is in constant 2019 CHF; annual real growth is compounded from the
+    # source value is in 2021 CHF (converted below to constant 2025 CHF); annual real growth is compounded from the
     # reference year to APPRAISAL_START_YEAR + the zero-based appraisal year.
     "CO2_VALUE_CHF_PER_TONNE": 430,  # Reference-year CO2 value (CHF/tonne CO2); ARE/INFRAS climate cost rate for 2021.
     "CO2_REFERENCE_YEAR": 2021,  # Calendar year to which the reference CO2 value applies.
@@ -155,6 +155,11 @@ NOMINAL_PARAMS = {
     # Internal shared keys for appraisal and uncertainties; edit values in stages.py.
     **package_parameter_defaults(),
 }
+
+# Monetary literals above retain their source price bases. Convert appraisal-only
+# unit values to 2025 CHF; physical behaviour, CAPEX and dimensionless factors stay fixed.
+from appraisal_price_basis import harmonize_nominal, harmonize_uncertainties
+NOMINAL_PARAMS = harmonize_nominal(NOMINAL_PARAMS)
 
 # Preserve convenient module-level imports without a second configuration block.
 globals().update(NOMINAL_PARAMS)
@@ -483,7 +488,7 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
         "minimum": 31.91,
         "maximum": 53.18,
     },
-    "CO2_VALUE_CHF_PER_TONNE": {  # Draw the reference-year value once (constant 2019 CHF/tonne CO2).
+    "CO2_VALUE_CHF_PER_TONNE": {  # Draw the reference-year value once (source 2021 CHF/tonne CO2, converted below).
         # Triangular mode is the general reference value; the engine applies
         # CO2_VALUE_ANNUAL_GROWTH from CO2_REFERENCE_YEAR to each appraisal year.
         "category": "post_modelling",
@@ -544,6 +549,9 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
         "relative_sigma": True,
     },
 }
+
+# Convert fresh source-basis monetary sensitivity bounds to the same 2025 basis.
+harmonize_uncertainties(STRUCTURAL_UNCERTAINTIES)
 
 # Validate settings and prepare internal surrogate metadata.
 uc.configure(

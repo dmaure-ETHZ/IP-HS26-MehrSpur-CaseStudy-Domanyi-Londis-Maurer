@@ -1,0 +1,6 @@
+﻿indicator,favourable_direction,sample_minimum,sample_maximum
+NPV_MCHF,higher,-7.818076009891229,355.1648295467312
+pct_acceptable_years,higher,72.5,100.0
+delta_final_bike_share_trips_pp,higher,0.0,0.6115688469710223
+avoided_co2_tonnes,higher,-1375.2263538837433,9484.322793630417
+additional_expenditure_MCHF,lower,0.0,65.28817216484711
