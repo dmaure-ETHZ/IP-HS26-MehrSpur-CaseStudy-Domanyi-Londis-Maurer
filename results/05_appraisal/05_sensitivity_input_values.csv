@@ -1,0 +1,13 @@
+﻿,uncertainty,case,input_start,input_end,units,input_basis
+0,C_TT_BIKE,P10,28.0,28.0,CHF/person-hour,Configured parameter input
+5,C_TT_BIKE,P90,42.0,42.0,CHF/person-hour,Configured parameter input
+10,BENEFIT_HEALTH_BIKE_PER_KM,P10,0.1850615539858729,0.1850615539858729,CHF/person-km,Configured parameter input
+15,BENEFIT_HEALTH_BIKE_PER_KM,P90,0.4318102926337034,0.4318102926337034,CHF/person-km,Configured parameter input
+20,C_TT_CAR,P10,36.23737171717172,36.23737171717172,CHF/person-hour,Configured parameter input
+25,C_TT_CAR,P90,54.35339595959596,54.35339595959596,CHF/person-hour,Configured parameter input
+30,CO2_VALUE_CHF_PER_TONNE,P10,302.5853564405297,302.5853564405297,CHF/tonne CO2,Reference-year value (2021); calendar escalation applied
+35,CO2_VALUE_CHF_PER_TONNE,P90,727.5317005843747,727.5317005843747,CHF/tonne CO2,Reference-year value (2021); calendar escalation applied
+40,NUMBER_OF_PEAK_HOURS,P10,3.0,3.0,hours/day,Configured parameter input
+45,NUMBER_OF_PEAK_HOURS,P90,5.0,5.0,hours/day,Configured parameter input
+50,DISCOUNT_RATE,P10,0.012,0.012,fraction/year,Configured parameter input
+55,DISCOUNT_RATE,P90,0.027999999999999997,0.027999999999999997,fraction/year,Configured parameter input
