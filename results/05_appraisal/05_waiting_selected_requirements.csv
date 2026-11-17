@@ -1,0 +1,2 @@
+﻿requirement,new_failure_years,scenario,comparator
+"bike_share_trips >= 0.22, Years 30–40",1,204,staged1
