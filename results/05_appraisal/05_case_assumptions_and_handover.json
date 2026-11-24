@@ -406,7 +406,7 @@
     "C_TT_PT_WAITING": 28.23442424242424,
     "C_TT_PT_ACCESS": 28.23442424242424,
     "C_TT_PT_TRANSFER": 28.23442424242424,
-    "C_TT_BIKE": 35.0,
+    "C_TT_BIKE": 36.3,
     "C_TT_WALK": 16.0,
     "BENEFIT_HEALTH_BIKE_PER_KM": 0.30843592330978814,
     "BENEFIT_HEALTH_WALK_PER_KM": 1.021029263370333,
@@ -467,7 +467,7 @@
   },
   "discount_rate": 0.02,
   "horizon_years": 40,
-  "appraisal_signature": "c6cba07f636283f4cdede0ded83f3c5a59f8c40af238a3cb5a011e97c068d3d4",
+  "appraisal_signature": "dfe36937c4e3cb0e244dbe887a4aac4c802421eb0aec92af1f417b72e2a5d861",
   "surrogate_sha256": "5393156bf6f953e12c638a6a77e62090dc4433d9f177257fa4b78361db7ecade",
   "price_basis": "Constant 2025 CHF. NIBA 2014 and ARE 2021 appraisal rates CPI-converted; CAPEX already 2025. Cycling/walking time and option premium explicitly assumed 2025.",
   "nb04_files": {

@@ -15,7 +15,8 @@ SOURCE_PRICE_YEARS = {
     **dict.fromkeys(("BENEFIT_HEALTH_BIKE_PER_KM", "BENEFIT_HEALTH_WALK_PER_KM",
         "CO2_VALUE_CHF_PER_TONNE"), 2021),
     # No original price year is documented for these project assumptions.
-    # Explicit convention: interpret the existing 35/16 CHF rates as 2025 prices.
+    # Explicit convention: C_TT_BIKE (36.3, derived from the KNA 2017 bike/car ratio applied
+    # to the 2025 car value) and C_TT_WALK (16) are defined directly in 2025 prices.
     "C_TT_BIKE": 2025, "C_TT_WALK": 2025,
 }
 PRICE_FACTORS = {key: ANNUAL_CPI[APPRAISAL_PRICE_YEAR] / ANNUAL_CPI[year]

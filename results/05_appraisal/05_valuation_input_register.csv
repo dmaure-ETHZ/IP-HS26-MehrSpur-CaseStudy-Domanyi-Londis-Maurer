@@ -4,7 +4,7 @@ C_TT_PT,28.23442424242424,CHF/person-hour,Retained course time value
 C_TT_PT_WAITING,28.23442424242424,CHF/person-hour,Initial and transfer waiting
 C_TT_PT_ACCESS,28.23442424242424,CHF/person-hour,PT access and egress
 C_TT_PT_TRANSFER,28.23442424242424,CHF/person-hour,Physical transfer walking
-C_TT_BIKE,35.0,CHF/person-hour,Configured cycling time value
+C_TT_BIKE,36.3,CHF/person-hour,Configured cycling time value
 C_TT_WALK,16.0,CHF/person-hour,Configured walking time value
 BENEFIT_HEALTH_BIKE_PER_KM,0.30843592330978814,CHF/person-km,2021 source converted to 2025 CHF; net health/accident rate
 BENEFIT_HEALTH_WALK_PER_KM,1.021029263370333,CHF/person-km,2021 source converted to 2025 CHF; net health/accident rate

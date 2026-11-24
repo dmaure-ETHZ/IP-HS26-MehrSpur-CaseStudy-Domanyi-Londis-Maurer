@@ -98,7 +98,7 @@ NOMINAL_PARAMS = {
     "C_TT_PT_ACCESS": 26.52,  # PT access and egress walking/cycling time value (CHF/person-hour).
     "C_TT_PT_TRANSFER": 26.52,  # Physical transfer-walking time value (CHF/person-hour); excludes waiting.
     # Active-mode time is valued per person-hour, like PT/car passenger time.
-    "C_TT_BIKE": 35.0,  # Cycling value of time (CHF/person-hour)
+    "C_TT_BIKE": 36.3,  # Cycling value of time (CHF/person-hour, 2025 prices): Kanton Zuerich (2017) KNA ratio separated cycle path / car = 18.70/23.30 = 0.80, applied to the NIBA car value 45.29 CHF/h (2025).
     "C_TT_WALK": 16.0,  # Walking value of time (CHF/person-hour)
     # -------------------------------------------------------------------------
     # Optional additional benefits (uncomment to include in appraisal)

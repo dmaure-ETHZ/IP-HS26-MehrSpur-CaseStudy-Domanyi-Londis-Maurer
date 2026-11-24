@@ -153,9 +153,11 @@ from math import isfinite
 #
 # The route is split into two independently buildable stretches at the golf park
 # in Unterengstringen, the same split the cantonal cost estimate uses:
-#   - "stations" key -> Package 1: EAST stretch, city border Altstetten – golf park (5.0 km)
+#   - "stations" key -> Package 1: EAST stretch, city border Altstetten – golf park (5.0 km;
+#                       crosses the Limmat on the existing Überlandstrasse bridge, shared
+#                       with road traffic, so no separate bridge cost)
 #   - "tunnel" key   -> Package 2: WEST stretch, golf park – cantonal border Dietikon (3.0 km
-#                       plus the two Limmat bridges)
+#                       plus the Limmat bridge and the canal bridge at Dietikon)
 # The internal keys "stations"/"tunnel" are required by the model and adaptive_planning.py;
 # only the content and "name" are project-specific.
 #
@@ -193,7 +195,7 @@ from math import isfinite
 # Appraisal derivation (2016 cantonal estimate, indexed with BFS construction
 # price index +19.6 % to 2025; ASTRA (2010) unit costs indexed +17.9 %):
 #   - East route: CHF 12.7 M (5 km cantonal estimate) * 1.196       = CHF 15.19 M
-#   - West route: 3 km * 2'540 CHF/m * 1.196 = 9.11 M; bridges
+#   - West route: 3 km * 2'540 CHF/m * 1.196 = 9.11 M; Limmat + canal bridge Dietikon
 #     CHF 2.1 M * 1.196 = 2.51 M                                      = CHF 11.62 M
 #   - Major underpass: (20 m * 15'000 + 2 * 90'000) * 0.95 * 1.179   = CHF 0.538 M each
 #   - Land acquisition: 10 % of the indexed route cost
@@ -336,7 +338,8 @@ PACKAGES = {
     },
 
     # --- Package 2: West stretch, golf park Unterengstringen – Dietikon (cantonal border) ---
-    # Bike highway (3.0 km, 4.8 m), the two Limmat bridges and the remaining
+    # Bike highway (3.0 km, 4.8 m), the Limmat bridge and the canal bridge at Dietikon
+    # (cantonal KNA 2017, Table 5: "Limmatbrücken Dietikon", CHF 2.1 M) and the remaining
     # underpass at a cantonal main road.
     "tunnel": {
         "name": "Stage 2 – West stretch Schlieren–Dietikon",
@@ -397,7 +400,7 @@ PACKAGES = {
             "capital_cost_chf": 13_320_000,
             "lifetime_years": 50,  # ASSUMPTION, as Package 1.
             "capital_share": 0.50,  # ASSUMPTION, as Package 1.
-            # ESTIMATE: ~65 t/km * 3.0 km + 150 t underpass + ~400 t per Limmat bridge * 2.
+            # ESTIMATE: ~65 t/km * 3.0 km + 150 t underpass + ~400 t per bridge * 2 (Limmat + canal).
             "construction_co2_tonnes": 1_145.0,
         },
     },
